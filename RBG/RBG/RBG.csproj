@@ -55,7 +55,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AdminManager.cs" />
+    <Compile Include="BLL\ClientManager.cs" />
     <Compile Include="BLL\Infrastructure\BaseManager.cs" />
+    <Compile Include="BLL\InvoiceItemManager.cs" />
+    <Compile Include="BLL\InvoiceManager.cs" />
+    <Compile Include="BLL\InvoicePaymentManager.cs" />
+    <Compile Include="BLL\MaterialManager.cs" />
     <Compile Include="DAL\Model\Admin.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
