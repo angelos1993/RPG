@@ -32,8 +32,10 @@
             this.txtUsername = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.btnLogin = new DevComponents.DotNetBar.ButtonX();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
+            this.btnLogin = new DevComponents.DotNetBar.ButtonX();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -43,7 +45,7 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(282, 12);
+            this.labelX1.Location = new System.Drawing.Point(416, 24);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(90, 23);
@@ -57,7 +59,7 @@
             // 
             this.txtUsername.Border.Class = "TextBoxBorder";
             this.txtUsername.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtUsername.Location = new System.Drawing.Point(12, 12);
+            this.txtUsername.Location = new System.Drawing.Point(146, 24);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(264, 26);
             this.txtUsername.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             this.txtPassword.Border.Class = "TextBoxBorder";
             this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(12, 44);
+            this.txtPassword.Location = new System.Drawing.Point(146, 56);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 26);
             this.txtPassword.TabIndex = 3;
@@ -81,30 +83,30 @@
             // 
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(282, 44);
+            this.labelX2.Location = new System.Drawing.Point(416, 56);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(90, 23);
             this.labelX2.TabIndex = 2;
             this.labelX2.Text = "الرقم السري";
             // 
-            // btnLogin
+            // pictureBox1
             // 
-            this.btnLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLogin.Location = new System.Drawing.Point(197, 76);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 40);
-            this.btnLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "دخول";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.pictureBox1.Image = global::RBG.Properties.Resources.Login;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnClose.Location = new System.Drawing.Point(61, 76);
+            this.btnClose.Image = global::RBG.Properties.Resources.Exit;
+            this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(195, 88);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -112,11 +114,26 @@
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLogin.Image = global::RBG.Properties.Resources.Entry;
+            this.btnLogin.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnLogin.Location = new System.Drawing.Point(331, 88);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(130, 40);
+            this.btnLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "دخول";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 131);
+            this.ClientSize = new System.Drawing.Size(520, 153);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -126,6 +143,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmLogin";
             this.Text = "تسجيل الدخول - RBG";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +156,6 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.ButtonX btnLogin;
         private DevComponents.DotNetBar.ButtonX btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
