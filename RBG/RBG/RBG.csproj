@@ -107,6 +107,12 @@
     <Compile Include="DAL\Repositories\InvoicePaymentRepository.cs" />
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
+    <Compile Include="PL\Forms\FrmIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmIndex.Designer.cs">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="Utility\MessageBoxUtility.cs" />
     <Compile Include="Utility\StringExtensions.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="PL\Forms\FrmIndex.resx">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,11 +187,15 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Add.png" />
+    <None Include="Resources\Admin.png" />
     <Content Include="Resources\Backup.png" />
     <Content Include="Resources\Clear.ico" />
+    <None Include="Resources\Clients.png" />
     <Content Include="Resources\DB.png" />
     <Content Include="Resources\Edit.png" />
     <Content Include="Resources\Exit.png" />
+    <None Include="Resources\Invoice.png" />
+    <None Include="Resources\Materials.png" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />

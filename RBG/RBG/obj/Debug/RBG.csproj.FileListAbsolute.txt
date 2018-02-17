@@ -12,3 +12,4 @@ G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.dll
 G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.SqlServer.dll
 G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.xml
 G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.SqlServer.xml
+G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmIndex.resources
