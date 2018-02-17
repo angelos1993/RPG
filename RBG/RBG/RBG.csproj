@@ -89,8 +89,18 @@
     <Folder Include="BLL\" />
     <Folder Include="DAL\" />
     <Folder Include="Deployment Versions\" />
-    <Folder Include="Resources\" />
     <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\Backup.png" />
+    <Content Include="Resources\Clear.ico" />
+    <Content Include="Resources\DB.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\Restore.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
