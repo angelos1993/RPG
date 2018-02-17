@@ -86,10 +86,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
+    <Folder Include="BLL\Infrastructure\" />
+    <Folder Include="DAL\Model\" />
+    <Folder Include="DAL\Repositories\" />
+    <Folder Include="DAL\VMs\" />
     <Folder Include="Deployment Versions\" />
-    <Folder Include="Utility\" />
+    <Folder Include="Utility\Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Add.png" />
