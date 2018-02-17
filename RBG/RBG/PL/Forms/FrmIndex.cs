@@ -52,7 +52,7 @@ namespace RBG.PL.Forms
 
         private void btnListMaterials_Click(object sender, EventArgs e)
         {
-
+            new FrmMaterials().ShowDialog();
         }
 
         #endregion

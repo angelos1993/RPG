@@ -65,20 +65,32 @@ namespace RBG.PL.Forms
             if (!isFormValid)
                 return;
             var isMaterialCodeExists = MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim());
-            var isMaterialNameExists = MaterialManager.IsMaterialCodeExists(txtName.Text.FullTrim());
+            var isMaterialNameExists = MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim());
             if (isMaterialNameExists && isMaterialCodeExists)
+            {
                 ShowErrorMsg("الكود والاسم مستخدمان من قبل");
+                txtCode.Focus();
+            }
             else if (isMaterialNameExists)
+            {
                 ShowErrorMsg("الاسم الذي أدخلتة مستخدم من قبل");
+                txtName.Focus();
+            }
             else if (isMaterialCodeExists)
+            {
                 ShowErrorMsg("الكود الذي أدخلتة مستخدم من قبل");
+                txtCode.Focus();
+            }
             else
+            {
                 MaterialManager.AddMaterial(new Material
                 {
                     Code = txtCode.Text.FullTrim(),
                     Name = txtName.Text.FullTrim(),
                     Price = (decimal) dblInPrice.Value
                 });
+                Close();
+            }
         }
 
         #endregion

@@ -27,6 +27,20 @@ namespace RBG.BLL
             return UnitOfWork.MaterialRepository.Get(material => material.Name == materialName).Any();
         }
 
+        public IQueryable<Material> GetAllMaterials()
+        {
+            return UnitOfWork.MaterialRepository.GetAll();
+        }
+
+        public void DeleteMaterial(string materialCode, string materialName)
+        {
+            var materialToDelete = UnitOfWork.MaterialRepository
+                .Get(material => material.Code == materialCode && material.Name == materialName).FirstOrDefault();
+            if (materialToDelete == null)
+                return;
+            UnitOfWork.MaterialRepository.Delete(materialToDelete);
+        }
+
         #endregion
     }
 }

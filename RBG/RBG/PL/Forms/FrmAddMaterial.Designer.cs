@@ -36,6 +36,7 @@
             this.dblInPrice = new DevComponents.Editors.DoubleInput();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.txtCode.Location = new System.Drawing.Point(28, 12);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(248, 26);
-            this.txtCode.TabIndex = 3;
+            this.txtCode.TabIndex = 0;
             // 
             // labelX1
             // 
@@ -75,7 +76,7 @@
             this.txtName.Location = new System.Drawing.Point(28, 44);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(248, 26);
-            this.txtName.TabIndex = 5;
+            this.txtName.TabIndex = 1;
             // 
             // labelX2
             // 
@@ -119,19 +120,20 @@
             this.dblInPrice.Name = "dblInPrice";
             this.dblInPrice.ShowUpDown = true;
             this.dblInPrice.Size = new System.Drawing.Size(158, 26);
-            this.dblInPrice.TabIndex = 8;
+            this.dblInPrice.TabIndex = 2;
             // 
             // btnClose
             // 
             this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btnClose.Location = new System.Drawing.Point(43, 108);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 10;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -145,14 +147,16 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 9;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmAddMaterial
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(353, 155);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -165,6 +169,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmAddMaterial";
             this.Text = "إضافة مادة / خامة";
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).EndInit();
             this.ResumeLayout(false);
 

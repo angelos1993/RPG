@@ -5,22 +5,22 @@ namespace RBG.Utility
     {
         public static void ShowErrorMsg(string msg)
         {
-            MessageBox.Show(msg, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(msg, @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void ShowWarningMsg(string msg)
         {
-            MessageBox.Show(msg, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(msg, @"تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static void ShowInfoMsg(string msg)
         {
-            MessageBox.Show(msg, @"Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(msg, @"تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static DialogResult ShowConfirmationDialog(string msg)
         {
-            return MessageBox.Show(msg, @"Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return MessageBox.Show(msg, @"تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }
