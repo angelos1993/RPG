@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using RBG.BLL;
 
 namespace RBG.PL.Forms
 {
@@ -16,9 +17,22 @@ namespace RBG.PL.Forms
 
         #region Properties
 
+        private AdminManager _adminManager;
+        private AdminManager AdminManager => _adminManager ?? (_adminManager = new AdminManager());
+
         #endregion
 
         #region Events
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            lblValidationMsg.Visible = false;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            lblValidationMsg.Visible = false;
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -38,7 +52,14 @@ namespace RBG.PL.Forms
 
         private void Login()
         {
-            lblValidationMsg.Visible = false;
+            if (AdminManager.Login(txtUsername.Text, txtPassword.Text))
+            {
+                Hide();
+                new FrmIndex().Show();
+            }
+            lblValidationMsg.Visible = true;
+            txtUsername.SelectAll();
+            txtUsername.Focus();
         }
 
         #endregion

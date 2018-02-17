@@ -107,6 +107,12 @@
     <Compile Include="DAL\Repositories\InvoicePaymentRepository.cs" />
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
+    <Compile Include="PL\Forms\FrmAddMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmAddMaterial.Designer.cs">
+      <DependentUpon>FrmAddMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmIndex.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Utility\MessageBoxUtility.cs" />
     <Compile Include="Utility\StringExtensions.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="PL\Forms\FrmAddMaterial.resx">
+      <DependentUpon>FrmAddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmIndex.resx">
       <DependentUpon>FrmIndex.cs</DependentUpon>
     </EmbeddedResource>

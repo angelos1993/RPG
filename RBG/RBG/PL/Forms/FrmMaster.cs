@@ -17,6 +17,7 @@ namespace RBG.PL.Forms
 
         #region Properties
 
+        public ErrorProvider ErrorProvider;
         #endregion
 
         #region Events
@@ -31,6 +32,11 @@ namespace RBG.PL.Forms
             ShowInTaskbar = false;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular);
             AutoScaleMode = AutoScaleMode.Font;
+            ErrorProvider = new ErrorProvider
+            {
+                ContainerControl = this,
+                RightToLeft = true
+            };
         }
 
         #endregion

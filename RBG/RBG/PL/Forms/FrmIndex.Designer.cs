@@ -35,6 +35,8 @@
             this.btnClient = new DevComponents.DotNetBar.ButtonX();
             this.btnInvoice = new DevComponents.DotNetBar.ButtonX();
             this.btnAddInvoice = new DevComponents.DotNetBar.ButtonItem();
+            this.btnAddMaterial = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListMaterials = new DevComponents.DotNetBar.ButtonItem();
             this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,8 +107,12 @@
             this.btnMaterial.Name = "btnMaterial";
             this.btnMaterial.Size = new System.Drawing.Size(100, 100);
             this.btnMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnMaterial.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnAddMaterial,
+            this.btnListMaterials});
             this.btnMaterial.TabIndex = 2;
             this.btnMaterial.Text = "الخامات / المواد";
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
             // btnClient
             // 
@@ -148,6 +154,22 @@
             this.btnAddInvoice.Name = "btnAddInvoice";
             this.btnAddInvoice.Text = "إضافة فاتورة جديدة ...";
             // 
+            // btnAddMaterial
+            // 
+            this.btnAddMaterial.GlobalItem = false;
+            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Text = "إضافة خامة / مادة جديدة ...";
+            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
+            // 
+            // btnListMaterials
+            // 
+            this.btnListMaterials.GlobalItem = false;
+            this.btnListMaterials.Name = "btnListMaterials";
+            this.btnListMaterials.Text = "عرض كل المواد / الخامات ...";
+            this.btnListMaterials.Click += new System.EventHandler(this.btnListMaterials_Click);
+            // 
             // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -163,6 +185,7 @@
             this.Name = "FrmIndex";
             this.Text = "RBG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIndex_FormClosing);
             this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -177,5 +200,7 @@
         private DevComponents.DotNetBar.ButtonX btnAdmin;
         private DevComponents.DotNetBar.ButtonX btnMaterial;
         private DevComponents.DotNetBar.ButtonItem btnAddInvoice;
+        private DevComponents.DotNetBar.ButtonItem btnAddMaterial;
+        private DevComponents.DotNetBar.ButtonItem btnListMaterials;
     }
 }
