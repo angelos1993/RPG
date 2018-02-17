@@ -29,7 +29,7 @@ namespace RBG.PL.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         #endregion
@@ -38,7 +38,7 @@ namespace RBG.PL.Forms
 
         private void Login()
         {
-            throw new NotImplementedException();
+            lblValidationMsg.Visible = false;
         }
 
         #endregion
