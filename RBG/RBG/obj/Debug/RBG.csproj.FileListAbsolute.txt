@@ -9,3 +9,7 @@ G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.exe
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.pdb
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmLogin.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csprojResolveAssemblyReference.cache
+G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.dll
+G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.SqlServer.dll
+G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.xml
+G:\Angelos\RBG\Repo\RBG\RBG\bin\Debug\EntityFramework.SqlServer.xml
