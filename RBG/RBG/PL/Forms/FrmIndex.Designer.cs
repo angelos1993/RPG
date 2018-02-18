@@ -28,154 +28,437 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlButtons = new DevComponents.DotNetBar.PanelEx();
-            this.btnDatabase = new DevComponents.DotNetBar.ButtonX();
-            this.btnAdmin = new DevComponents.DotNetBar.ButtonX();
-            this.btnMaterial = new DevComponents.DotNetBar.ButtonX();
-            this.btnClient = new DevComponents.DotNetBar.ButtonX();
-            this.btnInvoice = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddInvoice = new DevComponents.DotNetBar.ButtonItem();
-            this.btnAddMaterial = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListMaterials = new DevComponents.DotNetBar.ButtonItem();
-            this.pnlButtons.SuspendLayout();
+            this.pnlInvoices = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListInvoices = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddInvoice = new DevComponents.DotNetBar.ButtonX();
+            this.picInvoices = new System.Windows.Forms.PictureBox();
+            this.pnlMaterials = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListMaterials = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
+            this.picMaterials = new System.Windows.Forms.PictureBox();
+            this.pnlClients = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListClients = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddClient = new DevComponents.DotNetBar.ButtonX();
+            this.picClients = new System.Windows.Forms.PictureBox();
+            this.pnlAdmins = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListAdmins = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddAdmin = new DevComponents.DotNetBar.ButtonX();
+            this.picAdmins = new System.Windows.Forms.PictureBox();
+            this.pnlDB = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.picDB = new System.Windows.Forms.PictureBox();
+            this.pnlInvoices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).BeginInit();
+            this.pnlMaterials.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).BeginInit();
+            this.pnlClients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClients)).BeginInit();
+            this.pnlAdmins.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).BeginInit();
+            this.pnlDB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDB)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlButtons
+            // pnlInvoices
             // 
-            this.pnlButtons.CanvasColor = System.Drawing.Color.Transparent;
-            this.pnlButtons.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.pnlButtons.Controls.Add(this.btnDatabase);
-            this.pnlButtons.Controls.Add(this.btnAdmin);
-            this.pnlButtons.Controls.Add(this.btnMaterial);
-            this.pnlButtons.Controls.Add(this.btnClient);
-            this.pnlButtons.Controls.Add(this.btnInvoice);
-            this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlButtons.Location = new System.Drawing.Point(0, 0);
-            this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlButtons.RightToLeftLayout = true;
-            this.pnlButtons.Size = new System.Drawing.Size(908, 100);
-            this.pnlButtons.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.pnlButtons.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.pnlButtons.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.pnlButtons.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.pnlButtons.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.pnlButtons.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.pnlButtons.Style.GradientAngle = 90;
-            this.pnlButtons.TabIndex = 0;
+            this.pnlInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlInvoices.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlInvoices.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlInvoices.Controls.Add(this.btnListInvoices);
+            this.pnlInvoices.Controls.Add(this.btnAddInvoice);
+            this.pnlInvoices.Controls.Add(this.picInvoices);
+            this.pnlInvoices.Location = new System.Drawing.Point(666, 12);
+            this.pnlInvoices.Name = "pnlInvoices";
+            this.pnlInvoices.Size = new System.Drawing.Size(400, 200);
             // 
-            // btnDatabase
             // 
-            this.btnDatabase.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDatabase.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDatabase.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDatabase.Image = global::RBG.Properties.Resources.DB;
-            this.btnDatabase.ImageFixedSize = new System.Drawing.Size(80, 70);
-            this.btnDatabase.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDatabase.Location = new System.Drawing.Point(400, 0);
-            this.btnDatabase.Name = "btnDatabase";
-            this.btnDatabase.Size = new System.Drawing.Size(100, 100);
-            this.btnDatabase.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDatabase.TabIndex = 4;
-            this.btnDatabase.Text = "قاعدة البيانات";
-            this.btnDatabase.Visible = false;
             // 
-            // btnAdmin
+            this.pnlInvoices.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlInvoices.Style.BackColorGradientAngle = 90;
+            this.pnlInvoices.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlInvoices.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlInvoices.Style.BorderBottomWidth = 1;
+            this.pnlInvoices.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlInvoices.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlInvoices.Style.BorderLeftWidth = 1;
+            this.pnlInvoices.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlInvoices.Style.BorderRightWidth = 1;
+            this.pnlInvoices.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlInvoices.Style.BorderTopWidth = 1;
+            this.pnlInvoices.Style.Class = "";
+            this.pnlInvoices.Style.CornerDiameter = 4;
+            this.pnlInvoices.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlInvoices.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlInvoices.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlInvoices.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
-            this.btnAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAdmin.Image = global::RBG.Properties.Resources.Admin;
-            this.btnAdmin.ImageFixedSize = new System.Drawing.Size(80, 70);
-            this.btnAdmin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnAdmin.Location = new System.Drawing.Point(300, 0);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(100, 100);
-            this.btnAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAdmin.TabIndex = 3;
-            this.btnAdmin.Text = "المستخدمين";
             // 
-            // btnMaterial
             // 
-            this.btnMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnMaterial.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMaterial.Image = global::RBG.Properties.Resources.Materials;
-            this.btnMaterial.ImageFixedSize = new System.Drawing.Size(80, 70);
-            this.btnMaterial.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMaterial.Location = new System.Drawing.Point(200, 0);
-            this.btnMaterial.Name = "btnMaterial";
-            this.btnMaterial.Size = new System.Drawing.Size(100, 100);
-            this.btnMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnMaterial.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnAddMaterial,
-            this.btnListMaterials});
-            this.btnMaterial.TabIndex = 2;
-            this.btnMaterial.Text = "الخامات / المواد";
-            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
+            this.pnlInvoices.StyleMouseDown.Class = "";
+            this.pnlInvoices.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // btnClient
             // 
-            this.btnClient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnClient.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnClient.Image = global::RBG.Properties.Resources.Clients;
-            this.btnClient.ImageFixedSize = new System.Drawing.Size(80, 70);
-            this.btnClient.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnClient.Location = new System.Drawing.Point(100, 0);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(100, 100);
-            this.btnClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClient.TabIndex = 1;
-            this.btnClient.Text = "العملاء";
             // 
-            // btnInvoice
+            this.pnlInvoices.StyleMouseOver.Class = "";
+            this.pnlInvoices.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlInvoices.TabIndex = 1;
+            this.pnlInvoices.Text = "الفواتير";
             // 
-            this.btnInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnInvoice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnInvoice.Image = global::RBG.Properties.Resources.Invoice;
-            this.btnInvoice.ImageFixedSize = new System.Drawing.Size(70, 70);
-            this.btnInvoice.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnInvoice.Location = new System.Drawing.Point(0, 0);
-            this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(100, 100);
-            this.btnInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnInvoice.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnAddInvoice});
-            this.btnInvoice.TabIndex = 0;
-            this.btnInvoice.Text = "الفواتير";
+            // btnListInvoices
+            // 
+            this.btnListInvoices.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListInvoices.Image = global::RBG.Properties.Resources.List;
+            this.btnListInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListInvoices.Location = new System.Drawing.Point(185, 83);
+            this.btnListInvoices.Name = "btnListInvoices";
+            this.btnListInvoices.Size = new System.Drawing.Size(200, 40);
+            this.btnListInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListInvoices.TabIndex = 7;
+            this.btnListInvoices.Text = "عرض الكل";
+            this.btnListInvoices.Click += new System.EventHandler(this.btnListInvoices_Click);
             // 
             // btnAddInvoice
             // 
-            this.btnAddInvoice.GlobalItem = false;
+            this.btnAddInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddInvoice.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddInvoice.Location = new System.Drawing.Point(185, 37);
             this.btnAddInvoice.Name = "btnAddInvoice";
-            this.btnAddInvoice.Text = "إضافة فاتورة جديدة ...";
+            this.btnAddInvoice.Size = new System.Drawing.Size(200, 40);
+            this.btnAddInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddInvoice.TabIndex = 6;
+            this.btnAddInvoice.Text = "إضافة جديد";
+            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
             // 
-            // btnAddMaterial
+            // picInvoices
             // 
-            this.btnAddMaterial.GlobalItem = false;
-            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Text = "إضافة خامة / مادة جديدة ...";
-            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
+            this.picInvoices.BackColor = System.Drawing.Color.Transparent;
+            this.picInvoices.Image = global::RBG.Properties.Resources.Invoice;
+            this.picInvoices.Location = new System.Drawing.Point(31, 19);
+            this.picInvoices.Name = "picInvoices";
+            this.picInvoices.Size = new System.Drawing.Size(120, 120);
+            this.picInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInvoices.TabIndex = 0;
+            this.picInvoices.TabStop = false;
+            // 
+            // pnlMaterials
+            // 
+            this.pnlMaterials.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMaterials.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlMaterials.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlMaterials.Controls.Add(this.btnListMaterials);
+            this.pnlMaterials.Controls.Add(this.btnAddMaterial);
+            this.pnlMaterials.Controls.Add(this.picMaterials);
+            this.pnlMaterials.Location = new System.Drawing.Point(260, 12);
+            this.pnlMaterials.Name = "pnlMaterials";
+            this.pnlMaterials.Size = new System.Drawing.Size(400, 200);
+            // 
+            // 
+            // 
+            this.pnlMaterials.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlMaterials.Style.BackColorGradientAngle = 90;
+            this.pnlMaterials.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlMaterials.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlMaterials.Style.BorderBottomWidth = 1;
+            this.pnlMaterials.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlMaterials.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlMaterials.Style.BorderLeftWidth = 1;
+            this.pnlMaterials.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlMaterials.Style.BorderRightWidth = 1;
+            this.pnlMaterials.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlMaterials.Style.BorderTopWidth = 1;
+            this.pnlMaterials.Style.Class = "";
+            this.pnlMaterials.Style.CornerDiameter = 4;
+            this.pnlMaterials.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlMaterials.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlMaterials.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlMaterials.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlMaterials.StyleMouseDown.Class = "";
+            this.pnlMaterials.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlMaterials.StyleMouseOver.Class = "";
+            this.pnlMaterials.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlMaterials.TabIndex = 2;
+            this.pnlMaterials.Text = "الخامات / المواد";
             // 
             // btnListMaterials
             // 
-            this.btnListMaterials.GlobalItem = false;
+            this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListMaterials.Image = global::RBG.Properties.Resources.List;
+            this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListMaterials.Location = new System.Drawing.Point(185, 83);
             this.btnListMaterials.Name = "btnListMaterials";
-            this.btnListMaterials.Text = "عرض كل المواد / الخامات ...";
+            this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
+            this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListMaterials.TabIndex = 7;
+            this.btnListMaterials.Text = "عرض الكل";
             this.btnListMaterials.Click += new System.EventHandler(this.btnListMaterials_Click);
+            // 
+            // btnAddMaterial
+            // 
+            this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddMaterial.Location = new System.Drawing.Point(185, 37);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
+            this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterial.TabIndex = 6;
+            this.btnAddMaterial.Text = "إضافة جديد";
+            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
+            // 
+            // picMaterials
+            // 
+            this.picMaterials.BackColor = System.Drawing.Color.Transparent;
+            this.picMaterials.Image = global::RBG.Properties.Resources.Materials;
+            this.picMaterials.Location = new System.Drawing.Point(27, 19);
+            this.picMaterials.Name = "picMaterials";
+            this.picMaterials.Size = new System.Drawing.Size(120, 120);
+            this.picMaterials.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaterials.TabIndex = 0;
+            this.picMaterials.TabStop = false;
+            // 
+            // pnlClients
+            // 
+            this.pnlClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlClients.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlClients.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlClients.Controls.Add(this.btnListClients);
+            this.pnlClients.Controls.Add(this.btnAddClient);
+            this.pnlClients.Controls.Add(this.picClients);
+            this.pnlClients.Location = new System.Drawing.Point(666, 218);
+            this.pnlClients.Name = "pnlClients";
+            this.pnlClients.Size = new System.Drawing.Size(400, 200);
+            // 
+            // 
+            // 
+            this.pnlClients.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlClients.Style.BackColorGradientAngle = 90;
+            this.pnlClients.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlClients.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlClients.Style.BorderBottomWidth = 1;
+            this.pnlClients.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlClients.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlClients.Style.BorderLeftWidth = 1;
+            this.pnlClients.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlClients.Style.BorderRightWidth = 1;
+            this.pnlClients.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlClients.Style.BorderTopWidth = 1;
+            this.pnlClients.Style.Class = "";
+            this.pnlClients.Style.CornerDiameter = 4;
+            this.pnlClients.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlClients.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlClients.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlClients.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlClients.StyleMouseDown.Class = "";
+            this.pnlClients.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlClients.StyleMouseOver.Class = "";
+            this.pnlClients.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlClients.TabIndex = 3;
+            this.pnlClients.Text = "العملاء";
+            // 
+            // btnListClients
+            // 
+            this.btnListClients.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListClients.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListClients.Image = global::RBG.Properties.Resources.List;
+            this.btnListClients.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListClients.Location = new System.Drawing.Point(185, 79);
+            this.btnListClients.Name = "btnListClients";
+            this.btnListClients.Size = new System.Drawing.Size(200, 40);
+            this.btnListClients.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListClients.TabIndex = 7;
+            this.btnListClients.Text = "عرض الكل";
+            this.btnListClients.Click += new System.EventHandler(this.btnListClients_Click);
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddClient.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddClient.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddClient.Location = new System.Drawing.Point(185, 33);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(200, 40);
+            this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddClient.TabIndex = 6;
+            this.btnAddClient.Text = "إضافة جديد";
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // picClients
+            // 
+            this.picClients.BackColor = System.Drawing.Color.Transparent;
+            this.picClients.Image = global::RBG.Properties.Resources.Clients;
+            this.picClients.Location = new System.Drawing.Point(31, 19);
+            this.picClients.Name = "picClients";
+            this.picClients.Size = new System.Drawing.Size(120, 120);
+            this.picClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClients.TabIndex = 0;
+            this.picClients.TabStop = false;
+            // 
+            // pnlAdmins
+            // 
+            this.pnlAdmins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAdmins.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlAdmins.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlAdmins.Controls.Add(this.btnListAdmins);
+            this.pnlAdmins.Controls.Add(this.btnAddAdmin);
+            this.pnlAdmins.Controls.Add(this.picAdmins);
+            this.pnlAdmins.Location = new System.Drawing.Point(260, 218);
+            this.pnlAdmins.Name = "pnlAdmins";
+            this.pnlAdmins.Size = new System.Drawing.Size(400, 200);
+            // 
+            // 
+            // 
+            this.pnlAdmins.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlAdmins.Style.BackColorGradientAngle = 90;
+            this.pnlAdmins.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlAdmins.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlAdmins.Style.BorderBottomWidth = 1;
+            this.pnlAdmins.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlAdmins.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlAdmins.Style.BorderLeftWidth = 1;
+            this.pnlAdmins.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlAdmins.Style.BorderRightWidth = 1;
+            this.pnlAdmins.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlAdmins.Style.BorderTopWidth = 1;
+            this.pnlAdmins.Style.Class = "";
+            this.pnlAdmins.Style.CornerDiameter = 4;
+            this.pnlAdmins.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlAdmins.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlAdmins.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlAdmins.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlAdmins.StyleMouseDown.Class = "";
+            this.pnlAdmins.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlAdmins.StyleMouseOver.Class = "";
+            this.pnlAdmins.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlAdmins.TabIndex = 4;
+            this.pnlAdmins.Text = "المستخدمين";
+            // 
+            // btnListAdmins
+            // 
+            this.btnListAdmins.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListAdmins.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListAdmins.Image = global::RBG.Properties.Resources.List;
+            this.btnListAdmins.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListAdmins.Location = new System.Drawing.Point(185, 79);
+            this.btnListAdmins.Name = "btnListAdmins";
+            this.btnListAdmins.Size = new System.Drawing.Size(200, 40);
+            this.btnListAdmins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListAdmins.TabIndex = 7;
+            this.btnListAdmins.Text = "عرض الكل";
+            this.btnListAdmins.Click += new System.EventHandler(this.btnListAdmins_Click);
+            // 
+            // btnAddAdmin
+            // 
+            this.btnAddAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddAdmin.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddAdmin.Location = new System.Drawing.Point(185, 33);
+            this.btnAddAdmin.Name = "btnAddAdmin";
+            this.btnAddAdmin.Size = new System.Drawing.Size(200, 40);
+            this.btnAddAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddAdmin.TabIndex = 6;
+            this.btnAddAdmin.Text = "إضافة جديد";
+            this.btnAddAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
+            // 
+            // picAdmins
+            // 
+            this.picAdmins.BackColor = System.Drawing.Color.Transparent;
+            this.picAdmins.Image = global::RBG.Properties.Resources.Admin;
+            this.picAdmins.Location = new System.Drawing.Point(27, 19);
+            this.picAdmins.Name = "picAdmins";
+            this.picAdmins.Size = new System.Drawing.Size(120, 120);
+            this.picAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAdmins.TabIndex = 0;
+            this.picAdmins.TabStop = false;
+            // 
+            // pnlDB
+            // 
+            this.pnlDB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDB.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlDB.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlDB.Controls.Add(this.picDB);
+            this.pnlDB.Location = new System.Drawing.Point(666, 424);
+            this.pnlDB.Name = "pnlDB";
+            this.pnlDB.Size = new System.Drawing.Size(400, 200);
+            // 
+            // 
+            // 
+            this.pnlDB.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlDB.Style.BackColorGradientAngle = 90;
+            this.pnlDB.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlDB.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlDB.Style.BorderBottomWidth = 1;
+            this.pnlDB.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlDB.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlDB.Style.BorderLeftWidth = 1;
+            this.pnlDB.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlDB.Style.BorderRightWidth = 1;
+            this.pnlDB.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlDB.Style.BorderTopWidth = 1;
+            this.pnlDB.Style.Class = "";
+            this.pnlDB.Style.CornerDiameter = 4;
+            this.pnlDB.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlDB.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlDB.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlDB.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlDB.StyleMouseDown.Class = "";
+            this.pnlDB.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlDB.StyleMouseOver.Class = "";
+            this.pnlDB.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlDB.TabIndex = 5;
+            this.pnlDB.Text = "قاعدة البيانات";
+            this.pnlDB.Visible = false;
+            // 
+            // picDB
+            // 
+            this.picDB.BackColor = System.Drawing.Color.Transparent;
+            this.picDB.Image = global::RBG.Properties.Resources.DB;
+            this.picDB.Location = new System.Drawing.Point(31, 22);
+            this.picDB.Name = "picDB";
+            this.picDB.Size = new System.Drawing.Size(120, 120);
+            this.picDB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDB.TabIndex = 0;
+            this.picDB.TabStop = false;
             // 
             // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 488);
-            this.Controls.Add(this.pnlButtons);
+            this.ClientSize = new System.Drawing.Size(1078, 653);
+            this.Controls.Add(this.pnlDB);
+            this.Controls.Add(this.pnlAdmins);
+            this.Controls.Add(this.pnlClients);
+            this.Controls.Add(this.pnlMaterials);
+            this.Controls.Add(this.pnlInvoices);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,21 +469,38 @@
             this.Text = "RBG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIndex_FormClosing);
-            this.pnlButtons.ResumeLayout(false);
+            this.pnlInvoices.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).EndInit();
+            this.pnlMaterials.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).EndInit();
+            this.pnlClients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picClients)).EndInit();
+            this.pnlAdmins.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).EndInit();
+            this.pnlDB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDB)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.PanelEx pnlButtons;
-        private DevComponents.DotNetBar.ButtonX btnInvoice;
-        private DevComponents.DotNetBar.ButtonX btnClient;
-        private DevComponents.DotNetBar.ButtonX btnDatabase;
-        private DevComponents.DotNetBar.ButtonX btnAdmin;
-        private DevComponents.DotNetBar.ButtonX btnMaterial;
-        private DevComponents.DotNetBar.ButtonItem btnAddInvoice;
-        private DevComponents.DotNetBar.ButtonItem btnAddMaterial;
-        private DevComponents.DotNetBar.ButtonItem btnListMaterials;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlInvoices;
+        private System.Windows.Forms.PictureBox picInvoices;
+        private DevComponents.DotNetBar.ButtonX btnListInvoices;
+        private DevComponents.DotNetBar.ButtonX btnAddInvoice;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlMaterials;
+        private DevComponents.DotNetBar.ButtonX btnListMaterials;
+        private DevComponents.DotNetBar.ButtonX btnAddMaterial;
+        private System.Windows.Forms.PictureBox picMaterials;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlClients;
+        private DevComponents.DotNetBar.ButtonX btnListClients;
+        private DevComponents.DotNetBar.ButtonX btnAddClient;
+        private System.Windows.Forms.PictureBox picClients;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlAdmins;
+        private DevComponents.DotNetBar.ButtonX btnListAdmins;
+        private DevComponents.DotNetBar.ButtonX btnAddAdmin;
+        private System.Windows.Forms.PictureBox picAdmins;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlDB;
+        private System.Windows.Forms.PictureBox picDB;
     }
 }

@@ -215,6 +215,7 @@
     <Content Include="Resources\Exit.png" />
     <None Include="Resources\Invoice.png" />
     <None Include="Resources\Materials.png" />
+    <None Include="Resources\List.png" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />

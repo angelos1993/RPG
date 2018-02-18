@@ -32,18 +32,33 @@ namespace RBG.PL.Forms
 
         #region Invoice
 
+        private void btnAddInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListInvoices_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Client
 
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListClients_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Material
-
-        private void btnMaterial_Click(object sender, EventArgs e)
-        {
-            new FrmAddMaterial().ShowDialog();
-        }
 
         private void btnAddMaterial_Click(object sender, EventArgs e)
         {
@@ -58,6 +73,16 @@ namespace RBG.PL.Forms
         #endregion
 
         #region Admin
+
+        private void btnAddAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListAdmins_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
