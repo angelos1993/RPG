@@ -1,6 +1,6 @@
 ﻿namespace RBG.PL.Forms
 {
-    partial class FrmAddMaterial
+    partial class FrmAddClient
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCode = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.txtAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.dblInPrice = new DevComponents.Editors.DoubleInput();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtCode
-            // 
-            // 
-            // 
-            // 
-            this.txtCode.Border.Class = "TextBoxBorder";
-            this.txtCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCode.Location = new System.Drawing.Point(28, 12);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCode.Size = new System.Drawing.Size(248, 26);
-            this.txtCode.TabIndex = 0;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.Class = "";
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(282, 12);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(59, 23);
-            this.labelX1.TabIndex = 2;
-            this.labelX1.Text = "الكود";
             // 
             // txtName
             // 
@@ -74,11 +46,38 @@
             // 
             this.txtName.Border.Class = "TextBoxBorder";
             this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtName.Location = new System.Drawing.Point(28, 44);
+            this.txtName.Location = new System.Drawing.Point(32, 12);
             this.txtName.Name = "txtName";
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtName.Size = new System.Drawing.Size(248, 26);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.Class = "";
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(286, 12);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(59, 23);
+            this.labelX1.TabIndex = 4;
+            this.labelX1.Text = "الاسم";
+            // 
+            // txtPhone
+            // 
+            // 
+            // 
+            // 
+            this.txtPhone.Border.Class = "TextBoxBorder";
+            this.txtPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPhone.Location = new System.Drawing.Point(32, 76);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPhone.Size = new System.Drawing.Size(248, 26);
+            this.txtPhone.TabIndex = 2;
             // 
             // labelX2
             // 
@@ -87,12 +86,25 @@
             // 
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(282, 44);
+            this.labelX2.Location = new System.Drawing.Point(286, 76);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(59, 23);
-            this.labelX2.TabIndex = 4;
-            this.labelX2.Text = "الاسم";
+            this.labelX2.TabIndex = 6;
+            this.labelX2.Text = "تليفون";
+            // 
+            // txtAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtAddress.Border.Class = "TextBoxBorder";
+            this.txtAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAddress.Location = new System.Drawing.Point(32, 44);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtAddress.Size = new System.Drawing.Size(248, 26);
+            this.txtAddress.TabIndex = 1;
             // 
             // labelX3
             // 
@@ -101,29 +113,12 @@
             // 
             this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(282, 76);
+            this.labelX3.Location = new System.Drawing.Point(286, 44);
             this.labelX3.Name = "labelX3";
             this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX3.Size = new System.Drawing.Size(59, 23);
-            this.labelX3.TabIndex = 6;
-            this.labelX3.Text = "السعر";
-            // 
-            // dblInPrice
-            // 
-            // 
-            // 
-            // 
-            this.dblInPrice.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dblInPrice.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dblInPrice.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dblInPrice.Increment = 0.1D;
-            this.dblInPrice.Location = new System.Drawing.Point(118, 76);
-            this.dblInPrice.MinValue = 0D;
-            this.dblInPrice.Name = "dblInPrice";
-            this.dblInPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dblInPrice.ShowUpDown = true;
-            this.dblInPrice.Size = new System.Drawing.Size(158, 26);
-            this.dblInPrice.TabIndex = 2;
+            this.labelX3.TabIndex = 8;
+            this.labelX3.Text = "العنوان";
             // 
             // btnClose
             // 
@@ -154,39 +149,38 @@
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // FrmAddMaterial
+            // FrmAddClient
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(353, 155);
+            this.ClientSize = new System.Drawing.Size(353, 159);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dblInPrice);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.Name = "FrmAddMaterial";
-            this.Text = "إضافة مادة / خامة";
+            this.Name = "FrmAddClient";
+            this.Text = "إضافة عميل";
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX txtCode;
-        private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtName;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPhone;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.Editors.DoubleInput dblInPrice;
-        private DevComponents.DotNetBar.ButtonX btnSave;
         private DevComponents.DotNetBar.ButtonX btnClose;
+        private DevComponents.DotNetBar.ButtonX btnSave;
     }
 }

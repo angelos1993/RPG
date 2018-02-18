@@ -1,4 +1,5 @@
 ﻿using RBG.BLL.Infrastructure;
+using RBG.DAL.Model;
 
 namespace RBG.BLL
 {
@@ -9,6 +10,11 @@ namespace RBG.BLL
         #endregion
 
         #region Methods
+
+        public void AddClient(Client client)
+        {
+            UnitOfWork.ClientRepository.Add(client);
+        }
 
         #endregion
     }

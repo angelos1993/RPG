@@ -48,7 +48,7 @@ namespace RBG.PL.Forms
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-
+            new FrmAddClient().ShowDialog();
         }
 
         private void btnListClients_Click(object sender, EventArgs e)

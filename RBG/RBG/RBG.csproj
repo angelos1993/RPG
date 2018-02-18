@@ -108,6 +108,12 @@
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
     <Compile Include="DAL\VMs\MaterialVm.cs" />
+    <Compile Include="PL\Forms\FrmAddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmAddClient.Designer.cs">
+      <DependentUpon>FrmAddClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmAddMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <Compile Include="Utility\MessageBoxUtility.cs" />
     <Compile Include="Utility\StringExtensions.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="PL\Forms\FrmAddClient.resx">
+      <DependentUpon>FrmAddClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterial.resx">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmMaster.resx">
+      <DependentUpon>FrmMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmMaterials.resx">
       <DependentUpon>FrmMaterials.cs</DependentUpon>
