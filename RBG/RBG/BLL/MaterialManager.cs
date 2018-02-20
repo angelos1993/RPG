@@ -39,7 +39,7 @@ namespace RBG.BLL
 
         public void DeleteMaterial(int materialId)
         {
-            DeleteMaterial(UnitOfWork.MaterialRepository.GetById(materialId));
+            DeleteMaterial(GetMaterialById(materialId));
         }
 
         public void UpdateMaterial(Material material)

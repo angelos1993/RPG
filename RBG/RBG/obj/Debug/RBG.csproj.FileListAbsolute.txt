@@ -18,3 +18,4 @@ G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmMaterials.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddClient.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmMaster.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csprojResolveAssemblyReference.cache
+G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmClients.resources

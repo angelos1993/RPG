@@ -53,7 +53,7 @@ namespace RBG.PL.Forms
 
         private void btnListClients_Click(object sender, EventArgs e)
         {
-
+            new FrmClients().ShowDialog();
         }
 
         #endregion

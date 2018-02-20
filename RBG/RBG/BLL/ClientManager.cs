@@ -1,4 +1,5 @@
-﻿using RBG.BLL.Infrastructure;
+﻿using System.Linq;
+using RBG.BLL.Infrastructure;
 using RBG.DAL.Model;
 
 namespace RBG.BLL
@@ -24,6 +25,21 @@ namespace RBG.BLL
         public void UpdateClient(Client client)
         {
             UnitOfWork.ClientRepository.Update(client);
+        }
+
+        public IQueryable<Client> GetAllClients()
+        {
+            return UnitOfWork.ClientRepository.GetAll();
+        }
+
+        public void DeleteClient(int clientId)
+        {
+            DeleteClient(GetClientById(clientId));
+        }
+
+        public void DeleteClient(Client client)
+        {
+            UnitOfWork.ClientRepository.Delete(client);
         }
 
         #endregion

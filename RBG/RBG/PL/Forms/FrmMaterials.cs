@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.DAL.VMs;
+using RBG.Utility;
 using static RBG.Utility.MessageBoxUtility;
 
 namespace RBG.PL.Forms
@@ -106,7 +107,7 @@ namespace RBG.PL.Forms
 
         private void SearchMaterials()
         {
-            var searchText = txtSearch.Text;
+            var searchText = txtSearch.Text.FullTrim();
             MaterialsList = Materials
                 .Where(material => material.Name.Contains(searchText) || material.Code.Contains(searchText))
                 .Select(material => new MaterialVm
@@ -134,14 +135,12 @@ namespace RBG.PL.Forms
         {
             dgvMaterials.DataSource = MaterialsList;
         }
-        
+
         private void EditMaterial()
         {
             var materialId = int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString());
             new FrmAddMaterial(materialId).ShowDialog();
-            MaterialManager.UpdateMaterial(MaterialManager.GetMaterialById(materialId));
             ResetForm();
-
         }
 
         private void DeleteMaterial()

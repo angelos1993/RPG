@@ -108,6 +108,7 @@
     <Compile Include="DAL\Repositories\InvoicePaymentRepository.cs" />
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
+    <Compile Include="DAL\VMs\ClientVm.cs" />
     <Compile Include="DAL\VMs\MaterialVm.cs" />
     <Compile Include="PL\Forms\FrmAddClient.cs">
       <SubType>Form</SubType>
@@ -120,6 +121,12 @@
     </Compile>
     <Compile Include="PL\Forms\FrmAddMaterial.Designer.cs">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmClients.Designer.cs">
+      <DependentUpon>FrmClients.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmIndex.cs">
       <SubType>Form</SubType>
@@ -158,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterial.resx">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmClients.resx">
+      <DependentUpon>FrmClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmIndex.resx">
       <DependentUpon>FrmIndex.cs</DependentUpon>
