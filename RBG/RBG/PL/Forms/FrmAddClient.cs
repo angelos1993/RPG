@@ -10,9 +10,11 @@ namespace RBG.PL.Forms
     {
         #region Constructor
 
-        public FrmAddClient()
+        public FrmAddClient(int? clientId = null)
         {
             InitializeComponent();
+            if(clientId.HasValue)
+                SetFormForEditMode(clientId.Value);
         }
 
         #endregion
@@ -21,6 +23,8 @@ namespace RBG.PL.Forms
 
         private ClientManager _clientManager;
         private ClientManager ClientManager => _clientManager ?? (_clientManager = new ClientManager());
+        private bool IsEditMode { get; set; }
+        private Client Client { get; set; }
 
         #endregion
 
@@ -44,22 +48,45 @@ namespace RBG.PL.Forms
 
         private void SaveClient()
         {
+            ErrorProvider.Clear();
             var isFormValid = true;
             if (txtName.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
                 ErrorProvider.SetError(txtName, ValidationMsg);
-                txtName.Focus();
             }
             if (!isFormValid)
-                return;
-            ClientManager.AddClient(new Client
             {
-                Name = txtName.Text.FullTrim(),
-                Address = txtAddress.Text.FullTrim(),
-                Phone = txtPhone.Text.FullTrim()
-            });
+                txtName.Focus();
+                return;
+            }
+            if (!IsEditMode)
+            {
+                ClientManager.AddClient(new Client
+                {
+                    Name = txtName.Text.FullTrim(),
+                    Address = txtAddress.Text.FullTrim(),
+                    Phone = txtPhone.Text.FullTrim()
+                });
+            }
+            else
+            {
+                Client.Name = txtName.Text.FullTrim();
+                Client.Address = txtAddress.Text.FullTrim();
+                Client.Phone = txtPhone.Text.FullTrim();
+                ClientManager.UpdateClient(Client);
+            }
             Close();
+        }
+
+        private void SetFormForEditMode(int clientId)
+        {
+            IsEditMode = true;
+            Client = ClientManager.GetClientById(clientId);
+            Text = @"تعديل عميل";
+            txtName.Text = Client.Name;
+            txtAddress.Text = Client.Address;
+            txtPhone.Text = Client.Phone;
         }
 
         #endregion

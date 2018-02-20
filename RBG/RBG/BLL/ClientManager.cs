@@ -16,6 +16,16 @@ namespace RBG.BLL
             UnitOfWork.ClientRepository.Add(client);
         }
 
+        public Client GetClientById(int clientId)
+        {
+            return UnitOfWork.ClientRepository.GetById(clientId);
+        }
+
+        public void UpdateClient(Client client)
+        {
+            UnitOfWork.ClientRepository.Update(client);
+        }
+
         #endregion
     }
 }

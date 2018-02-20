@@ -50,6 +50,7 @@ namespace RBG.PL.Forms
 
         private void SaveMaterial()
         {
+            ErrorProvider.Clear();
             var isFormValid = true;
             if (txtCode.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
@@ -67,7 +68,10 @@ namespace RBG.PL.Forms
                 ErrorProvider.SetError(dblInPrice, ValidationMsg);
             }
             if (!isFormValid)
+            {
+                txtCode.Focus();
                 return;
+            }
             var isMaterialCodeExists = !IsEditMode
                 ? MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim())
                 : txtCode.Text.FullTrim() != Material.Code &&
