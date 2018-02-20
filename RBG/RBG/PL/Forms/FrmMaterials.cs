@@ -88,7 +88,7 @@ namespace RBG.PL.Forms
         private void ResetForm()
         {
             GetMaterials();
-            FillGrid();
+            SearchMaterials();
             dgvMaterials.Columns[0].Visible = false;
         }
 
@@ -141,6 +141,7 @@ namespace RBG.PL.Forms
             new FrmAddMaterial(materialId).ShowDialog();
             MaterialManager.UpdateMaterial(MaterialManager.GetMaterialById(materialId));
             ResetForm();
+
         }
 
         private void DeleteMaterial()
