@@ -34,8 +34,7 @@ namespace RBG.PL.Forms
         private void FrmMaterials_Load(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            GetMaterials();
-            FillGrid();
+            ResetForm();
             Cursor = Cursors.Default;
         }
 
@@ -43,7 +42,6 @@ namespace RBG.PL.Forms
         {
             Cursor = Cursors.WaitCursor;
             SearchMaterials();
-            FillGrid();
             Cursor = Cursors.Default;
         }
 
@@ -51,7 +49,7 @@ namespace RBG.PL.Forms
         {
             Cursor = Cursors.WaitCursor;
             new FrmAddMaterial().ShowDialog();
-            RefreshGrid();
+            ResetForm();
             Cursor = Cursors.Default;
         }
 
@@ -59,10 +57,16 @@ namespace RBG.PL.Forms
         {
             Cursor = Cursors.WaitCursor;
             SortMaterials();
-            FillGrid();
             Cursor = Cursors.Default;
         }
-        
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            EditMaterial();
+            Cursor = Cursors.Default;
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟") != DialogResult.Yes)
@@ -81,11 +85,19 @@ namespace RBG.PL.Forms
 
         #region Methods
 
+        private void ResetForm()
+        {
+            GetMaterials();
+            FillGrid();
+            dgvMaterials.Columns[0].Visible = false;
+        }
+
         private void GetMaterials()
         {
             Materials = MaterialManager.GetAllMaterials().OrderBy(material => material.Name).ToList();
             MaterialsList = Materials.Select(material => new MaterialVm
             {
+                Id = material.Id,
                 Code = material.Code,
                 Name = material.Name,
                 Price = material.Price
@@ -97,8 +109,13 @@ namespace RBG.PL.Forms
             var searchText = txtSearch.Text;
             MaterialsList = Materials
                 .Where(material => material.Name.Contains(searchText) || material.Code.Contains(searchText))
-                .Select(material => new MaterialVm {Code = material.Code, Name = material.Name, Price = material.Price})
-                .ToList();
+                .Select(material => new MaterialVm
+                {
+                    Id = material.Id,
+                    Code = material.Code,
+                    Name = material.Name,
+                    Price = material.Price
+                }).ToList();
             SortMaterials();
         }
 
@@ -110,25 +127,26 @@ namespace RBG.PL.Forms
                 MaterialsList = MaterialsList.OrderBy(material => material.Code).ToList();
             else
                 MaterialsList = MaterialsList.OrderBy(material => material.Price).ToList();
+            FillGrid();
         }
 
         private void FillGrid()
         {
             dgvMaterials.DataSource = MaterialsList;
         }
-
-        private void RefreshGrid()
+        
+        private void EditMaterial()
         {
-            GetMaterials();
-            SearchMaterials();
-            FillGrid();
+            var materialId = int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString());
+            new FrmAddMaterial(materialId).ShowDialog();
+            MaterialManager.UpdateMaterial(MaterialManager.GetMaterialById(materialId));
+            ResetForm();
         }
 
         private void DeleteMaterial()
         {
-            MaterialManager.DeleteMaterial(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString(),
-                dgvMaterials.SelectedRows[0].Cells[1].Value.ToString());
-            RefreshGrid();
+            MaterialManager.DeleteMaterial(int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString()));
+            ResetForm();
         }
 
         #endregion

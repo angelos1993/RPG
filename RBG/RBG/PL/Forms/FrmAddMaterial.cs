@@ -12,9 +12,11 @@ namespace RBG.PL.Forms
     {
         #region Constructor
 
-        public FrmAddMaterial()
+        public FrmAddMaterial(int? materialId = null)
         {
             InitializeComponent();
+            if (materialId.HasValue)
+                SetFormForEditMode(materialId.Value);
         }
 
         #endregion
@@ -23,6 +25,8 @@ namespace RBG.PL.Forms
 
         private MaterialManager _materialManager;
         private MaterialManager MaterialManager => _materialManager ?? (_materialManager = new MaterialManager());
+        private bool IsEditMode { get; set; }
+        private Material Material { get; set; }
 
         #endregion
 
@@ -64,8 +68,14 @@ namespace RBG.PL.Forms
             }
             if (!isFormValid)
                 return;
-            var isMaterialCodeExists = MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim());
-            var isMaterialNameExists = MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim());
+            var isMaterialCodeExists = !IsEditMode
+                ? MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim())
+                : txtCode.Text.FullTrim() != Material.Code &&
+                  MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim());
+            var isMaterialNameExists = !IsEditMode
+                ? MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim())
+                : txtName.Text.FullTrim() != Material.Name &&
+                  MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim());
             if (isMaterialNameExists && isMaterialCodeExists)
             {
                 ShowErrorMsg("الكود والاسم مستخدمان من قبل");
@@ -83,14 +93,34 @@ namespace RBG.PL.Forms
             }
             else
             {
-                MaterialManager.AddMaterial(new Material
+                if (!IsEditMode)
                 {
-                    Code = txtCode.Text.FullTrim(),
-                    Name = txtName.Text.FullTrim(),
-                    Price = (decimal) dblInPrice.Value
-                });
+                    MaterialManager.AddMaterial(new Material
+                    {
+                        Code = txtCode.Text.FullTrim(),
+                        Name = txtName.Text.FullTrim(),
+                        Price = (decimal) dblInPrice.Value
+                    });
+                }
+                else
+                {
+                    Material.Code = txtCode.Text.FullTrim();
+                    Material.Name = txtName.Text.FullTrim();
+                    Material.Price = (decimal) dblInPrice.Value;
+                    MaterialManager.UpdateMaterial(Material);
+                }
                 Close();
             }
+        }
+
+        private void SetFormForEditMode(int materialId)
+        {
+            IsEditMode = true;
+            Material = MaterialManager.GetMaterialById(materialId);
+            Text = @"تعديل مادة / خامة";
+            txtCode.Text = Material.Code;
+            txtName.Text = Material.Name;
+            dblInPrice.Value = (double) Material.Price;
         }
 
         #endregion

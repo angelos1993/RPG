@@ -4,6 +4,7 @@ namespace RBG.DAL.VMs
 {
     public class MaterialVm
     {
+        public int Id { get; set; }
         [DisplayName("الكود")]
         public string Code { get; set; }
         [DisplayName("الاسم")]

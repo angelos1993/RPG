@@ -102,6 +102,7 @@
     <Compile Include="DAL\Repositories\ClientRepository.cs" />
     <Compile Include="DAL\Repositories\Infrastructure\IUnitOfWork.cs" />
     <Compile Include="DAL\Repositories\Infrastructure\RepositoryBase.cs" />
+    <Compile Include="DAL\Repositories\Infrastructure\RgbContext.cs" />
     <Compile Include="DAL\Repositories\Infrastructure\UnitOfWork.cs" />
     <Compile Include="DAL\Repositories\InvoiceItemRepository.cs" />
     <Compile Include="DAL\Repositories\InvoicePaymentRepository.cs" />

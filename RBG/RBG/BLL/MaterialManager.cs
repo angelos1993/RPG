@@ -32,13 +32,24 @@ namespace RBG.BLL
             return UnitOfWork.MaterialRepository.GetAll();
         }
 
-        public void DeleteMaterial(string materialCode, string materialName)
+        public void DeleteMaterial(Material material)
         {
-            var materialToDelete = UnitOfWork.MaterialRepository
-                .Get(material => material.Code == materialCode && material.Name == materialName).FirstOrDefault();
-            if (materialToDelete == null)
-                return;
-            UnitOfWork.MaterialRepository.Delete(materialToDelete);
+            UnitOfWork.MaterialRepository.Delete(material);
+        }
+
+        public void DeleteMaterial(int materialId)
+        {
+            DeleteMaterial(UnitOfWork.MaterialRepository.GetById(materialId));
+        }
+
+        public void UpdateMaterial(Material material)
+        {
+            UnitOfWork.MaterialRepository.Update(material);
+        }
+
+        public Material GetMaterialById(int materialId)
+        {
+            return UnitOfWork.MaterialRepository.GetById(materialId);
         }
 
         #endregion

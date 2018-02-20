@@ -35,6 +35,7 @@
             this.radCode = new System.Windows.Forms.RadioButton();
             this.radPrice = new System.Windows.Forms.RadioButton();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
@@ -58,6 +59,7 @@
             this.dgvMaterials.Location = new System.Drawing.Point(12, 74);
             this.dgvMaterials.MultiSelect = false;
             this.dgvMaterials.Name = "dgvMaterials";
+            this.dgvMaterials.ReadOnly = true;
             this.dgvMaterials.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaterials.Size = new System.Drawing.Size(453, 326);
@@ -127,6 +129,20 @@
             this.labelX2.TabIndex = 18;
             this.labelX2.Text = "ترتيب حسب :";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEdit.Image = global::RBG.Properties.Resources.Edit;
+            this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnEdit.Location = new System.Drawing.Point(309, 406);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(130, 40);
+            this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEdit.TabIndex = 19;
+            this.btnEdit.Text = "تعديل";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // btnAddMaterial
             // 
             this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -147,7 +163,7 @@
             this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(105, 406);
+            this.btnClose.Location = new System.Drawing.Point(37, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -161,7 +177,7 @@
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnDelete.Image = global::RBG.Properties.Resources.Delete;
             this.btnDelete.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(241, 406);
+            this.btnDelete.Location = new System.Drawing.Point(173, 406);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 40);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -174,6 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 458);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.radPrice);
             this.Controls.Add(this.radCode);
@@ -205,5 +222,6 @@
         private System.Windows.Forms.RadioButton radCode;
         private System.Windows.Forms.RadioButton radPrice;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.ButtonX btnEdit;
     }
 }

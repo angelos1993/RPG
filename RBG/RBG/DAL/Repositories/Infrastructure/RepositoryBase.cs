@@ -22,13 +22,7 @@ namespace RBG.DAL.Repositories.Infrastructure
     {
         #region Properties
 
-        private RBGEntities _context;
-
-        public RBGEntities Context
-        {
-            get => _context ?? (_context = new RBGEntities());
-            private set => _context = value;
-        }
+        public RBGEntities Context => RgbContext.Instance;
 
         private DbSet<T> _dbSet;
         public DbSet<T> DbSet => _dbSet ?? (_dbSet = Context.Set<T>());
@@ -86,7 +80,6 @@ namespace RBG.DAL.Repositories.Infrastructure
         {
             if (!disposing || Context == null) return;
             Context.Dispose();
-            Context = null;
         }
 
         #endregion
