@@ -253,10 +253,12 @@
     <Content Include="Resources\DB.png" />
     <None Include="Resources\Delete.png" />
     <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\Entry.png" />
     <Content Include="Resources\Exit.png" />
     <None Include="Resources\Invoice.png" />
     <None Include="Resources\Materials.png" />
     <None Include="Resources\List.png" />
+    <Content Include="Resources\Login.gif" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />
