@@ -117,19 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CurrentPasswordInvalid" xml:space="preserve">
-    <value>الرقم السري الحالي غير صحيح</value>
-  </data>
-  <data name="CurrentUsernameInvalid" xml:space="preserve">
-    <value>اسم المستخدم الحالي غير صحيح</value>
-  </data>
-  <data name="NewPasswordConfirmationNotMached" xml:space="preserve">
-    <value>كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان</value>
-  </data>
-  <data name="ThisFieldIsRequired" xml:space="preserve">
-    <value>يجب ملئ هذا الحقل</value>
-  </data>
-  <data name="UpdateAdminDataSuccessfully" xml:space="preserve">
-    <value>تم تعديل بيانات المستخدم بنجاح</value>
-  </data>
+  <metadata name="ErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -41,8 +41,7 @@
             this.btnAddClient = new DevComponents.DotNetBar.ButtonX();
             this.picClients = new System.Windows.Forms.PictureBox();
             this.pnlAdmins = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnListAdmins = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddAdmin = new DevComponents.DotNetBar.ButtonX();
+            this.btnEditAdmin = new DevComponents.DotNetBar.ButtonX();
             this.picAdmins = new System.Windows.Forms.PictureBox();
             this.pnlDB = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.picDB = new System.Windows.Forms.PictureBox();
@@ -315,8 +314,7 @@
             this.pnlAdmins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAdmins.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlAdmins.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlAdmins.Controls.Add(this.btnListAdmins);
-            this.pnlAdmins.Controls.Add(this.btnAddAdmin);
+            this.pnlAdmins.Controls.Add(this.btnEditAdmin);
             this.pnlAdmins.Controls.Add(this.picAdmins);
             this.pnlAdmins.Location = new System.Drawing.Point(260, 218);
             this.pnlAdmins.Name = "pnlAdmins";
@@ -355,33 +353,19 @@
             this.pnlAdmins.TabIndex = 4;
             this.pnlAdmins.Text = "المستخدمين";
             // 
-            // btnListAdmins
+            // btnEditAdmin
             // 
-            this.btnListAdmins.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnListAdmins.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListAdmins.Image = global::RBG.Properties.Resources.List;
-            this.btnListAdmins.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListAdmins.Location = new System.Drawing.Point(185, 79);
-            this.btnListAdmins.Name = "btnListAdmins";
-            this.btnListAdmins.Size = new System.Drawing.Size(200, 40);
-            this.btnListAdmins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnListAdmins.TabIndex = 7;
-            this.btnListAdmins.Text = "عرض الكل";
-            this.btnListAdmins.Click += new System.EventHandler(this.btnListAdmins_Click);
-            // 
-            // btnAddAdmin
-            // 
-            this.btnAddAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddAdmin.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddAdmin.Location = new System.Drawing.Point(185, 33);
-            this.btnAddAdmin.Name = "btnAddAdmin";
-            this.btnAddAdmin.Size = new System.Drawing.Size(200, 40);
-            this.btnAddAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddAdmin.TabIndex = 6;
-            this.btnAddAdmin.Text = "إضافة جديد";
-            this.btnAddAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
+            this.btnEditAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEditAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEditAdmin.Image = global::RBG.Properties.Resources.Edit;
+            this.btnEditAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnEditAdmin.Location = new System.Drawing.Point(185, 60);
+            this.btnEditAdmin.Name = "btnEditAdmin";
+            this.btnEditAdmin.Size = new System.Drawing.Size(200, 40);
+            this.btnEditAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEditAdmin.TabIndex = 6;
+            this.btnEditAdmin.Text = "تعديل المستخدم";
+            this.btnEditAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
             // 
             // picAdmins
             // 
@@ -497,8 +481,7 @@
         private DevComponents.DotNetBar.ButtonX btnAddClient;
         private System.Windows.Forms.PictureBox picClients;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlAdmins;
-        private DevComponents.DotNetBar.ButtonX btnListAdmins;
-        private DevComponents.DotNetBar.ButtonX btnAddAdmin;
+        private DevComponents.DotNetBar.ButtonX btnEditAdmin;
         private System.Windows.Forms.PictureBox picAdmins;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlDB;
         private System.Windows.Forms.PictureBox picDB;

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using RBG.BLL.Infrastructure;
+using RBG.DAL.Model;
 using RBG.Utility;
 
 namespace RBG.BLL
@@ -17,6 +18,16 @@ namespace RBG.BLL
             var hashedPassword = password.ToMd5Hash();
             return UnitOfWork.AdminRepository
                 .Get(admin => admin.Username == username && admin.Password == hashedPassword).Any();
+        }
+
+        public Admin GetCurrentAdmin()
+        {
+            return UnitOfWork.AdminRepository.GetAll().FirstOrDefault();
+        }
+
+        public void UpdateAdmin(Admin admin)
+        {
+            UnitOfWork.AdminRepository.Update(admin);
         }
 
         #endregion

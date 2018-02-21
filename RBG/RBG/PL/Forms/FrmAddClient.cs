@@ -2,7 +2,6 @@
 using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.Utility;
-using static RBG.Utility.Constants;
 
 namespace RBG.PL.Forms
 {
@@ -53,7 +52,7 @@ namespace RBG.PL.Forms
             if (txtName.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
-                ErrorProvider.SetError(txtName, ValidationMsg);
+                ErrorProvider.SetError(txtName, Resources.ThisFieldIsRequired);
             }
             if (!isFormValid)
             {

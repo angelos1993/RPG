@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.Utility;
-using static RBG.Utility.Constants;
 using static RBG.Utility.MessageBoxUtility;
 
 namespace RBG.PL.Forms
@@ -55,17 +54,17 @@ namespace RBG.PL.Forms
             if (txtCode.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
-                ErrorProvider.SetError(txtCode, ValidationMsg);
+                ErrorProvider.SetError(txtCode, Resources.ThisFieldIsRequired);
             }
             if (txtName.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
-                ErrorProvider.SetError(txtName, ValidationMsg);
+                ErrorProvider.SetError(txtName, Resources.ThisFieldIsRequired);
             }
             if (Math.Abs(dblInPrice.Value) <= 0)
             {
                 isFormValid = false;
-                ErrorProvider.SetError(dblInPrice, ValidationMsg);
+                ErrorProvider.SetError(dblInPrice, Resources.ThisFieldIsRequired);
             }
             if (!isFormValid)
             {

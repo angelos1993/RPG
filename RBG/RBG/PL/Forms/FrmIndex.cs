@@ -76,12 +76,7 @@ namespace RBG.PL.Forms
 
         private void btnAddAdmin_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnListAdmins_Click(object sender, EventArgs e)
-        {
-
+            new FrmEditAdmin().ShowDialog();
         }
 
         #endregion

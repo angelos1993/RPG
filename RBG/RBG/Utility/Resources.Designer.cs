@@ -79,7 +79,7 @@ namespace RBG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to كلمة المرور الجديدة وتأكيدها يجب أن يكونا متطابقان.
+        ///   Looks up a localized string similar to كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان.
         /// </summary>
         internal static string NewPasswordConfirmationNotMached {
             get {
@@ -93,6 +93,15 @@ namespace RBG.Utility {
         internal static string ThisFieldIsRequired {
             get {
                 return ResourceManager.GetString("ThisFieldIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم تعديل بيانات المستخدم بنجاح.
+        /// </summary>
+        internal static string UpdateAdminDataSuccessfully {
+            get {
+                return ResourceManager.GetString("UpdateAdminDataSuccessfully", resourceCulture);
             }
         }
     }
