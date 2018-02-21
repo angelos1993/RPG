@@ -158,6 +158,11 @@
     <Compile Include="Utility\DateTimeExtensions.cs" />
     <Compile Include="Utility\InputLanguageUtility.cs" />
     <Compile Include="Utility\MessageBoxUtility.cs" />
+    <Compile Include="Utility\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utility\StringExtensions.cs" />
     <Compile Include="Utility\Utility.cs" />
     <EmbeddedResource Include="PL\Forms\FrmAddClient.resx">
@@ -191,6 +196,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Utility\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EntityDeploy Include="DAL\Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
