@@ -34,7 +34,7 @@ namespace RBG.PL.Forms
 
         private void btnAddInvoice_Click(object sender, EventArgs e)
         {
-
+            new FrmAddInvoice().ShowDialog();
         }
 
         private void btnListInvoices_Click(object sender, EventArgs e)

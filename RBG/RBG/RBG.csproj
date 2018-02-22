@@ -116,6 +116,12 @@
     <Compile Include="PL\Forms\FrmAddClient.Designer.cs">
       <DependentUpon>FrmAddClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmAddInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmAddInvoice.Designer.cs">
+      <DependentUpon>FrmAddInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmAddMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     <Compile Include="Utility\Utility.cs" />
     <EmbeddedResource Include="PL\Forms\FrmAddClient.resx">
       <DependentUpon>FrmAddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmAddInvoice.resx">
+      <DependentUpon>FrmAddInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterial.resx">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
@@ -258,6 +267,7 @@
     <None Include="Resources\Invoice.png" />
     <None Include="Resources\Materials.png" />
     <None Include="Resources\List.png" />
+    <None Include="Resources\Insert.png" />
     <Content Include="Resources\Login.gif" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using RBG.BLL.Infrastructure;
 using RBG.DAL.Model;
 
@@ -40,6 +41,11 @@ namespace RBG.BLL
         public void DeleteClient(Client client)
         {
             UnitOfWork.ClientRepository.Delete(client);
+        }
+
+        public List<string> GetAllClientsNames()
+        {
+            return GetAllClients().Select(client => client.Name).ToList();
         }
 
         #endregion
