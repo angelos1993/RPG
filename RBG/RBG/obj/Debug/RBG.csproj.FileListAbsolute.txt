@@ -20,5 +20,4 @@ G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.Utility.Resources.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csproj.GenerateResource.Cache
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.exe
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.pdb
-G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csprojResolveAssemblyReference.cache
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddInvoice.resources

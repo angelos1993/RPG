@@ -25,6 +25,7 @@ namespace RBG.DAL.Model
         public System.DateTime Date { get; set; }
         public int ClientId { get; set; }
         public decimal Total { get; set; }
+        public decimal Paid { get; set; }
     
         public virtual Client Client { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

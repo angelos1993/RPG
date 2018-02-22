@@ -17,7 +17,8 @@ namespace RBG.DAL.Model
         public int Id { get; set; }
         public int InvoiceId { get; set; }
         public int MaterialId { get; set; }
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal Price { get; set; }
     
         public virtual Invoice Invoice { get; set; }
         public virtual Material Material { get; set; }

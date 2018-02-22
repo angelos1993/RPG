@@ -109,6 +109,7 @@
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
     <Compile Include="DAL\VMs\ClientVm.cs" />
+    <Compile Include="DAL\VMs\InvoiceItemVm.cs" />
     <Compile Include="DAL\VMs\MaterialVm.cs" />
     <Compile Include="PL\Forms\FrmAddClient.cs">
       <SubType>Form</SubType>
@@ -246,8 +247,8 @@
   <ItemGroup>
     <Content Include="DAL\Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DAL\Model\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
