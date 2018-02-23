@@ -177,6 +177,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utility\StringExtensions.cs" />
+    <Compile Include="Utility\TextBoxAutoCompleteUtility.cs" />
     <Compile Include="Utility\Utility.cs" />
     <EmbeddedResource Include="PL\Forms\FrmAddClient.resx">
       <DependentUpon>FrmAddClient.cs</DependentUpon>

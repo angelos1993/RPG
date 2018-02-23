@@ -61,6 +61,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to اختر.
+        /// </summary>
+        internal static string ComboBoxDefaultText {
+            get {
+                return ResourceManager.GetString("ComboBoxDefaultText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الرقم السري الحالي غير صحيح.
         /// </summary>
         internal static string CurrentPasswordInvalid {
@@ -79,11 +88,38 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إدخال الفاتورة بنجاح.
+        /// </summary>
+        internal static string InvoiceCreatedSuccessfully {
+            get {
+                return ResourceManager.GetString("InvoiceCreatedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان.
         /// </summary>
         internal static string NewPasswordConfirmationNotMached {
             get {
                 return ResourceManager.GetString("NewPasswordConfirmationNotMached", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لم يتم إدخال أي خامات بالفاتورة.
+        /// </summary>
+        internal static string NoItemsAdded {
+            get {
+                return ResourceManager.GetString("NoItemsAdded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يجب اختيار المادة / الخامة.
+        /// </summary>
+        internal static string ShouldSelectMaterial {
+            get {
+                return ResourceManager.GetString("ShouldSelectMaterial", resourceCulture);
             }
         }
         

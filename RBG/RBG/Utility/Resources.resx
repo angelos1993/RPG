@@ -117,14 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ComboBoxDefaultText" xml:space="preserve">
+    <value>اختر</value>
+  </data>
   <data name="CurrentPasswordInvalid" xml:space="preserve">
     <value>الرقم السري الحالي غير صحيح</value>
   </data>
   <data name="CurrentUsernameInvalid" xml:space="preserve">
     <value>اسم المستخدم الحالي غير صحيح</value>
   </data>
+  <data name="InvoiceCreatedSuccessfully" xml:space="preserve">
+    <value>تم إدخال الفاتورة بنجاح</value>
+  </data>
   <data name="NewPasswordConfirmationNotMached" xml:space="preserve">
     <value>كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان</value>
+  </data>
+  <data name="NoItemsAdded" xml:space="preserve">
+    <value>لم يتم إدخال أي خامات بالفاتورة</value>
+  </data>
+  <data name="ShouldSelectMaterial" xml:space="preserve">
+    <value>يجب اختيار المادة / الخامة</value>
   </data>
   <data name="ThisFieldIsRequired" xml:space="preserve">
     <value>يجب ملئ هذا الحقل</value>

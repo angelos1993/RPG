@@ -48,6 +48,11 @@ namespace RBG.BLL
             return GetAllClients().Select(client => client.Name).ToList();
         }
 
+        public int GetClientIdByName(string clientName)
+        {
+            return UnitOfWork.ClientRepository.Get(client => client.Name == clientName).FirstOrDefault()?.Id ?? 0;
+        }
+
         #endregion
     }
 }

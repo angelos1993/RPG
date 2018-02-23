@@ -4,7 +4,7 @@ namespace RBG.DAL.VMs
 {
     public class InvoiceItemVm
     {
-        //public int MaterialId { get; set; }
+        public int MaterialId { get; set; }
         [DisplayName("المادة / الخامة")]
         public string MaterialName { get; set; }
         [DisplayName("الكمية")]
