@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88fa8626489644f88b4b0109d4aeee64" Name="Diagram1">
+      <Diagram DiagramId="9d5012b2e878477e906e85572d16e925" Name="Diagram1">
         <EntityTypeShape EntityType="RBGModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.Client" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.InvoiceItem" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.InvoicePayment" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.Invoice" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="RBGModel.Material" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RBGModel.Material" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.sysdiagram" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="RBGModel.FK_Invoices_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="RBGModel.FK_InvoiceItems_Invoices" ManuallyRouted="false" />

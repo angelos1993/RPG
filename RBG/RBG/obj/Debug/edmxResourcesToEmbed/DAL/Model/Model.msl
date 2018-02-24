@@ -59,6 +59,8 @@
           <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
