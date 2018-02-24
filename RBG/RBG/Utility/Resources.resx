@@ -129,6 +129,15 @@
   <data name="InvoiceCreatedSuccessfully" xml:space="preserve">
     <value>تم إدخال الفاتورة بنجاح</value>
   </data>
+  <data name="MaterialCodeAlreadyUsed" xml:space="preserve">
+    <value>الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟</value>
+  </data>
+  <data name="MaterialCodeAndNameAlreadyUsed" xml:space="preserve">
+    <value>الكود والاسم مستخدمان من قبل. هل تريد الاستمرار ؟</value>
+  </data>
+  <data name="MaterialNameAlreadyUsed" xml:space="preserve">
+    <value>الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟</value>
+  </data>
   <data name="NewPasswordConfirmationNotMached" xml:space="preserve">
     <value>كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان</value>
   </data>

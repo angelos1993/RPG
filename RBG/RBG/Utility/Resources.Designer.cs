@@ -97,6 +97,33 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟.
+        /// </summary>
+        internal static string MaterialCodeAlreadyUsed {
+            get {
+                return ResourceManager.GetString("MaterialCodeAlreadyUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الكود والاسم مستخدمان من قبل. هل تريد الاستمرار ؟.
+        /// </summary>
+        internal static string MaterialCodeAndNameAlreadyUsed {
+            get {
+                return ResourceManager.GetString("MaterialCodeAndNameAlreadyUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟.
+        /// </summary>
+        internal static string MaterialNameAlreadyUsed {
+            get {
+                return ResourceManager.GetString("MaterialNameAlreadyUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان.
         /// </summary>
         internal static string NewPasswordConfirmationNotMached {

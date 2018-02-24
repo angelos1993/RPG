@@ -80,40 +80,30 @@ namespace RBG.PL.Forms
                 : txtName.Text.FullTrim() != Material.Name &&
                   MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim());
             if (isMaterialNameExists && isMaterialCodeExists)
-            {
-                ShowErrorMsg("الكود والاسم مستخدمان من قبل");
-                txtCode.Focus();
-            }
+                isFormValid = ShowConfirmationDialog(Resources.MaterialCodeAndNameAlreadyUsed) == DialogResult.Yes;
             else if (isMaterialNameExists)
-            {
-                ShowErrorMsg("الاسم الذي أدخلتة مستخدم من قبل");
-                txtName.Focus();
-            }
+                isFormValid = ShowConfirmationDialog(Resources.MaterialNameAlreadyUsed) == DialogResult.Yes;
             else if (isMaterialCodeExists)
+                isFormValid = ShowConfirmationDialog(Resources.MaterialCodeAlreadyUsed) == DialogResult.Yes;
+            if (!isFormValid)
+                return;
+            if (!IsEditMode)
             {
-                ShowErrorMsg("الكود الذي أدخلتة مستخدم من قبل");
-                txtCode.Focus();
+                MaterialManager.AddMaterial(new Material
+                {
+                    Code = txtCode.Text.FullTrim(),
+                    Name = txtName.Text.FullTrim(),
+                    Price = (decimal) dblInPrice.Value
+                });
             }
             else
             {
-                if (!IsEditMode)
-                {
-                    MaterialManager.AddMaterial(new Material
-                    {
-                        Code = txtCode.Text.FullTrim(),
-                        Name = txtName.Text.FullTrim(),
-                        Price = (decimal) dblInPrice.Value
-                    });
-                }
-                else
-                {
-                    Material.Code = txtCode.Text.FullTrim();
-                    Material.Name = txtName.Text.FullTrim();
-                    Material.Price = (decimal) dblInPrice.Value;
-                    MaterialManager.UpdateMaterial(Material);
-                }
-                Close();
+                Material.Code = txtCode.Text.FullTrim();
+                Material.Name = txtName.Text.FullTrim();
+                Material.Price = (decimal) dblInPrice.Value;
+                MaterialManager.UpdateMaterial(Material);
             }
+            Close();
         }
 
         private void SetFormForEditMode(int materialId)
