@@ -39,7 +39,7 @@ namespace RBG.PL.Forms
 
         private void btnListInvoices_Click(object sender, EventArgs e)
         {
-
+            new FrmInvoices().ShowDialog();
         }
 
         #endregion

@@ -147,6 +147,12 @@
     <Compile Include="PL\Forms\FrmIndex.Designer.cs">
       <DependentUpon>FrmIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmInvoices.Designer.cs">
+      <DependentUpon>FrmInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmIndex.resx">
       <DependentUpon>FrmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmInvoices.resx">
+      <DependentUpon>FrmInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
