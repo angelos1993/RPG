@@ -36,8 +36,11 @@
             this.dblInPrice = new DevComponents.Editors.DoubleInput();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.dblInQuantity = new DevComponents.Editors.DoubleInput();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCode
@@ -132,11 +135,11 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(43, 108);
+            this.btnClose.Location = new System.Drawing.Point(43, 141);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 4;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -146,13 +149,44 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Image = global::RBG.Properties.Resources.Save;
             this.btnSave.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnSave.Location = new System.Drawing.Point(179, 108);
+            this.btnSave.Location = new System.Drawing.Point(179, 141);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dblInQuantity
+            // 
+            // 
+            // 
+            // 
+            this.dblInQuantity.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInQuantity.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInQuantity.Increment = 0.1D;
+            this.dblInQuantity.Location = new System.Drawing.Point(118, 108);
+            this.dblInQuantity.MinValue = 0D;
+            this.dblInQuantity.Name = "dblInQuantity";
+            this.dblInQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dblInQuantity.ShowUpDown = true;
+            this.dblInQuantity.Size = new System.Drawing.Size(158, 26);
+            this.dblInQuantity.TabIndex = 3;
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.Class = "";
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(282, 108);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX4.Size = new System.Drawing.Size(59, 23);
+            this.labelX4.TabIndex = 8;
+            this.labelX4.Text = "الكمية";
             // 
             // FrmAddMaterial
             // 
@@ -160,7 +194,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(353, 155);
+            this.ClientSize = new System.Drawing.Size(353, 193);
+            this.Controls.Add(this.dblInQuantity);
+            this.Controls.Add(this.labelX4);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dblInPrice);
@@ -174,6 +210,7 @@
             this.Text = "إضافة مادة / خامة";
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +225,7 @@
         private DevComponents.Editors.DoubleInput dblInPrice;
         private DevComponents.DotNetBar.ButtonX btnSave;
         private DevComponents.DotNetBar.ButtonX btnClose;
+        private DevComponents.Editors.DoubleInput dblInQuantity;
+        private DevComponents.DotNetBar.LabelX labelX4;
     }
 }

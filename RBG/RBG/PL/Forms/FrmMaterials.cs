@@ -101,7 +101,9 @@ namespace RBG.PL.Forms
                 Id = material.Id,
                 Code = material.Code,
                 Name = material.Name,
-                Price = material.Price
+                Price = material.Price,
+                Quantity = material.Quantity,
+                IsArchived = material.IsArchived
             }).ToList();
         }
 
@@ -115,7 +117,9 @@ namespace RBG.PL.Forms
                     Id = material.Id,
                     Code = material.Code,
                     Name = material.Name,
-                    Price = material.Price
+                    Price = material.Price,
+                    Quantity = material.Quantity,
+                    IsArchived = material.IsArchived
                 }).ToList();
             SortMaterials();
         }

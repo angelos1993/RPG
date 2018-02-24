@@ -14,5 +14,11 @@ namespace RBG.DAL.VMs
 
         [DisplayName("السعر")]
         public decimal Price { get; set; }
+
+        [DisplayName("الكمية المتوفرة")]
+        public decimal Quantity { get; set; }
+
+        [DisplayName("منتهي / محذوف")]
+        public bool IsArchived { get; set; }
     }
 }

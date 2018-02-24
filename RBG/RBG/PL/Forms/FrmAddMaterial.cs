@@ -93,7 +93,9 @@ namespace RBG.PL.Forms
                 {
                     Code = txtCode.Text.FullTrim(),
                     Name = txtName.Text.FullTrim(),
-                    Price = (decimal) dblInPrice.Value
+                    Price = (decimal) dblInPrice.Value,
+                    Quantity = (decimal) dblInQuantity.Value,
+                    IsArchived = false
                 });
             }
             else
@@ -101,6 +103,7 @@ namespace RBG.PL.Forms
                 Material.Code = txtCode.Text.FullTrim();
                 Material.Name = txtName.Text.FullTrim();
                 Material.Price = (decimal) dblInPrice.Value;
+                Material.Quantity = (decimal) dblInQuantity.Value;
                 MaterialManager.UpdateMaterial(Material);
             }
             Close();
