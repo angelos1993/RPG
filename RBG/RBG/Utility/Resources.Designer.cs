@@ -61,6 +61,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات.
+        /// </summary>
+        internal static string ClientNotExists {
+            get {
+                return ResourceManager.GetString("ClientNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to اختر.
         /// </summary>
         internal static string ComboBoxDefaultText {
@@ -93,6 +102,24 @@ namespace RBG.Utility {
         internal static string InvoiceCreatedSuccessfully {
             get {
                 return ResourceManager.GetString("InvoiceCreatedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to قم بإدخال المواد / الخامات أولاً.
+        /// </summary>
+        internal static string InvoiceWithoutItems {
+            get {
+                return ResourceManager.GetString("InvoiceWithoutItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الكمية المتاحة {0}.
+        /// </summary>
+        internal static string MaterialAvailableQuantity {
+            get {
+                return ResourceManager.GetString("MaterialAvailableQuantity", resourceCulture);
             }
         }
         

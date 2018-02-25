@@ -43,6 +43,7 @@
             this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.pnlMaterial = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.lblMaterialAvailableQuantity = new DevComponents.DotNetBar.LabelX();
             this.cmbMaterials = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.btnInsertItem = new DevComponents.DotNetBar.ButtonX();
@@ -230,7 +231,7 @@
             this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddClient.Image = global::RBG.Properties.Resources.Add;
             this.btnAddClient.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddClient.Location = new System.Drawing.Point(249, 13);
+            this.btnAddClient.Location = new System.Drawing.Point(246, 13);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(25, 25);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -334,6 +335,7 @@
             // 
             this.pnlMaterial.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlMaterial.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlMaterial.Controls.Add(this.lblMaterialAvailableQuantity);
             this.pnlMaterial.Controls.Add(this.cmbMaterials);
             this.pnlMaterial.Controls.Add(this.btnAddMaterial);
             this.pnlMaterial.Controls.Add(this.btnInsertItem);
@@ -376,6 +378,22 @@
             this.pnlMaterial.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlMaterial.TabIndex = 20;
             // 
+            // lblMaterialAvailableQuantity
+            // 
+            this.lblMaterialAvailableQuantity.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lblMaterialAvailableQuantity.BackgroundStyle.Class = "";
+            this.lblMaterialAvailableQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblMaterialAvailableQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblMaterialAvailableQuantity.ForeColor = System.Drawing.Color.Black;
+            this.lblMaterialAvailableQuantity.Location = new System.Drawing.Point(207, 14);
+            this.lblMaterialAvailableQuantity.Name = "lblMaterialAvailableQuantity";
+            this.lblMaterialAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMaterialAvailableQuantity.Size = new System.Drawing.Size(115, 23);
+            this.lblMaterialAvailableQuantity.TabIndex = 25;
+            // 
             // cmbMaterials
             // 
             this.cmbMaterials.DisplayMember = "Text";
@@ -383,11 +401,12 @@
             this.cmbMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterials.FormattingEnabled = true;
             this.cmbMaterials.ItemHeight = 20;
-            this.cmbMaterials.Location = new System.Drawing.Point(298, 12);
+            this.cmbMaterials.Location = new System.Drawing.Point(380, 12);
             this.cmbMaterials.Name = "cmbMaterials";
-            this.cmbMaterials.Size = new System.Drawing.Size(271, 26);
+            this.cmbMaterials.Size = new System.Drawing.Size(189, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbMaterials.TabIndex = 24;
+            this.cmbMaterials.SelectedIndexChanged += new System.EventHandler(this.cmbMaterials_SelectedIndexChanged);
             // 
             // btnAddMaterial
             // 
@@ -395,7 +414,7 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Location = new System.Drawing.Point(249, 13);
+            this.btnAddMaterial.Location = new System.Drawing.Point(328, 13);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(25, 25);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -408,7 +427,7 @@
             this.btnInsertItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnInsertItem.Image = global::RBG.Properties.Resources.Insert;
             this.btnInsertItem.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnInsertItem.Location = new System.Drawing.Point(24, 13);
+            this.btnInsertItem.Location = new System.Drawing.Point(3, 12);
             this.btnInsertItem.Name = "btnInsertItem";
             this.btnInsertItem.Size = new System.Drawing.Size(25, 25);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -424,11 +443,11 @@
             this.dblInQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dblInQuantity.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dblInQuantity.Increment = 0.1D;
-            this.dblInQuantity.Location = new System.Drawing.Point(67, 12);
+            this.dblInQuantity.Location = new System.Drawing.Point(44, 13);
             this.dblInQuantity.MinValue = 0D;
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
-            this.dblInQuantity.Size = new System.Drawing.Size(97, 26);
+            this.dblInQuantity.Size = new System.Drawing.Size(87, 26);
             this.dblInQuantity.TabIndex = 21;
             // 
             // labelX6
@@ -439,7 +458,7 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(176, 12);
+            this.labelX6.Location = new System.Drawing.Point(137, 15);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX6.Size = new System.Drawing.Size(64, 23);
@@ -563,5 +582,6 @@
         private DevComponents.DotNetBar.ButtonX btnAddMaterial;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMaterials;
         private DevComponents.DotNetBar.ButtonX btnDeleteItem;
+        private DevComponents.DotNetBar.LabelX lblMaterialAvailableQuantity;
     }
 }

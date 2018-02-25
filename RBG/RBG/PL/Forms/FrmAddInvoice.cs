@@ -64,6 +64,13 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void cmbMaterials_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            SetAvailableQuantity();
+            Cursor = Cursors.Default;
+        }
+
         private void btnAddMaterial_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -71,7 +78,7 @@ namespace RBG.PL.Forms
             FillMaterials();
             Cursor = Cursors.Default;
         }
-
+        
         private void btnInsertItem_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -174,6 +181,7 @@ namespace RBG.PL.Forms
             SetTotalPrice();
             cmbMaterials.SelectedIndex = 0;
             dblInQuantity.Value = 0;
+            lblMaterialAvailableQuantity.Text = string.Empty;
         }
 
         private decimal GetMaterialPrice(int materialId)
@@ -207,10 +215,11 @@ namespace RBG.PL.Forms
                 ErrorProvider.SetError(txtClientName, Resources.ThisFieldIsRequired);
             }
             else if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
+                isFormValid = ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
+            if (!InvoiceItemVms.Any())
             {
-                //if client name does not exist in DB
-                //what should I do ??
-                //add the client as a new one or stop the process ??
+                isFormValid = false;
+                ShowErrorMsg(Resources.InvoiceWithoutItems);
             }
             if (!isFormValid)
                 return;
@@ -247,6 +256,19 @@ namespace RBG.PL.Forms
         private void SetTotalPrice()
         {
             dblInTotal.Value = (double) InvoiceItemVms.Select(item => item.TotalPrice).Sum();
+        }
+
+        private void SetAvailableQuantity()
+        {
+            if (cmbMaterials.SelectedIndex == 0)
+                return;
+            var selectedMaterial =
+                Materials.FirstOrDefault(material => material.Id == int.Parse(cmbMaterials.SelectedValue.ToString()));
+            if (selectedMaterial == null)
+                return;
+            lblMaterialAvailableQuantity.Text =
+                string.Format(Resources.MaterialAvailableQuantity, selectedMaterial.Quantity);
+            dblInQuantity.MaxValue = (double) selectedMaterial.Quantity;
         }
 
         #endregion
