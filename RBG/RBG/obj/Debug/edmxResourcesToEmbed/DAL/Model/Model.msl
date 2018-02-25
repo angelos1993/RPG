@@ -49,6 +49,7 @@
           <ScalarProperty Name="ClientId" ColumnName="ClientId" />
           <ScalarProperty Name="Total" ColumnName="Total" />
           <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

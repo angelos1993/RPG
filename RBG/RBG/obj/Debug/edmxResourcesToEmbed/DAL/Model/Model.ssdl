@@ -45,6 +45,7 @@
     <Property Name="ClientId" Type="int" Nullable="false" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="Materials">
     <Key>

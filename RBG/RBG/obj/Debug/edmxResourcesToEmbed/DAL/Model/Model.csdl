@@ -49,6 +49,7 @@
     <Property Name="ClientId" Type="Int32" Nullable="false" />
     <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <NavigationProperty Name="Client" Relationship="Self.FK_Invoices_Clients" FromRole="Invoices" ToRole="Clients" />
     <NavigationProperty Name="InvoiceItems" Relationship="Self.FK_InvoiceItems_Invoices" FromRole="Invoices" ToRole="InvoiceItems" />
     <NavigationProperty Name="InvoicePayments" Relationship="Self.FK_InvoicePayments_Invoices" FromRole="Invoices" ToRole="InvoicePayments" />
