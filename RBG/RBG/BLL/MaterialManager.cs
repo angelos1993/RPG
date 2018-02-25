@@ -32,14 +32,9 @@ namespace RBG.BLL
             return UnitOfWork.MaterialRepository.GetAll();
         }
 
-        public void DeleteMaterial(Material material)
+        public IQueryable<Material> GetAllUnArchivedMaterials()
         {
-            UnitOfWork.MaterialRepository.Delete(material);
-        }
-
-        public void DeleteMaterial(int materialId)
-        {
-            DeleteMaterial(GetMaterialById(materialId));
+            return GetAllMaterials().Where(material => !material.IsArchived);
         }
 
         public void UpdateMaterial(Material material)

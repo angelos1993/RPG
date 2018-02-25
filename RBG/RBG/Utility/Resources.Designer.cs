@@ -124,6 +124,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إضافة الكمية بنجاح.
+        /// </summary>
+        internal static string MaterialQuantityAddedSeccessfully {
+            get {
+                return ResourceManager.GetString("MaterialQuantityAddedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to كلمة المرور الجديدة وتأكيدها يجب أن تكونا متطابقتان.
         /// </summary>
         internal static string NewPasswordConfirmationNotMached {

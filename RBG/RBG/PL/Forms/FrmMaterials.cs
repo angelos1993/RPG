@@ -6,7 +6,6 @@ using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.DAL.VMs;
 using RBG.Utility;
-using static RBG.Utility.MessageBoxUtility;
 
 namespace RBG.PL.Forms
 {
@@ -68,12 +67,10 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnArchive_Click(object sender, EventArgs e)
         {
-            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟") != DialogResult.Yes)
-                return;
             Cursor = Cursors.WaitCursor;
-            DeleteMaterial();
+            ArchiveMaterial();
             Cursor = Cursors.Default;
         }
 
@@ -147,9 +144,12 @@ namespace RBG.PL.Forms
             ResetForm();
         }
 
-        private void DeleteMaterial()
+        private void ArchiveMaterial()
         {
-            MaterialManager.DeleteMaterial(int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString()));
+            var material =
+                MaterialManager.GetMaterialById(int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString()));
+            material.IsArchived = true;
+            MaterialManager.UpdateMaterial(material);
             ResetForm();
         }
 

@@ -134,7 +134,7 @@ namespace RBG.PL.Forms
 
         private void FillMaterials()
         {
-            Materials = MaterialManager.GetAllMaterials().ToList();
+            Materials = MaterialManager.GetAllUnArchivedMaterials().ToList();
             var materialsList = Materials.Select(material => new KeyValuePair<int, string>(material.Id, material.Name))
                 .OrderBy(keyValuePair => keyValuePair.Value).ToList();
             materialsList.Insert(0, new KeyValuePair<int, string>(0, Resources.ComboBoxDefaultText));

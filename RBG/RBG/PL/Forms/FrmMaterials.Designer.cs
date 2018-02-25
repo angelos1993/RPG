@@ -34,12 +34,13 @@
             this.radName = new System.Windows.Forms.RadioButton();
             this.radCode = new System.Windows.Forms.RadioButton();
             this.radPrice = new System.Windows.Forms.RadioButton();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.grpSearch = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.grpSearch = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnArchive = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterials)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -120,62 +121,6 @@
             this.radPrice.Text = "السعر";
             this.radPrice.UseVisualStyleBackColor = false;
             this.radPrice.CheckedChanged += new System.EventHandler(this.radSort_CheckedChanged);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnEdit.Image = global::RBG.Properties.Resources.Edit;
-            this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(475, 406);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(130, 40);
-            this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnEdit.TabIndex = 19;
-            this.btnEdit.Text = "تعديل";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnAddMaterial
-            // 
-            this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Location = new System.Drawing.Point(12, 39);
-            this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(203, 26);
-            this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterial.TabIndex = 1;
-            this.btnAddMaterial.Text = "إضافة مادة / خامة جديدة";
-            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnClose.Image = global::RBG.Properties.Resources.Exit;
-            this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(203, 406);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(130, 40);
-            this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "خروج";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Image = global::RBG.Properties.Resources.Delete;
-            this.btnDelete.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(339, 406);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(130, 40);
-            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // groupPanel1
             // 
@@ -263,17 +208,87 @@
             this.grpSearch.TabIndex = 22;
             this.grpSearch.Text = "بحث";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEdit.Image = global::RBG.Properties.Resources.Edit;
+            this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnEdit.Location = new System.Drawing.Point(475, 406);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(130, 40);
+            this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEdit.TabIndex = 19;
+            this.btnEdit.Text = "تعديل";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAddMaterial
+            // 
+            this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnAddMaterial.Location = new System.Drawing.Point(12, 17);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Size = new System.Drawing.Size(203, 26);
+            this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterial.TabIndex = 1;
+            this.btnAddMaterial.Text = "إضافة مادة / خامة جديدة";
+            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClose.Image = global::RBG.Properties.Resources.Exit;
+            this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(203, 406);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(130, 40);
+            this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "خروج";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnArchive
+            // 
+            this.btnArchive.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnArchive.Image = global::RBG.Properties.Resources.Archive;
+            this.btnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnArchive.Location = new System.Drawing.Point(339, 406);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Size = new System.Drawing.Size(130, 40);
+            this.btnArchive.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnArchive.TabIndex = 5;
+            this.btnArchive.Text = "أرشفة";
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::RBG.Properties.Resources.IncreaseQuantity;
+            this.buttonX1.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.buttonX1.Location = new System.Drawing.Point(12, 49);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(203, 26);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 23;
+            this.buttonX1.Text = "إضافة كمية لـ مادة / خامة";
+            // 
             // FrmMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 458);
+            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAddMaterial);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.dgvMaterials);
             this.DoubleBuffered = true;
             this.Name = "FrmMaterials";
@@ -292,7 +307,7 @@
 
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvMaterials;
         private DevComponents.DotNetBar.ButtonX btnClose;
-        private DevComponents.DotNetBar.ButtonX btnDelete;
+        private DevComponents.DotNetBar.ButtonX btnArchive;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearch;
         private DevComponents.DotNetBar.ButtonX btnAddMaterial;
         private System.Windows.Forms.RadioButton radName;
@@ -301,5 +316,6 @@
         private DevComponents.DotNetBar.ButtonX btnEdit;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel grpSearch;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

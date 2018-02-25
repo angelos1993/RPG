@@ -33,6 +33,7 @@
             this.btnAddInvoice = new DevComponents.DotNetBar.ButtonX();
             this.picInvoices = new System.Windows.Forms.PictureBox();
             this.pnlMaterials = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             this.btnListMaterials = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.picMaterials = new System.Windows.Forms.PictureBox();
@@ -146,6 +147,7 @@
             this.pnlMaterials.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMaterials.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlMaterials.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlMaterials.Controls.Add(this.btnAddMaterialQuantity);
             this.pnlMaterials.Controls.Add(this.btnListMaterials);
             this.pnlMaterials.Controls.Add(this.btnAddMaterial);
             this.pnlMaterials.Controls.Add(this.picMaterials);
@@ -186,13 +188,27 @@
             this.pnlMaterials.TabIndex = 2;
             this.pnlMaterials.Text = "الخامات / المواد";
             // 
+            // btnAddMaterialQuantity
+            // 
+            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterialQuantity.Image = global::RBG.Properties.Resources.IncreaseQuantity;
+            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(185, 66);
+            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
+            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(200, 40);
+            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterialQuantity.TabIndex = 8;
+            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
+            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
+            // 
             // btnListMaterials
             // 
             this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListMaterials.Image = global::RBG.Properties.Resources.List;
             this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListMaterials.Location = new System.Drawing.Point(185, 83);
+            this.btnListMaterials.Location = new System.Drawing.Point(185, 112);
             this.btnListMaterials.Name = "btnListMaterials";
             this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
             this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -206,12 +222,12 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterial.Location = new System.Drawing.Point(185, 37);
+            this.btnAddMaterial.Location = new System.Drawing.Point(185, 20);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddMaterial.TabIndex = 6;
-            this.btnAddMaterial.Text = "إضافة جديد";
+            this.btnAddMaterial.Text = "إضافة مادة جديد";
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
             // picMaterials
@@ -485,5 +501,6 @@
         private System.Windows.Forms.PictureBox picAdmins;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlDB;
         private System.Windows.Forms.PictureBox picDB;
+        private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
     }
 }

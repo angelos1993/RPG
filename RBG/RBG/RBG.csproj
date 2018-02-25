@@ -129,6 +129,12 @@
     <Compile Include="PL\Forms\FrmAddMaterial.Designer.cs">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmAddMaterialQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmAddMaterialQuantity.Designer.cs">
+      <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmClients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterial.resx">
       <DependentUpon>FrmAddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmAddMaterialQuantity.resx">
+      <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmClients.resx">
       <DependentUpon>FrmClients.cs</DependentUpon>
@@ -267,6 +276,7 @@
     </Content>
     <Content Include="Resources\Add.png" />
     <None Include="Resources\Admin.png" />
+    <None Include="Resources\Archive.png" />
     <Content Include="Resources\Backup.png" />
     <Content Include="Resources\Clear.ico" />
     <None Include="Resources\Clients.png" />
@@ -279,6 +289,7 @@
     <None Include="Resources\Materials.png" />
     <None Include="Resources\List.png" />
     <None Include="Resources\Insert.png" />
+    <None Include="Resources\IncreaseQuantity.png" />
     <Content Include="Resources\Login.gif" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
