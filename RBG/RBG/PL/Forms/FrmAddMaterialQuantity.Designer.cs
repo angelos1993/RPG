@@ -45,9 +45,9 @@
             this.cmbMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterials.FormattingEnabled = true;
             this.cmbMaterials.ItemHeight = 20;
-            this.cmbMaterials.Location = new System.Drawing.Point(12, 12);
+            this.cmbMaterials.Location = new System.Drawing.Point(27, 12);
             this.cmbMaterials.Name = "cmbMaterials";
-            this.cmbMaterials.Size = new System.Drawing.Size(260, 26);
+            this.cmbMaterials.Size = new System.Drawing.Size(245, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbMaterials.TabIndex = 26;
             // 
@@ -128,8 +128,10 @@
             // 
             // FrmAddMaterialQuantity
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(376, 123);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);

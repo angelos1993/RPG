@@ -40,7 +40,7 @@
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnArchive = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterials)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -264,25 +264,26 @@
             this.btnArchive.Text = "أرشفة";
             this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
             // 
-            // buttonX1
+            // btnAddMaterialQuantity
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = global::RBG.Properties.Resources.IncreaseQuantity;
-            this.buttonX1.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.buttonX1.Location = new System.Drawing.Point(12, 49);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(203, 26);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 23;
-            this.buttonX1.Text = "إضافة كمية لـ مادة / خامة";
+            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterialQuantity.Image = global::RBG.Properties.Resources.IncreaseQuantity;
+            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(12, 49);
+            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
+            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(203, 26);
+            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterialQuantity.TabIndex = 23;
+            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
+            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
             // 
             // FrmMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 458);
-            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.btnAddMaterialQuantity);
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.btnEdit);
@@ -316,6 +317,6 @@
         private DevComponents.DotNetBar.ButtonX btnEdit;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel grpSearch;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
     }
 }

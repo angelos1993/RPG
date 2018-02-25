@@ -66,6 +66,20 @@ namespace RBG.PL.Forms
 
         private void Save()
         {
+            ErrorProvider.Clear();
+            var isFormValid = true;
+            if (cmbMaterials.SelectedIndex == 0)
+            {
+                isFormValid = false;
+                ErrorProvider.SetError(cmbMaterials, Resources.ShouldSelectMaterial);
+            }
+            if (Math.Abs(dblInQuantity.Value) <= 0)
+            {
+                isFormValid = false;
+                ErrorProvider.SetError(dblInQuantity, Resources.ThisFieldIsRequired);
+            }
+            if (!isFormValid)
+                return;
             var selectedMaterial = Materials
                 .FirstOrDefault(material => material.Id == int.Parse(cmbMaterials.SelectedValue.ToString()));
             if (selectedMaterial != null)

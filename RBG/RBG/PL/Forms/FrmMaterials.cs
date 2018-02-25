@@ -53,6 +53,14 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void btnAddMaterialQuantity_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            new FrmAddMaterialQuantity().ShowDialog();
+            ResetForm();
+            Cursor = Cursors.Default;
+        }
+
         private void radSort_CheckedChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
