@@ -89,17 +89,25 @@ namespace RBG.PL.Forms
         private void dblInTotal_ValueChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            dblInPaid.Enabled = dblInTotal.Value > 0;
+            dblInPaid.Enabled = dblInDiscount.Enabled = dblInTotal.Value > 0;
             dblInPaid.Value = dblInPaid.Value > dblInTotal.Value ? dblInTotal.Value : dblInPaid.Value;
+            dblInDiscount.MaxValue = dblInTotal.Value;
             dblInPaid.MaxValue = dblInTotal.Value;
-            dblInRemaining.Value = dblInTotal.Value - dblInPaid.Value;
+            SetRemainingValue();
             Cursor = Cursors.Default;
         }
 
         private void dblInPaid_ValueChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            dblInRemaining.Value = dblInTotal.Value - dblInPaid.Value;
+            SetRemainingValue();
+            Cursor = Cursors.Default;
+        }
+
+        private void dblInDiscount_ValueChanged(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            SetRemainingValue();
             Cursor = Cursors.Default;
         }
 
@@ -233,7 +241,8 @@ namespace RBG.PL.Forms
                 ClientId = ClientManager.GetClientIdByName(txtClientName.Text.FullTrim()),
                 Date = dtInvoiceDate.Value,
                 Total = (decimal) dblInTotal.Value,
-                Paid = (decimal) dblInPaid.Value
+                Paid = (decimal) dblInPaid.Value,
+                Discount = (decimal) dblInDiscount.Value
             };
             InvoiceManager.AddInvoice(invoice);
             InvoiceItemManager.AddInvoiceItems(InvoiceItemVms.Select(item => new InvoiceItem
@@ -249,6 +258,7 @@ namespace RBG.PL.Forms
                 Date = dtInvoiceDate.Value,
                 Paid = (decimal) dblInPaid.Value
             });
+            MaterialManager.UpdateQuantitiesAfterCreatingInvoice(InvoiceItemVms);
             ShowInfoMsg(Resources.InvoiceCreatedSuccessfully);
             Close();
         }
@@ -269,6 +279,11 @@ namespace RBG.PL.Forms
             lblMaterialAvailableQuantity.Text =
                 string.Format(Resources.MaterialAvailableQuantity, selectedMaterial.Quantity);
             dblInQuantity.MaxValue = (double) selectedMaterial.Quantity;
+        }
+
+        private void SetRemainingValue()
+        {
+            dblInRemaining.Value = dblInTotal.Value - dblInDiscount.Value - dblInPaid.Value;
         }
 
         #endregion

@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using RBG.BLL.Infrastructure;
 using RBG.DAL.Model;
+using RBG.DAL.VMs;
 
 namespace RBG.BLL
 {
@@ -45,6 +47,16 @@ namespace RBG.BLL
         public Material GetMaterialById(int materialId)
         {
             return UnitOfWork.MaterialRepository.GetById(materialId);
+        }
+
+        public void UpdateQuantitiesAfterCreatingInvoice(List<InvoiceItemVm> invoiceItemVms)
+        {
+            foreach (var invoiceItemVm in invoiceItemVms)
+            {
+                var material = GetMaterialById(invoiceItemVm.MaterialId);
+                material.Quantity -= invoiceItemVm.Quantity;
+                UpdateMaterial(material);
+            }
         }
 
         #endregion

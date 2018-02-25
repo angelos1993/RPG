@@ -53,6 +53,8 @@
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.btnDeleteItem = new DevComponents.DotNetBar.ButtonX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.dblInDiscount = new DevComponents.Editors.DoubleInput();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).BeginInit();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate)).BeginInit();
             this.pnlMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dblInQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvInvoiceItems
@@ -92,7 +95,7 @@
             // 
             this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(590, 463);
+            this.labelX3.Location = new System.Drawing.Point(590, 460);
             this.labelX3.Name = "labelX3";
             this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX3.Size = new System.Drawing.Size(97, 23);
@@ -109,7 +112,7 @@
             this.dblInTotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dblInTotal.Enabled = false;
             this.dblInTotal.Increment = 0.1D;
-            this.dblInTotal.Location = new System.Drawing.Point(445, 460);
+            this.dblInTotal.Location = new System.Drawing.Point(434, 460);
             this.dblInTotal.MinValue = 0D;
             this.dblInTotal.Name = "dblInTotal";
             this.dblInTotal.ShowUpDown = true;
@@ -127,7 +130,7 @@
             this.dblInPaid.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dblInPaid.Enabled = false;
             this.dblInPaid.Increment = 0.1D;
-            this.dblInPaid.Location = new System.Drawing.Point(218, 460);
+            this.dblInPaid.Location = new System.Drawing.Point(434, 495);
             this.dblInPaid.MinValue = 0D;
             this.dblInPaid.Name = "dblInPaid";
             this.dblInPaid.ShowUpDown = true;
@@ -142,7 +145,7 @@
             // 
             this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(374, 460);
+            this.labelX4.Location = new System.Drawing.Point(633, 498);
             this.labelX4.Name = "labelX4";
             this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX4.Size = new System.Drawing.Size(54, 23);
@@ -173,7 +176,7 @@
             // 
             this.labelX5.BackgroundStyle.Class = "";
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(168, 460);
+            this.labelX5.Location = new System.Drawing.Point(172, 460);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX5.Size = new System.Drawing.Size(44, 23);
@@ -487,7 +490,7 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(123, 497);
+            this.btnClose.Location = new System.Drawing.Point(123, 530);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -501,7 +504,7 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Image = global::RBG.Properties.Resources.Save;
             this.btnSave.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnSave.Location = new System.Drawing.Point(259, 497);
+            this.btnSave.Location = new System.Drawing.Point(259, 530);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -516,7 +519,7 @@
             this.btnDeleteItem.Enabled = false;
             this.btnDeleteItem.Image = global::RBG.Properties.Resources.Delete;
             this.btnDeleteItem.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnDeleteItem.Location = new System.Drawing.Point(395, 497);
+            this.btnDeleteItem.Location = new System.Drawing.Point(395, 530);
             this.btnDeleteItem.Name = "btnDeleteItem";
             this.btnDeleteItem.Size = new System.Drawing.Size(180, 40);
             this.btnDeleteItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -524,11 +527,45 @@
             this.btnDeleteItem.Text = "حذف المادة / الخامة";
             this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
+            // labelX8
+            // 
+            // 
+            // 
+            // 
+            this.labelX8.BackgroundStyle.Class = "";
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.Location = new System.Drawing.Point(172, 498);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX8.Size = new System.Drawing.Size(44, 23);
+            this.labelX8.TabIndex = 22;
+            this.labelX8.Text = "تخفيض";
+            // 
+            // dblInDiscount
+            // 
+            // 
+            // 
+            // 
+            this.dblInDiscount.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInDiscount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInDiscount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInDiscount.Enabled = false;
+            this.dblInDiscount.Increment = 0.1D;
+            this.dblInDiscount.Location = new System.Drawing.Point(12, 498);
+            this.dblInDiscount.MinValue = 0D;
+            this.dblInDiscount.Name = "dblInDiscount";
+            this.dblInDiscount.ShowUpDown = true;
+            this.dblInDiscount.Size = new System.Drawing.Size(150, 26);
+            this.dblInDiscount.TabIndex = 23;
+            this.dblInDiscount.ValueChanged += new System.EventHandler(this.dblInDiscount_ValueChanged);
+            // 
             // FrmAddInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 549);
+            this.ClientSize = new System.Drawing.Size(699, 582);
+            this.Controls.Add(this.dblInDiscount);
+            this.Controls.Add(this.labelX8);
             this.Controls.Add(this.btnDeleteItem);
             this.Controls.Add(this.pnlMaterial);
             this.Controls.Add(this.pnlClient);
@@ -554,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate)).EndInit();
             this.pnlMaterial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dblInQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInDiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,5 +621,7 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMaterials;
         private DevComponents.DotNetBar.ButtonX btnDeleteItem;
         private DevComponents.DotNetBar.LabelX lblMaterialAvailableQuantity;
+        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.Editors.DoubleInput dblInDiscount;
     }
 }
