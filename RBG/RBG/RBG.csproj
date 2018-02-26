@@ -178,6 +178,12 @@
     <Compile Include="PL\Forms\FrmMaterials.Designer.cs">
       <DependentUpon>FrmMaterials.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmPayInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmPayInvoice.Designer.cs">
+      <DependentUpon>FrmPayInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Constants.cs" />
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmMaterials.resx">
       <DependentUpon>FrmMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPayInvoice.resx">
+      <DependentUpon>FrmPayInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -292,6 +301,7 @@
     <None Include="Resources\Insert.png" />
     <None Include="Resources\IncreaseQuantity.png" />
     <Content Include="Resources\Login.gif" />
+    <None Include="Resources\Pay.png" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />
