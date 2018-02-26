@@ -1,4 +1,5 @@
-﻿using RBG.BLL.Infrastructure;
+﻿using System.Linq;
+using RBG.BLL.Infrastructure;
 using RBG.DAL.Model;
 
 namespace RBG.BLL
@@ -14,6 +15,11 @@ namespace RBG.BLL
         public void AddInvoice(Invoice invoice)
         {
             UnitOfWork.InvoiceRepository.Add(invoice);
+        }
+
+        public IQueryable<Invoice> GetAllInvoices()
+        {
+            return UnitOfWork.InvoiceRepository.GetAll();
         }
 
         #endregion
