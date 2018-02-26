@@ -117,6 +117,7 @@ namespace RBG.PL.Forms
             txtCode.Text = Material.Code;
             txtName.Text = Material.Name;
             dblInPrice.Value = (double) Material.Price;
+            dblInQuantity.Value = (double) Material.Quantity;
         }
 
         #endregion
