@@ -47,6 +47,7 @@
             this.btnListInvoices = new DevComponents.DotNetBar.ButtonX();
             this.btnAddInvoice = new DevComponents.DotNetBar.ButtonX();
             this.picInvoices = new System.Windows.Forms.PictureBox();
+            this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.pnlInvoices.SuspendLayout();
             this.pnlMaterials.SuspendLayout();
             this.pnlClients.SuspendLayout();
@@ -465,11 +466,28 @@
             this.picInvoices.TabIndex = 0;
             this.picInvoices.TabStop = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Image = global::RBG.Properties.Resources.Exit;
+            this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(12, 601);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(130, 40);
+            this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "خروج";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 653);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlDB);
             this.Controls.Add(this.pnlAdmins);
             this.Controls.Add(this.pnlClients);
@@ -519,5 +537,6 @@
         private System.Windows.Forms.PictureBox picDB;
         private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
         private DevComponents.DotNetBar.ButtonX btnPayInvoice;
+        private DevComponents.DotNetBar.ButtonX btnClose;
     }
 }

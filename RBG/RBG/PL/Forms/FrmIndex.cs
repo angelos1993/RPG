@@ -28,6 +28,11 @@ namespace RBG.PL.Forms
             Application.Exit();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         #endregion
 
         #region Invoice
