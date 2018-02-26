@@ -111,6 +111,7 @@
     <Compile Include="DAL\VMs\ClientVm.cs" />
     <Compile Include="DAL\VMs\InvoiceItemVm.cs" />
     <Compile Include="DAL\VMs\InvoiceVm.cs" />
+    <Compile Include="DAL\VMs\LightInvoiceVm.cs" />
     <Compile Include="DAL\VMs\MaterialVm.cs" />
     <Compile Include="PL\Forms\FrmAddClient.cs">
       <SubType>Form</SubType>

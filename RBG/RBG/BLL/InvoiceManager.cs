@@ -22,6 +22,11 @@ namespace RBG.BLL
             return UnitOfWork.InvoiceRepository.GetAll();
         }
 
+        public IQueryable<Invoice> GetClientInvoices(int clientId)
+        {
+            return GetAllInvoices().Where(invoice => invoice.ClientId == clientId);
+        }
+
         #endregion
     }
 }

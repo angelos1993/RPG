@@ -4,7 +4,8 @@ using RBG.Utility;
 
 namespace RBG.DAL.VMs
 {
-    public class InvoiceVm
+    //todo: try to make InvoiceVm & this class inherit from each other, the problem is columns' order
+    public class LightInvoiceVm
     {
         public int InvoiceId { get; set; }
 
@@ -13,9 +14,6 @@ namespace RBG.DAL.VMs
 
         [DisplayName("التاريخ")]
         public string DateString => Date.ToCustomShortDateString();
-
-        [DisplayName("اسم العميل")]
-        public string ClientName { get; set; }
 
         [DisplayName("الإجمالي")]
         public decimal Total { get; set; }

@@ -135,6 +135,9 @@
   <data name="InvoiceWithoutItems" xml:space="preserve">
     <value>قم بإدخال المواد / الخامات أولاً</value>
   </data>
+  <data name="MakeSureOfClientName" xml:space="preserve">
+    <value>من فضلك تأكد من اسم العميل</value>
+  </data>
   <data name="MaterialAvailableQuantity" xml:space="preserve">
     <value>الكمية المتاحة {0}</value>
   </data>

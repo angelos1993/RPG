@@ -103,7 +103,7 @@ namespace RBG.PL.Forms
                 InvoiceId = invoice.Id,
                 Date = invoice.Date,
                 ClientName = invoice.Client.Name,
-                Total = invoice.Paid,
+                Total = invoice.Total,
                 Paid = invoice.Paid,
                 Discount = invoice.Discount
             }).ToList();

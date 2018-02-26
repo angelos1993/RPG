@@ -115,6 +115,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to من فضلك تأكد من اسم العميل.
+        /// </summary>
+        internal static string MakeSureOfClientName {
+            get {
+                return ResourceManager.GetString("MakeSureOfClientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الكمية المتاحة {0}.
         /// </summary>
         internal static string MaterialAvailableQuantity {
