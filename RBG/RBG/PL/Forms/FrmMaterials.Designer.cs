@@ -68,6 +68,7 @@
             this.dgvMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaterials.Size = new System.Drawing.Size(785, 319);
             this.dgvMaterials.TabIndex = 0;
+            this.dgvMaterials.Click += new System.EventHandler(this.dgvMaterials_Click);
             // 
             // txtSearch
             // 

@@ -68,6 +68,14 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void dgvMaterials_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            btnEdit.Enabled = btnArchive.Enabled = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"].Value
+                .ToString());
+            Cursor = Cursors.Default;
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -114,9 +122,9 @@ namespace RBG.PL.Forms
 
         private void SearchMaterials()
         {
-            var searchText = txtSearch.Text.FullTrim();
-            MaterialsList = Materials
-                .Where(material => material.Name.Contains(searchText) || material.Code.Contains(searchText))
+            var searchText = txtSearch.Text.FullTrim().ToLower();
+            MaterialsList = Materials.Where(material =>
+                    material.Name.ToLower().Contains(searchText) || material.Code.ToLower().Contains(searchText))
                 .Select(material => new MaterialVm
                 {
                     Id = material.Id,
@@ -143,6 +151,7 @@ namespace RBG.PL.Forms
         private void FillGrid()
         {
             dgvMaterials.DataSource = MaterialsList;
+            btnEdit.Enabled = btnArchive.Enabled = MaterialsList.Any();
         }
 
         private void EditMaterial()

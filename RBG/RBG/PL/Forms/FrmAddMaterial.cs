@@ -51,26 +51,26 @@ namespace RBG.PL.Forms
         {
             ErrorProvider.Clear();
             var isFormValid = true;
-            if (txtCode.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
+            if (Math.Abs(dblInPrice.Value) <= 0)
             {
                 isFormValid = false;
-                ErrorProvider.SetError(txtCode, Resources.ThisFieldIsRequired);
+                ErrorProvider.SetError(dblInPrice, Resources.ThisFieldIsRequired);
+                dblInPrice.Focus();
             }
             if (txtName.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
                 ErrorProvider.SetError(txtName, Resources.ThisFieldIsRequired);
+                txtName.Focus();
             }
-            if (Math.Abs(dblInPrice.Value) <= 0)
+            if (txtCode.Text.FullTrim().IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
-                ErrorProvider.SetError(dblInPrice, Resources.ThisFieldIsRequired);
+                ErrorProvider.SetError(txtCode, Resources.ThisFieldIsRequired);
+                txtCode.Focus();
             }
             if (!isFormValid)
-            {
-                txtCode.Focus();
                 return;
-            }
             var isMaterialCodeExists = !IsEditMode
                 ? MaterialManager.IsMaterialCodeExists(txtCode.Text.FullTrim())
                 : txtCode.Text.FullTrim() != Material.Code &&

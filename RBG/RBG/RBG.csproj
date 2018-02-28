@@ -286,6 +286,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Add.png" />
+    <None Include="Resources\ShowAllMaterials.png" />
     <None Include="Resources\ShowAllClients.png" />
     <None Include="Resources\Admin.png" />
     <None Include="Resources\Archive.png" />

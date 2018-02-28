@@ -203,7 +203,7 @@
             this.pnlMaterials.StyleMouseOver.Class = "";
             this.pnlMaterials.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlMaterials.TabIndex = 2;
-            this.pnlMaterials.Text = "الخامات / المواد";
+            this.pnlMaterials.Text = "المواد / الخامات";
             // 
             // btnAddMaterialQuantity
             // 
@@ -223,14 +223,14 @@
             // 
             this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListMaterials.Image = global::RBG.Properties.Resources.List;
+            this.btnListMaterials.Image = global::RBG.Properties.Resources.ShowAllMaterials;
             this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btnListMaterials.Location = new System.Drawing.Point(185, 112);
             this.btnListMaterials.Name = "btnListMaterials";
             this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
             this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnListMaterials.TabIndex = 7;
-            this.btnListMaterials.Text = "عرض الكل";
+            this.btnListMaterials.Text = "عرض كل المواد / الخامات";
             this.btnListMaterials.Click += new System.EventHandler(this.btnListMaterials_Click);
             // 
             // btnAddMaterial
@@ -244,7 +244,7 @@
             this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddMaterial.TabIndex = 6;
-            this.btnAddMaterial.Text = "إضافة مادة جديد";
+            this.btnAddMaterial.Text = "إضافة مادة / خامة جديدة";
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
             // picMaterials
