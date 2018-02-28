@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.pnlInvoices = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pnlMaterials = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pnlClients = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pnlAdmins = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pnlDB = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.picDB = new System.Windows.Forms.PictureBox();
-            this.btnEditAdmin = new DevComponents.DotNetBar.ButtonX();
-            this.picAdmins = new System.Windows.Forms.PictureBox();
-            this.btnListClients = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddClient = new DevComponents.DotNetBar.ButtonX();
-            this.picClients = new System.Windows.Forms.PictureBox();
-            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
-            this.btnListMaterials = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
-            this.picMaterials = new System.Windows.Forms.PictureBox();
             this.btnPayInvoice = new DevComponents.DotNetBar.ButtonX();
             this.btnListInvoices = new DevComponents.DotNetBar.ButtonX();
             this.btnAddInvoice = new DevComponents.DotNetBar.ButtonX();
             this.picInvoices = new System.Windows.Forms.PictureBox();
+            this.pnlMaterials = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
+            this.btnListMaterials = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
+            this.picMaterials = new System.Windows.Forms.PictureBox();
+            this.pnlClients = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListClients = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddClient = new DevComponents.DotNetBar.ButtonX();
+            this.picClients = new System.Windows.Forms.PictureBox();
+            this.pnlAdmins = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnEditAdmin = new DevComponents.DotNetBar.ButtonX();
+            this.picAdmins = new System.Windows.Forms.PictureBox();
+            this.pnlDB = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.picDB = new System.Windows.Forms.PictureBox();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.pnlInvoices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).BeginInit();
             this.pnlMaterials.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).BeginInit();
             this.pnlClients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClients)).BeginInit();
             this.pnlAdmins.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).BeginInit();
             this.pnlDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInvoices
@@ -106,6 +106,59 @@
             this.pnlInvoices.TabIndex = 1;
             this.pnlInvoices.Text = "الفواتير";
             // 
+            // btnPayInvoice
+            // 
+            this.btnPayInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPayInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPayInvoice.Image = global::RBG.Properties.Resources.Pay;
+            this.btnPayInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnPayInvoice.Location = new System.Drawing.Point(185, 66);
+            this.btnPayInvoice.Name = "btnPayInvoice";
+            this.btnPayInvoice.Size = new System.Drawing.Size(200, 40);
+            this.btnPayInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPayInvoice.TabIndex = 8;
+            this.btnPayInvoice.Text = "دفع";
+            this.btnPayInvoice.Click += new System.EventHandler(this.btnPayInvoice_Click);
+            // 
+            // btnListInvoices
+            // 
+            this.btnListInvoices.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListInvoices.Image = global::RBG.Properties.Resources.List;
+            this.btnListInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListInvoices.Location = new System.Drawing.Point(185, 112);
+            this.btnListInvoices.Name = "btnListInvoices";
+            this.btnListInvoices.Size = new System.Drawing.Size(200, 40);
+            this.btnListInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListInvoices.TabIndex = 7;
+            this.btnListInvoices.Text = "عرض الكل";
+            this.btnListInvoices.Click += new System.EventHandler(this.btnListInvoices_Click);
+            // 
+            // btnAddInvoice
+            // 
+            this.btnAddInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddInvoice.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddInvoice.Location = new System.Drawing.Point(185, 19);
+            this.btnAddInvoice.Name = "btnAddInvoice";
+            this.btnAddInvoice.Size = new System.Drawing.Size(200, 40);
+            this.btnAddInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddInvoice.TabIndex = 6;
+            this.btnAddInvoice.Text = "إضافة جديد";
+            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
+            // 
+            // picInvoices
+            // 
+            this.picInvoices.BackColor = System.Drawing.Color.Transparent;
+            this.picInvoices.Image = global::RBG.Properties.Resources.Invoice;
+            this.picInvoices.Location = new System.Drawing.Point(31, 19);
+            this.picInvoices.Name = "picInvoices";
+            this.picInvoices.Size = new System.Drawing.Size(120, 120);
+            this.picInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInvoices.TabIndex = 0;
+            this.picInvoices.TabStop = false;
+            // 
             // pnlMaterials
             // 
             this.pnlMaterials.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -152,6 +205,59 @@
             this.pnlMaterials.TabIndex = 2;
             this.pnlMaterials.Text = "الخامات / المواد";
             // 
+            // btnAddMaterialQuantity
+            // 
+            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterialQuantity.Image = global::RBG.Properties.Resources.IncreaseQuantity;
+            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(185, 66);
+            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
+            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(200, 40);
+            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterialQuantity.TabIndex = 8;
+            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
+            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
+            // 
+            // btnListMaterials
+            // 
+            this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListMaterials.Image = global::RBG.Properties.Resources.List;
+            this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListMaterials.Location = new System.Drawing.Point(185, 112);
+            this.btnListMaterials.Name = "btnListMaterials";
+            this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
+            this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListMaterials.TabIndex = 7;
+            this.btnListMaterials.Text = "عرض الكل";
+            this.btnListMaterials.Click += new System.EventHandler(this.btnListMaterials_Click);
+            // 
+            // btnAddMaterial
+            // 
+            this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddMaterial.Location = new System.Drawing.Point(185, 20);
+            this.btnAddMaterial.Name = "btnAddMaterial";
+            this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
+            this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddMaterial.TabIndex = 6;
+            this.btnAddMaterial.Text = "إضافة مادة جديد";
+            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
+            // 
+            // picMaterials
+            // 
+            this.picMaterials.BackColor = System.Drawing.Color.Transparent;
+            this.picMaterials.Image = global::RBG.Properties.Resources.Materials;
+            this.picMaterials.Location = new System.Drawing.Point(27, 19);
+            this.picMaterials.Name = "picMaterials";
+            this.picMaterials.Size = new System.Drawing.Size(120, 120);
+            this.picMaterials.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaterials.TabIndex = 0;
+            this.picMaterials.TabStop = false;
+            // 
             // pnlClients
             // 
             this.pnlClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,6 +303,45 @@
             this.pnlClients.TabIndex = 3;
             this.pnlClients.Text = "العملاء";
             // 
+            // btnListClients
+            // 
+            this.btnListClients.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListClients.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListClients.Image = global::RBG.Properties.Resources.ShowAllClients;
+            this.btnListClients.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListClients.Location = new System.Drawing.Point(185, 79);
+            this.btnListClients.Name = "btnListClients";
+            this.btnListClients.Size = new System.Drawing.Size(200, 40);
+            this.btnListClients.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListClients.TabIndex = 7;
+            this.btnListClients.Text = "عرض كل العملاء";
+            this.btnListClients.Click += new System.EventHandler(this.btnListClients_Click);
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddClient.Image = global::RBG.Properties.Resources.Add;
+            this.btnAddClient.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddClient.Location = new System.Drawing.Point(185, 33);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(200, 40);
+            this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddClient.TabIndex = 6;
+            this.btnAddClient.Text = "إضافة عميل جديد";
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // picClients
+            // 
+            this.picClients.BackColor = System.Drawing.Color.Transparent;
+            this.picClients.Image = global::RBG.Properties.Resources.Clients;
+            this.picClients.Location = new System.Drawing.Point(31, 19);
+            this.picClients.Name = "picClients";
+            this.picClients.Size = new System.Drawing.Size(120, 120);
+            this.picClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClients.TabIndex = 0;
+            this.picClients.TabStop = false;
+            // 
             // pnlAdmins
             // 
             this.pnlAdmins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -240,6 +385,31 @@
             this.pnlAdmins.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlAdmins.TabIndex = 4;
             this.pnlAdmins.Text = "المستخدمين";
+            // 
+            // btnEditAdmin
+            // 
+            this.btnEditAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEditAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEditAdmin.Image = global::RBG.Properties.Resources.Edit;
+            this.btnEditAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnEditAdmin.Location = new System.Drawing.Point(185, 60);
+            this.btnEditAdmin.Name = "btnEditAdmin";
+            this.btnEditAdmin.Size = new System.Drawing.Size(200, 40);
+            this.btnEditAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEditAdmin.TabIndex = 6;
+            this.btnEditAdmin.Text = "تعديل المستخدم";
+            this.btnEditAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
+            // 
+            // picAdmins
+            // 
+            this.picAdmins.BackColor = System.Drawing.Color.Transparent;
+            this.picAdmins.Image = global::RBG.Properties.Resources.Admin;
+            this.picAdmins.Location = new System.Drawing.Point(27, 19);
+            this.picAdmins.Name = "picAdmins";
+            this.picAdmins.Size = new System.Drawing.Size(120, 120);
+            this.picAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAdmins.TabIndex = 0;
+            this.picAdmins.TabStop = false;
             // 
             // pnlDB
             // 
@@ -296,176 +466,6 @@
             this.picDB.TabIndex = 0;
             this.picDB.TabStop = false;
             // 
-            // btnEditAdmin
-            // 
-            this.btnEditAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnEditAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnEditAdmin.Image = global::RBG.Properties.Resources.Edit;
-            this.btnEditAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEditAdmin.Location = new System.Drawing.Point(185, 60);
-            this.btnEditAdmin.Name = "btnEditAdmin";
-            this.btnEditAdmin.Size = new System.Drawing.Size(200, 40);
-            this.btnEditAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnEditAdmin.TabIndex = 6;
-            this.btnEditAdmin.Text = "تعديل المستخدم";
-            this.btnEditAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
-            // 
-            // picAdmins
-            // 
-            this.picAdmins.BackColor = System.Drawing.Color.Transparent;
-            this.picAdmins.Image = global::RBG.Properties.Resources.Admin;
-            this.picAdmins.Location = new System.Drawing.Point(27, 19);
-            this.picAdmins.Name = "picAdmins";
-            this.picAdmins.Size = new System.Drawing.Size(120, 120);
-            this.picAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAdmins.TabIndex = 0;
-            this.picAdmins.TabStop = false;
-            // 
-            // btnListClients
-            // 
-            this.btnListClients.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnListClients.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListClients.Image = global::RBG.Properties.Resources.List;
-            this.btnListClients.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListClients.Location = new System.Drawing.Point(185, 79);
-            this.btnListClients.Name = "btnListClients";
-            this.btnListClients.Size = new System.Drawing.Size(200, 40);
-            this.btnListClients.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnListClients.TabIndex = 7;
-            this.btnListClients.Text = "عرض الكل";
-            this.btnListClients.Click += new System.EventHandler(this.btnListClients_Click);
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddClient.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddClient.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddClient.Location = new System.Drawing.Point(185, 33);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(200, 40);
-            this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddClient.TabIndex = 6;
-            this.btnAddClient.Text = "إضافة جديد";
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // picClients
-            // 
-            this.picClients.BackColor = System.Drawing.Color.Transparent;
-            this.picClients.Image = global::RBG.Properties.Resources.Clients;
-            this.picClients.Location = new System.Drawing.Point(31, 19);
-            this.picClients.Name = "picClients";
-            this.picClients.Size = new System.Drawing.Size(120, 120);
-            this.picClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClients.TabIndex = 0;
-            this.picClients.TabStop = false;
-            // 
-            // btnAddMaterialQuantity
-            // 
-            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddMaterialQuantity.Image = global::RBG.Properties.Resources.IncreaseQuantity;
-            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(185, 66);
-            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
-            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(200, 40);
-            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterialQuantity.TabIndex = 8;
-            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
-            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
-            // 
-            // btnListMaterials
-            // 
-            this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListMaterials.Image = global::RBG.Properties.Resources.List;
-            this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListMaterials.Location = new System.Drawing.Point(185, 112);
-            this.btnListMaterials.Name = "btnListMaterials";
-            this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
-            this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnListMaterials.TabIndex = 7;
-            this.btnListMaterials.Text = "عرض الكل";
-            this.btnListMaterials.Click += new System.EventHandler(this.btnListMaterials_Click);
-            // 
-            // btnAddMaterial
-            // 
-            this.btnAddMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterial.Location = new System.Drawing.Point(185, 20);
-            this.btnAddMaterial.Name = "btnAddMaterial";
-            this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
-            this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterial.TabIndex = 6;
-            this.btnAddMaterial.Text = "إضافة مادة جديد";
-            this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
-            // 
-            // picMaterials
-            // 
-            this.picMaterials.BackColor = System.Drawing.Color.Transparent;
-            this.picMaterials.Image = global::RBG.Properties.Resources.Materials;
-            this.picMaterials.Location = new System.Drawing.Point(27, 19);
-            this.picMaterials.Name = "picMaterials";
-            this.picMaterials.Size = new System.Drawing.Size(120, 120);
-            this.picMaterials.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaterials.TabIndex = 0;
-            this.picMaterials.TabStop = false;
-            // 
-            // btnPayInvoice
-            // 
-            this.btnPayInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPayInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPayInvoice.Image = global::RBG.Properties.Resources.Pay;
-            this.btnPayInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnPayInvoice.Location = new System.Drawing.Point(185, 66);
-            this.btnPayInvoice.Name = "btnPayInvoice";
-            this.btnPayInvoice.Size = new System.Drawing.Size(200, 40);
-            this.btnPayInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPayInvoice.TabIndex = 8;
-            this.btnPayInvoice.Text = "دفع";
-            this.btnPayInvoice.Click += new System.EventHandler(this.btnPayInvoice_Click);
-            // 
-            // btnListInvoices
-            // 
-            this.btnListInvoices.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnListInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListInvoices.Image = global::RBG.Properties.Resources.List;
-            this.btnListInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListInvoices.Location = new System.Drawing.Point(185, 112);
-            this.btnListInvoices.Name = "btnListInvoices";
-            this.btnListInvoices.Size = new System.Drawing.Size(200, 40);
-            this.btnListInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnListInvoices.TabIndex = 7;
-            this.btnListInvoices.Text = "عرض الكل";
-            this.btnListInvoices.Click += new System.EventHandler(this.btnListInvoices_Click);
-            // 
-            // btnAddInvoice
-            // 
-            this.btnAddInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddInvoice.Image = global::RBG.Properties.Resources.Add;
-            this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddInvoice.Location = new System.Drawing.Point(185, 19);
-            this.btnAddInvoice.Name = "btnAddInvoice";
-            this.btnAddInvoice.Size = new System.Drawing.Size(200, 40);
-            this.btnAddInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddInvoice.TabIndex = 6;
-            this.btnAddInvoice.Text = "إضافة جديد";
-            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
-            // 
-            // picInvoices
-            // 
-            this.picInvoices.BackColor = System.Drawing.Color.Transparent;
-            this.picInvoices.Image = global::RBG.Properties.Resources.Invoice;
-            this.picInvoices.Location = new System.Drawing.Point(31, 19);
-            this.picInvoices.Name = "picInvoices";
-            this.picInvoices.Size = new System.Drawing.Size(120, 120);
-            this.picInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInvoices.TabIndex = 0;
-            this.picInvoices.TabStop = false;
-            // 
             // btnClose
             // 
             this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -504,15 +504,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIndex_FormClosing);
             this.pnlInvoices.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).EndInit();
             this.pnlMaterials.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).EndInit();
             this.pnlClients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picClients)).EndInit();
             this.pnlAdmins.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).EndInit();
             this.pnlDB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAdmins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaterials)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).EndInit();
             this.ResumeLayout(false);
 
         }

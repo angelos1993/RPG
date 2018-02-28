@@ -61,6 +61,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إضافة العميل بنجاح.
+        /// </summary>
+        internal static string ClientAddedSeccessfully {
+            get {
+                return ResourceManager.GetString("ClientAddedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات.
         /// </summary>
         internal static string ClientNotExists {
@@ -93,6 +102,24 @@ namespace RBG.Utility {
         internal static string CurrentUsernameInvalid {
             get {
                 return ResourceManager.GetString("CurrentUsernameInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذا العميل ؟.
+        /// </summary>
+        internal static string DeleteClientConfirmationMsg {
+            get {
+                return ResourceManager.GetString("DeleteClientConfirmationMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟.
+        /// </summary>
+        internal static string DeleteMaterialConfirmationMsg {
+            get {
+                return ResourceManager.GetString("DeleteMaterialConfirmationMsg", resourceCulture);
             }
         }
         

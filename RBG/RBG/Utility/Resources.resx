@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClientAddedSeccessfully" xml:space="preserve">
+    <value>تم إضافة العميل بنجاح</value>
+  </data>
   <data name="ClientNotExists" xml:space="preserve">
     <value>اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات</value>
   </data>
@@ -128,6 +131,12 @@
   </data>
   <data name="CurrentUsernameInvalid" xml:space="preserve">
     <value>اسم المستخدم الحالي غير صحيح</value>
+  </data>
+  <data name="DeleteClientConfirmationMsg" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد حذف هذا العميل ؟</value>
+  </data>
+  <data name="DeleteMaterialConfirmationMsg" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟</value>
   </data>
   <data name="InvoiceCreatedSuccessfully" xml:space="preserve">
     <value>تم إدخال الفاتورة بنجاح</value>

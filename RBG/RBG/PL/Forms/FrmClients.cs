@@ -63,7 +63,7 @@ namespace RBG.PL.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟") != DialogResult.Yes)
+            if (ShowConfirmationDialog(Resources.DeleteClientConfirmationMsg) != DialogResult.Yes)
                 return;
             Cursor = Cursors.WaitCursor;
             DeleteClient();
@@ -117,6 +117,7 @@ namespace RBG.PL.Forms
         private void FillGrid()
         {
             dgvClients.DataSource = ClientsList;
+            btnEdit.Enabled = btnDelete.Enabled = ClientsList.Any();
         }
 
         private void EditClient()

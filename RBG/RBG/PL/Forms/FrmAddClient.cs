@@ -2,6 +2,7 @@
 using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.Utility;
+using static RBG.Utility.MessageBoxUtility;
 
 namespace RBG.PL.Forms
 {
@@ -75,6 +76,7 @@ namespace RBG.PL.Forms
                 Client.Phone = txtPhone.Text.FullTrim();
                 ClientManager.UpdateClient(Client);
             }
+            ShowConfirmationDialog(Resources.ClientAddedSeccessfully);
             Close();
         }
 
