@@ -144,10 +144,10 @@
             this.txtCurrentPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCurrentPassword.Location = new System.Drawing.Point(38, 35);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
-            this.txtCurrentPassword.PasswordChar = '*';
             this.txtCurrentPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCurrentPassword.Size = new System.Drawing.Size(318, 26);
             this.txtCurrentPassword.TabIndex = 1;
+            this.txtCurrentPassword.UseSystemPasswordChar = true;
             // 
             // pnlNewData
             // 
@@ -220,10 +220,10 @@
             this.txtNewPasswordConfirmation.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNewPasswordConfirmation.Location = new System.Drawing.Point(38, 67);
             this.txtNewPasswordConfirmation.Name = "txtNewPasswordConfirmation";
-            this.txtNewPasswordConfirmation.PasswordChar = '*';
             this.txtNewPasswordConfirmation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtNewPasswordConfirmation.Size = new System.Drawing.Size(318, 26);
             this.txtNewPasswordConfirmation.TabIndex = 2;
+            this.txtNewPasswordConfirmation.UseSystemPasswordChar = true;
             // 
             // labelX7
             // 
@@ -249,10 +249,10 @@
             this.txtNewPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNewPassword.Location = new System.Drawing.Point(38, 35);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtNewPassword.Size = new System.Drawing.Size(318, 26);
             this.txtNewPassword.TabIndex = 1;
+            this.txtNewPassword.UseSystemPasswordChar = true;
             // 
             // labelX8
             // 
