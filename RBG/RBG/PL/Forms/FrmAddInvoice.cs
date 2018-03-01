@@ -42,6 +42,7 @@ namespace RBG.PL.Forms
             _invoicePaymentManager ?? (_invoicePaymentManager = new InvoicePaymentManager());
 
         private List<Material> Materials { get; set; }
+        private List<LightMaterialVm> MaterialsList { get; set; }
         private List<InvoiceItemVm> InvoiceItemVms { get; }
         private List<string> ClientsNames { get; set; }
 
@@ -78,7 +79,7 @@ namespace RBG.PL.Forms
             FillMaterials();
             Cursor = Cursors.Default;
         }
-        
+
         private void btnInsertItem_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -149,7 +150,14 @@ namespace RBG.PL.Forms
 
         private void FillMaterials()
         {
-            Materials = MaterialManager.GetAllUnArchivedMaterials().ToList();
+            Materials = MaterialManager.GetAllUnArchivedMaterials().Where(material => material.Quantity > 0).ToList();
+            MaterialsList = Materials.Select(material => new LightMaterialVm
+            {
+                Id = material.Id,
+                Name = material.Name,
+                Price = material.Price,
+                AvailableQuantity = material.Quantity
+            }).ToList();
             var materialsList = Materials.Select(material => new KeyValuePair<int, string>(material.Id, material.Name))
                 .OrderBy(keyValuePair => keyValuePair.Value).ToList();
             materialsList.Insert(0, new KeyValuePair<int, string>(0, Resources.ComboBoxDefaultText));
@@ -174,22 +182,28 @@ namespace RBG.PL.Forms
             }
             if (!isFormValid)
                 return;
+            var addedQuantity = (decimal) dblInQuantity.Value;
             var materialId = int.Parse(cmbMaterials.SelectedValue.ToString());
             if (InvoiceItemVms.Exists(item => item.MaterialId == materialId))
-                InvoiceItemVms.Find(item => item.MaterialId == materialId).Quantity += (decimal) dblInQuantity.Value;
+                InvoiceItemVms.Find(item => item.MaterialId == materialId).Quantity += addedQuantity;
             else
                 InvoiceItemVms.Add(new InvoiceItemVm
                 {
                     MaterialId = materialId,
                     MaterialName = ((KeyValuePair<int, string>) cmbMaterials.SelectedItem).Value,
-                    Quantity = (decimal) dblInQuantity.Value,
+                    Quantity = addedQuantity,
                     PricePerMeter = GetMaterialPrice(materialId)
                 });
+            MaterialsList.Find(material => material.Id == materialId).AvailableQuantity -= addedQuantity;
             FillGrid();
             SetTotalPrice();
+            ResetInsertControls();
+        }
+
+        private void ResetInsertControls()
+        {
             cmbMaterials.SelectedIndex = 0;
             dblInQuantity.Value = 0;
-            lblMaterialAvailableQuantity.Text = string.Empty;
         }
 
         private decimal GetMaterialPrice(int materialId)
@@ -208,10 +222,14 @@ namespace RBG.PL.Forms
 
         private void DeleteItem()
         {
-            InvoiceItemVms.Remove(InvoiceItemVms
-                .Find(item => item.MaterialId == int.Parse(dgvInvoiceItems.SelectedRows[0].Cells[0].Value.ToString())));
+            var materialId = int.Parse(dgvInvoiceItems.SelectedRows[0].Cells[0].Value.ToString());
+            var deletedMaterialQuantity = decimal.Parse(dgvInvoiceItems.SelectedRows[0].Cells["Quantity"].Value
+                .ToString());
+            InvoiceItemVms.Remove(InvoiceItemVms.Find(item => item.MaterialId == materialId));
+            MaterialsList.Find(material => material.Id == materialId).AvailableQuantity += deletedMaterialQuantity;
             FillGrid();
             SetTotalPrice();
+            ResetInsertControls();
         }
 
         private void SaveInvoice()
@@ -223,7 +241,9 @@ namespace RBG.PL.Forms
                 ErrorProvider.SetError(txtClientName, Resources.ThisFieldIsRequired);
             }
             else if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
+            {
                 isFormValid = ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
+            }
             if (!InvoiceItemVms.Any())
             {
                 isFormValid = false;
@@ -271,14 +291,18 @@ namespace RBG.PL.Forms
         private void SetAvailableQuantity()
         {
             if (cmbMaterials.SelectedIndex == 0)
+            {
+                lblMaterialAvailableQuantity.Text = string.Empty;
                 return;
+            }
             var selectedMaterial =
-                Materials.FirstOrDefault(material => material.Id == int.Parse(cmbMaterials.SelectedValue.ToString()));
+                MaterialsList.FirstOrDefault(
+                    material => material.Id == int.Parse(cmbMaterials.SelectedValue.ToString()));
             if (selectedMaterial == null)
                 return;
             lblMaterialAvailableQuantity.Text =
-                string.Format(Resources.MaterialAvailableQuantity, selectedMaterial.Quantity);
-            dblInQuantity.MaxValue = (double) selectedMaterial.Quantity;
+                string.Format(Resources.MaterialAvailableQuantity, selectedMaterial.AvailableQuantity);
+            dblInQuantity.MaxValue = (double) selectedMaterial.AvailableQuantity;
         }
 
         private void SetRemainingValue()
