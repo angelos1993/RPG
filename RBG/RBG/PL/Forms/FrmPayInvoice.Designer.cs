@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoices = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnPay = new DevComponents.DotNetBar.ButtonX();
@@ -37,36 +37,36 @@
             this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dtPaymentDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.dblInTotal = new DevComponents.Editors.DoubleInput();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dblInPaid = new DevComponents.Editors.DoubleInput();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.dblInRemaining = new DevComponents.Editors.DoubleInput();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.dblInPaid = new DevComponents.Editors.DoubleInput();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.dblInTotal = new DevComponents.Editors.DoubleInput();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.dtPaymentDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.pnlClient.SuspendLayout();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtPaymentDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInPaid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInRemaining)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPaid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPaymentDate)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvInvoices
             // 
             this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoices.Location = new System.Drawing.Point(12, 74);
             this.dgvInvoices.MultiSelect = false;
@@ -95,6 +95,7 @@
             // 
             this.btnPay.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnPay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPay.Enabled = false;
             this.btnPay.Image = global::RBG.Properties.Resources.Pay;
             this.btnPay.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btnPay.Location = new System.Drawing.Point(515, 496);
@@ -238,6 +239,104 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 29;
             // 
+            // dblInRemaining
+            // 
+            // 
+            // 
+            // 
+            this.dblInRemaining.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInRemaining.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInRemaining.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInRemaining.Enabled = false;
+            this.dblInRemaining.Increment = 0.1D;
+            this.dblInRemaining.Location = new System.Drawing.Point(3, 13);
+            this.dblInRemaining.MinValue = 0D;
+            this.dblInRemaining.Name = "dblInRemaining";
+            this.dblInRemaining.ShowUpDown = true;
+            this.dblInRemaining.Size = new System.Drawing.Size(150, 26);
+            this.dblInRemaining.TabIndex = 20;
+            // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.Class = "";
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(159, 14);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(36, 23);
+            this.labelX5.TabIndex = 19;
+            this.labelX5.Text = "باقي";
+            // 
+            // dblInPaid
+            // 
+            // 
+            // 
+            // 
+            this.dblInPaid.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInPaid.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInPaid.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInPaid.Enabled = false;
+            this.dblInPaid.Increment = 0.1D;
+            this.dblInPaid.Location = new System.Drawing.Point(220, 13);
+            this.dblInPaid.MinValue = 0D;
+            this.dblInPaid.Name = "dblInPaid";
+            this.dblInPaid.ShowUpDown = true;
+            this.dblInPaid.Size = new System.Drawing.Size(150, 26);
+            this.dblInPaid.TabIndex = 18;
+            this.dblInPaid.ValueChanged += new System.EventHandler(this.dblInPaid_ValueChanged);
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.Class = "";
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(376, 16);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX4.Size = new System.Drawing.Size(36, 23);
+            this.labelX4.TabIndex = 17;
+            this.labelX4.Text = "دفع";
+            // 
+            // dblInTotal
+            // 
+            // 
+            // 
+            // 
+            this.dblInTotal.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInTotal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInTotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInTotal.Enabled = false;
+            this.dblInTotal.Increment = 0.1D;
+            this.dblInTotal.Location = new System.Drawing.Point(435, 13);
+            this.dblInTotal.MinValue = 0D;
+            this.dblInTotal.Name = "dblInTotal";
+            this.dblInTotal.ShowUpDown = true;
+            this.dblInTotal.Size = new System.Drawing.Size(150, 26);
+            this.dblInTotal.TabIndex = 16;
+            this.dblInTotal.ValueChanged += new System.EventHandler(this.dblInTotal_ValueChanged);
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.Class = "";
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(591, 14);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(56, 23);
+            this.labelX1.TabIndex = 15;
+            this.labelX1.Text = "الإجمالي";
+            // 
             // dtPaymentDate
             // 
             // 
@@ -303,102 +402,6 @@
             this.labelX2.TabIndex = 13;
             this.labelX2.Text = "التاريخ";
             // 
-            // dblInTotal
-            // 
-            // 
-            // 
-            // 
-            this.dblInTotal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dblInTotal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dblInTotal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dblInTotal.Enabled = false;
-            this.dblInTotal.Increment = 0.1D;
-            this.dblInTotal.Location = new System.Drawing.Point(435, 13);
-            this.dblInTotal.MinValue = 0D;
-            this.dblInTotal.Name = "dblInTotal";
-            this.dblInTotal.ShowUpDown = true;
-            this.dblInTotal.Size = new System.Drawing.Size(150, 26);
-            this.dblInTotal.TabIndex = 16;
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.Class = "";
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(591, 14);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(56, 23);
-            this.labelX1.TabIndex = 15;
-            this.labelX1.Text = "الإجمالي";
-            // 
-            // dblInPaid
-            // 
-            // 
-            // 
-            // 
-            this.dblInPaid.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dblInPaid.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dblInPaid.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dblInPaid.Enabled = false;
-            this.dblInPaid.Increment = 0.1D;
-            this.dblInPaid.Location = new System.Drawing.Point(220, 13);
-            this.dblInPaid.MinValue = 0D;
-            this.dblInPaid.Name = "dblInPaid";
-            this.dblInPaid.ShowUpDown = true;
-            this.dblInPaid.Size = new System.Drawing.Size(150, 26);
-            this.dblInPaid.TabIndex = 18;
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.Class = "";
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(376, 16);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX4.Size = new System.Drawing.Size(36, 23);
-            this.labelX4.TabIndex = 17;
-            this.labelX4.Text = "دفع";
-            // 
-            // dblInRemaining
-            // 
-            // 
-            // 
-            // 
-            this.dblInRemaining.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dblInRemaining.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dblInRemaining.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dblInRemaining.Enabled = false;
-            this.dblInRemaining.Increment = 0.1D;
-            this.dblInRemaining.Location = new System.Drawing.Point(3, 13);
-            this.dblInRemaining.MinValue = 0D;
-            this.dblInRemaining.Name = "dblInRemaining";
-            this.dblInRemaining.ShowUpDown = true;
-            this.dblInRemaining.Size = new System.Drawing.Size(150, 26);
-            this.dblInRemaining.TabIndex = 20;
-            // 
-            // labelX5
-            // 
-            this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.Class = "";
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(159, 14);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX5.Size = new System.Drawing.Size(36, 23);
-            this.labelX5.TabIndex = 19;
-            this.labelX5.Text = "باقي";
-            // 
             // FrmPayInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -417,10 +420,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).EndInit();
             this.pnlClient.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtPaymentDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dblInPaid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInRemaining)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPaid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPaymentDate)).EndInit();
             this.ResumeLayout(false);
 
         }

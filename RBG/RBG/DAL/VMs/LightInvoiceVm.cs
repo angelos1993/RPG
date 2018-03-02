@@ -26,8 +26,5 @@ namespace RBG.DAL.VMs
 
         [DisplayName("باقي")]
         public decimal Remaining => Total - Paid - Discount;
-
-        [DisplayName("خالص ؟")]
-        public bool IsPaid => Remaining == 0;
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using RBG.BLL;
 using RBG.DAL.Model;
+using RBG.DAL.VMs;
 using RBG.Utility;
 using static RBG.Utility.TextBoxAutoCompleteUtility;
 using static RBG.Utility.MessageBoxUtility;
@@ -28,7 +30,11 @@ namespace RBG.PL.Forms
         private InvoiceManager _invoiceManager;
         private InvoiceManager InvoiceManager => _invoiceManager ?? (_invoiceManager = new InvoiceManager());
         private List<string> ClientsNames { get; set; }
-        private List<Invoice> ClientInvoices { get; set; }
+        private List<LightInvoiceVm> ClientInvoices { get; set; }
+        private InvoicePaymentManager _invoicePaymentManager;
+
+        private InvoicePaymentManager InvoicePaymentManager => _invoicePaymentManager ??
+                                                               (_invoicePaymentManager = new InvoicePaymentManager());
 
         #endregion
 
@@ -45,6 +51,23 @@ namespace RBG.PL.Forms
         {
             Cursor = Cursors.WaitCursor;
             ShowInvoices();
+            Cursor = Cursors.Default;
+        }
+
+        private void dblInTotal_ValueChanged(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            dblInPaid.MaxValue = dblInTotal.Value;
+            dblInPaid.Value = 0;
+            dblInPaid.Enabled = dblInTotal.Value > 0;
+            Cursor = Cursors.Default;
+        }
+
+        private void dblInPaid_ValueChanged(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            dblInRemaining.Value = dblInTotal.Value - dblInPaid.Value;
+            btnPay.Enabled = dblInPaid.Value > 0;
             Cursor = Cursors.Default;
         }
 
@@ -68,6 +91,7 @@ namespace RBG.PL.Forms
         {
             dtPaymentDate.Value = DateTime.Today;
             SetAutocompletForClients();
+            txtClientName.Focus();
         }
 
         private void SetAutocompletForClients()
@@ -79,7 +103,6 @@ namespace RBG.PL.Forms
         private void ShowInvoices()
         {
             var isFormValid = true;
-            //validate the enterded client name before get invoices
             if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
             {
                 isFormValid = false;
@@ -87,23 +110,57 @@ namespace RBG.PL.Forms
             }
             if (!isFormValid)
                 return;
-            //get all invoices for the entered client
             ClientInvoices = InvoiceManager
-                .GetClientInvoices(ClientManager.GetClientIdByName(txtClientName.Text.FullTrim()))
+                .GetClientRemainingInvoices(ClientManager.GetClientIdByName(txtClientName.Text.FullTrim()))
                 .OrderBy(invoice => invoice.Date).ToList();
-            //fill the grid
-            FillGrid();
-            //set the max value of the paid input by the total
+            if (ClientInvoices.Any())
+            {
+                FillGrid();
+            }
+            else
+            {
+                ShowInfoMsg(Resources.ClientHasNoRemainingInvoices);
+                dblInTotal.Value = 0;
+            }
         }
 
         private void FillGrid()
         {
             dgvInvoices.DataSource = ClientInvoices;
+            dgvInvoices.Columns[0].Visible = false;
+            dblInTotal.Value = ClientInvoices.Sum(invoice => (double) invoice.Remaining);
         }
 
         private void Pay()
         {
-             //validate the entered amount before pay
+            var enteredAmount = (decimal) dblInPaid.Value;
+            var paidInvoices = new List<KeyValuePair<DateTime, decimal>>();
+            foreach (var invoice in ClientInvoices)
+            {
+                if (enteredAmount <= 0)
+                    break;
+                var paid = invoice.Remaining <= enteredAmount ? invoice.Remaining : enteredAmount;
+                InvoicePaymentManager.AddInvoicePayment(new InvoicePayment
+                {
+                    Date = dtPaymentDate.Value,
+                    InvoiceId = invoice.InvoiceId,
+                    Paid = paid
+                });
+                paidInvoices.Add(new KeyValuePair<DateTime, decimal>(invoice.Date, paid));
+                InvoiceManager.UpdateInvoicePaidAmount(invoice.InvoiceId, paid);
+                enteredAmount -= paid;
+            }
+            ShowSuccessMsg(paidInvoices, (decimal) dblInRemaining.Value);
+        }
+
+        private void ShowSuccessMsg(List<KeyValuePair<DateTime, decimal>> paidInvoices, decimal remaining)
+        {
+            var msg = new StringBuilder($"{Environment.NewLine}تم الدفع للفواتير الآتية{Environment.NewLine}");
+            foreach (var item in paidInvoices)
+                msg.AppendLine($"{item.Key.ToCustomShortDateString()}: {item.Value}{Environment.NewLine}");
+            msg.AppendLine($"المتبقي - {remaining}");
+            ShowInfoMsg(msg.ToString());
+            Close();
         }
 
         #endregion

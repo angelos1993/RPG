@@ -123,6 +123,9 @@
   <data name="ClientEditedSeccessfully" xml:space="preserve">
     <value>تم تعديل العميل بنجاح</value>
   </data>
+  <data name="ClientHasNoRemainingInvoices" xml:space="preserve">
+    <value>هذا العميل ليس له فواتير باقية</value>
+  </data>
   <data name="ClientNotExists" xml:space="preserve">
     <value>اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات</value>
   </data>

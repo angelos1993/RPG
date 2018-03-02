@@ -79,6 +79,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to هذا العميل ليس له فواتير باقية.
+        /// </summary>
+        internal static string ClientHasNoRemainingInvoices {
+            get {
+                return ResourceManager.GetString("ClientHasNoRemainingInvoices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات.
         /// </summary>
         internal static string ClientNotExists {
