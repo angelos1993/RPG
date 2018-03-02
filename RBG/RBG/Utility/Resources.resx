@@ -120,6 +120,9 @@
   <data name="ClientAddedSeccessfully" xml:space="preserve">
     <value>تم إضافة العميل بنجاح</value>
   </data>
+  <data name="ClientEditedSeccessfully" xml:space="preserve">
+    <value>تم تعديل العميل بنجاح</value>
+  </data>
   <data name="ClientNotExists" xml:space="preserve">
     <value>اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات</value>
   </data>
@@ -147,6 +150,9 @@
   <data name="MakeSureOfClientName" xml:space="preserve">
     <value>من فضلك تأكد من اسم العميل</value>
   </data>
+  <data name="MaterialAddedSuccessfully" xml:space="preserve">
+    <value>تم إضافة المادة / الخامة بنجاح</value>
+  </data>
   <data name="MaterialAvailableQuantity" xml:space="preserve">
     <value>الكمية المتاحة {0}</value>
   </data>
@@ -155,6 +161,9 @@
   </data>
   <data name="MaterialCodeAndNameAlreadyUsed" xml:space="preserve">
     <value>الكود والاسم مستخدمان من قبل. هل تريد الاستمرار ؟</value>
+  </data>
+  <data name="MaterialEditedSuccessfully" xml:space="preserve">
+    <value>تم تعديل المادة / الخامة بنجاح</value>
   </data>
   <data name="MaterialNameAlreadyUsed" xml:space="preserve">
     <value>الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟</value>

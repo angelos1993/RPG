@@ -94,21 +94,21 @@ namespace RBG.PL.Forms
             dblInPaid.Value = dblInPaid.Value > dblInTotal.Value ? dblInTotal.Value : dblInPaid.Value;
             dblInDiscount.MaxValue = dblInTotal.Value;
             dblInPaid.MaxValue = dblInTotal.Value;
-            SetRemainingValue();
+            SetDiscountAndRemainingValue();
             Cursor = Cursors.Default;
         }
 
         private void dblInPaid_ValueChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            SetRemainingValue();
+            SetDiscountAndRemainingValue();
             Cursor = Cursors.Default;
         }
 
         private void dblInDiscount_ValueChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            SetRemainingValue();
+            SetDiscountAndRemainingValue();
             Cursor = Cursors.Default;
         }
 
@@ -234,6 +234,7 @@ namespace RBG.PL.Forms
 
         private void SaveInvoice()
         {
+            ErrorProvider.Clear();
             var isFormValid = true;
             if (txtClientName.Text.IsNullOrEmptyOrWhiteSpace())
             {
@@ -243,6 +244,7 @@ namespace RBG.PL.Forms
             else if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
             {
                 isFormValid = ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
+                ClientManager.AddClient(new Client {Name = txtClientName.Text.FullTrim()});
             }
             if (!InvoiceItemVms.Any())
             {
@@ -305,8 +307,9 @@ namespace RBG.PL.Forms
             dblInQuantity.MaxValue = (double) selectedMaterial.AvailableQuantity;
         }
 
-        private void SetRemainingValue()
+        private void SetDiscountAndRemainingValue()
         {
+            dblInDiscount.MaxValue = dblInTotal.Value - dblInPaid.Value;
             dblInRemaining.Value = dblInTotal.Value - dblInDiscount.Value - dblInPaid.Value;
         }
 

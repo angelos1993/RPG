@@ -106,6 +106,7 @@ namespace RBG.PL.Forms
                 Material.Quantity = (decimal) dblInQuantity.Value;
                 MaterialManager.UpdateMaterial(Material);
             }
+            ShowInfoMsg(IsEditMode ? Resources.MaterialEditedSuccessfully : Resources.MaterialAddedSuccessfully);
             Close();
         }
 

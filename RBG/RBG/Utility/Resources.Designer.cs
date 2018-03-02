@@ -70,6 +70,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم تعديل العميل بنجاح.
+        /// </summary>
+        internal static string ClientEditedSeccessfully {
+            get {
+                return ResourceManager.GetString("ClientEditedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to اسم العميل غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا العميل إلي قاعدة البيانات.
         /// </summary>
         internal static string ClientNotExists {
@@ -151,6 +160,15 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إضافة المادة / الخامة بنجاح.
+        /// </summary>
+        internal static string MaterialAddedSuccessfully {
+            get {
+                return ResourceManager.GetString("MaterialAddedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الكمية المتاحة {0}.
         /// </summary>
         internal static string MaterialAvailableQuantity {
@@ -174,6 +192,15 @@ namespace RBG.Utility {
         internal static string MaterialCodeAndNameAlreadyUsed {
             get {
                 return ResourceManager.GetString("MaterialCodeAndNameAlreadyUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم تعديل المادة / الخامة بنجاح.
+        /// </summary>
+        internal static string MaterialEditedSuccessfully {
+            get {
+                return ResourceManager.GetString("MaterialEditedSuccessfully", resourceCulture);
             }
         }
         

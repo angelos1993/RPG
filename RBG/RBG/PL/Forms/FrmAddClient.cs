@@ -76,7 +76,7 @@ namespace RBG.PL.Forms
                 Client.Phone = txtPhone.Text.FullTrim();
                 ClientManager.UpdateClient(Client);
             }
-            ShowConfirmationDialog(Resources.ClientAddedSeccessfully);
+            ShowConfirmationDialog(IsEditMode ? Resources.ClientEditedSeccessfully : Resources.ClientAddedSeccessfully);
             Close();
         }
 
