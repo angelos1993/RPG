@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoices = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -41,8 +41,9 @@
             this.pnlInvoiceState = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.radRemainingInvoices = new System.Windows.Forms.RadioButton();
             this.radPaidInvoices = new System.Windows.Forms.RadioButton();
-            this.radAllInvoices = new System.Windows.Forms.RadioButton();
+            this.radAllStates = new System.Windows.Forms.RadioButton();
             this.pnlClient = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.radAllDates = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.pnlDate.SuspendLayout();
@@ -55,21 +56,21 @@
             // 
             this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoices.Location = new System.Drawing.Point(12, 93);
             this.dgvInvoices.Name = "dgvInvoices";
             this.dgvInvoices.ReadOnly = true;
             this.dgvInvoices.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoices.Size = new System.Drawing.Size(1000, 499);
+            this.dgvInvoices.Size = new System.Drawing.Size(1096, 499);
             this.dgvInvoices.TabIndex = 10;
             this.dgvInvoices.DoubleClick += new System.EventHandler(this.dgvInvoices_DoubleClick);
             // 
@@ -80,7 +81,7 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(447, 598);
+            this.btnClose.Location = new System.Drawing.Point(495, 598);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -97,7 +98,7 @@
             this.txtClientName.Location = new System.Drawing.Point(3, 10);
             this.txtClientName.Name = "txtClientName";
             this.txtClientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtClientName.Size = new System.Drawing.Size(274, 26);
+            this.txtClientName.Size = new System.Drawing.Size(305, 26);
             this.txtClientName.TabIndex = 9;
             this.txtClientName.TextChanged += new System.EventHandler(this.txtClientName_TextChanged);
             // 
@@ -109,7 +110,7 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(269, 10);
+            this.labelX1.Location = new System.Drawing.Point(314, 10);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(73, 23);
@@ -120,13 +121,14 @@
             // 
             this.pnlDate.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlDate.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlDate.Controls.Add(this.radAllDates);
             this.pnlDate.Controls.Add(this.dtInvoiceDate);
             this.pnlDate.Controls.Add(this.radSpesificDate);
             this.pnlDate.Controls.Add(this.radThisMonth);
             this.pnlDate.Controls.Add(this.radThisDay);
             this.pnlDate.Location = new System.Drawing.Point(272, 12);
             this.pnlDate.Name = "pnlDate";
-            this.pnlDate.Size = new System.Drawing.Size(383, 75);
+            this.pnlDate.Size = new System.Drawing.Size(434, 75);
             // 
             // 
             // 
@@ -257,7 +259,7 @@
             this.pnlInvoiceState.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.pnlInvoiceState.Controls.Add(this.radRemainingInvoices);
             this.pnlInvoiceState.Controls.Add(this.radPaidInvoices);
-            this.pnlInvoiceState.Controls.Add(this.radAllInvoices);
+            this.pnlInvoiceState.Controls.Add(this.radAllStates);
             this.pnlInvoiceState.Location = new System.Drawing.Point(12, 12);
             this.pnlInvoiceState.Name = "pnlInvoiceState";
             this.pnlInvoiceState.Size = new System.Drawing.Size(254, 75);
@@ -321,20 +323,20 @@
             this.radPaidInvoices.UseVisualStyleBackColor = false;
             this.radPaidInvoices.CheckedChanged += new System.EventHandler(this.radInvoiceState_CheckedChanged);
             // 
-            // radAllInvoices
+            // radAllStates
             // 
-            this.radAllInvoices.AutoSize = true;
-            this.radAllInvoices.BackColor = System.Drawing.Color.Transparent;
-            this.radAllInvoices.Checked = true;
-            this.radAllInvoices.Location = new System.Drawing.Point(192, 10);
-            this.radAllInvoices.Name = "radAllInvoices";
-            this.radAllInvoices.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radAllInvoices.Size = new System.Drawing.Size(48, 24);
-            this.radAllInvoices.TabIndex = 0;
-            this.radAllInvoices.TabStop = true;
-            this.radAllInvoices.Text = "الكل";
-            this.radAllInvoices.UseVisualStyleBackColor = false;
-            this.radAllInvoices.CheckedChanged += new System.EventHandler(this.radInvoiceState_CheckedChanged);
+            this.radAllStates.AutoSize = true;
+            this.radAllStates.BackColor = System.Drawing.Color.Transparent;
+            this.radAllStates.Checked = true;
+            this.radAllStates.Location = new System.Drawing.Point(192, 10);
+            this.radAllStates.Name = "radAllStates";
+            this.radAllStates.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radAllStates.Size = new System.Drawing.Size(48, 24);
+            this.radAllStates.TabIndex = 0;
+            this.radAllStates.TabStop = true;
+            this.radAllStates.Text = "الكل";
+            this.radAllStates.UseVisualStyleBackColor = false;
+            this.radAllStates.CheckedChanged += new System.EventHandler(this.radInvoiceState_CheckedChanged);
             // 
             // pnlClient
             // 
@@ -342,9 +344,9 @@
             this.pnlClient.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.pnlClient.Controls.Add(this.txtClientName);
             this.pnlClient.Controls.Add(this.labelX1);
-            this.pnlClient.Location = new System.Drawing.Point(661, 12);
+            this.pnlClient.Location = new System.Drawing.Point(712, 12);
             this.pnlClient.Name = "pnlClient";
-            this.pnlClient.Size = new System.Drawing.Size(351, 75);
+            this.pnlClient.Size = new System.Drawing.Size(396, 75);
             // 
             // 
             // 
@@ -379,11 +381,26 @@
             this.pnlClient.TabIndex = 23;
             this.pnlClient.Text = "بحث بالعميل";
             // 
+            // radAllDates
+            // 
+            this.radAllDates.AutoSize = true;
+            this.radAllDates.BackColor = System.Drawing.Color.Transparent;
+            this.radAllDates.Checked = true;
+            this.radAllDates.Location = new System.Drawing.Point(372, 10);
+            this.radAllDates.Name = "radAllDates";
+            this.radAllDates.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radAllDates.Size = new System.Drawing.Size(48, 24);
+            this.radAllDates.TabIndex = 14;
+            this.radAllDates.TabStop = true;
+            this.radAllDates.Text = "الكل";
+            this.radAllDates.UseVisualStyleBackColor = false;
+            this.radAllDates.CheckedChanged += new System.EventHandler(this.radInvoiceDate_CheckedChanged);
+            // 
             // FrmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 650);
+            this.ClientSize = new System.Drawing.Size(1120, 650);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.pnlInvoiceState);
             this.Controls.Add(this.pnlDate);
@@ -416,10 +433,11 @@
         private DevComponents.DotNetBar.Controls.GroupPanel pnlClient;
         private System.Windows.Forms.RadioButton radRemainingInvoices;
         private System.Windows.Forms.RadioButton radPaidInvoices;
-        private System.Windows.Forms.RadioButton radAllInvoices;
+        private System.Windows.Forms.RadioButton radAllStates;
         private System.Windows.Forms.RadioButton radThisMonth;
         private System.Windows.Forms.RadioButton radThisDay;
         private System.Windows.Forms.RadioButton radSpesificDate;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtInvoiceDate;
+        private System.Windows.Forms.RadioButton radAllDates;
     }
 }
