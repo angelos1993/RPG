@@ -124,6 +124,42 @@ namespace RBG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to حدث خطأ ما، من فضلك حاول مرة أخري ... قم بتغيير المكان.
+        /// </summary>
+        internal static string DatabaseBackupFailed {
+            get {
+                return ResourceManager.GetString("DatabaseBackupFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم نسخ قاعدة البيانات بنجاح.
+        /// </summary>
+        internal static string DatabaseBackupSuccessfully {
+            get {
+                return ResourceManager.GetString("DatabaseBackupSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حدث خطأ ما، من فضلك حاول مرة أخري ... قم بتغيير ملف الاسترجاع.
+        /// </summary>
+        internal static string DatabaseRestoreFailes {
+            get {
+                return ResourceManager.GetString("DatabaseRestoreFailes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إستعادة قاعدة البيانات بنجاح.
+        /// </summary>
+        internal static string DatabaseRestoreSuccessfully {
+            get {
+                return ResourceManager.GetString("DatabaseRestoreSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذا العميل ؟.
         /// </summary>
         internal static string DeleteClientConfirmationMsg {

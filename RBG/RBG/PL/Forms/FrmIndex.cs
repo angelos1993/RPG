@@ -98,6 +98,11 @@ namespace RBG.PL.Forms
 
         #region DB
 
+        private void btnDatabase_Click(object sender, EventArgs e)
+        {
+            new FrmDatabase().ShowDialog();
+        }
+
         #endregion
 
         #endregion
