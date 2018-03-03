@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMaterials = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.radName = new System.Windows.Forms.RadioButton();
             this.radCode = new System.Windows.Forms.RadioButton();
             this.radPrice = new System.Windows.Forms.RadioButton();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.radAvailableQuantity = new System.Windows.Forms.RadioButton();
             this.grpSearch = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
@@ -42,7 +43,6 @@
             this.btnArchive = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             this.btnUnArchive = new DevComponents.DotNetBar.ButtonX();
-            this.radAvailableQuantity = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterials)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -53,14 +53,14 @@
             // 
             this.dgvMaterials.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaterials.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMaterials.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMaterials.Location = new System.Drawing.Point(12, 81);
             this.dgvMaterials.MultiSelect = false;
@@ -172,6 +172,19 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 21;
             this.groupPanel1.Text = "ترتيب حسب";
+            // 
+            // radAvailableQuantity
+            // 
+            this.radAvailableQuantity.AutoSize = true;
+            this.radAvailableQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.radAvailableQuantity.Location = new System.Drawing.Point(31, 3);
+            this.radAvailableQuantity.Name = "radAvailableQuantity";
+            this.radAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radAvailableQuantity.Size = new System.Drawing.Size(95, 24);
+            this.radAvailableQuantity.TabIndex = 5;
+            this.radAvailableQuantity.Text = "الكمية المتاحة";
+            this.radAvailableQuantity.UseVisualStyleBackColor = false;
+            this.radAvailableQuantity.CheckedChanged += new System.EventHandler(this.radSort_CheckedChanged);
             // 
             // grpSearch
             // 
@@ -289,7 +302,7 @@
             // 
             this.btnUnArchive.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnUnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnUnArchive.Image = global::RBG.Properties.Resources.Archive;
+            this.btnUnArchive.Image = global::RBG.Properties.Resources.UnArchive;
             this.btnUnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btnUnArchive.Location = new System.Drawing.Point(271, 406);
             this.btnUnArchive.Name = "btnUnArchive";
@@ -298,19 +311,6 @@
             this.btnUnArchive.TabIndex = 24;
             this.btnUnArchive.Text = "إسترجاع";
             this.btnUnArchive.Click += new System.EventHandler(this.btnUnArchive_Click);
-            // 
-            // radAvailableQuantity
-            // 
-            this.radAvailableQuantity.AutoSize = true;
-            this.radAvailableQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.radAvailableQuantity.Location = new System.Drawing.Point(31, 3);
-            this.radAvailableQuantity.Name = "radAvailableQuantity";
-            this.radAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radAvailableQuantity.Size = new System.Drawing.Size(95, 24);
-            this.radAvailableQuantity.TabIndex = 5;
-            this.radAvailableQuantity.Text = "الكمية المتاحة";
-            this.radAvailableQuantity.UseVisualStyleBackColor = false;
-            this.radAvailableQuantity.CheckedChanged += new System.EventHandler(this.radSort_CheckedChanged);
             // 
             // FrmMaterials
             // 
