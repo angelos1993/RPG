@@ -68,11 +68,15 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
-        private void dgvMaterials_Click(object sender, EventArgs e)
+        private void dgvMaterials_SelectionChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            btnEdit.Enabled = btnArchive.Enabled = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"].Value
-                .ToString());
+            if (dgvMaterials.SelectedRows.Count <= 0)
+                return;
+            var isMaterialArchived = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"]
+                .Value.ToString());
+            btnEdit.Enabled = btnArchive.Enabled = isMaterialArchived;
+            btnUnArchive.Enabled = !isMaterialArchived;
             Cursor = Cursors.Default;
         }
 
@@ -86,7 +90,14 @@ namespace RBG.PL.Forms
         private void btnArchive_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            ArchiveMaterial();
+            ArchiveOrunArchiveMaterial(true);
+            Cursor = Cursors.Default;
+        }
+
+        private void btnUnArchive_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            ArchiveOrunArchiveMaterial(false);
             Cursor = Cursors.Default;
         }
 
@@ -143,15 +154,16 @@ namespace RBG.PL.Forms
                 MaterialsList = MaterialsList.OrderBy(material => material.Name).ToList();
             else if (radCode.Checked)
                 MaterialsList = MaterialsList.OrderBy(material => material.Code).ToList();
-            else
+            else if (radPrice.Checked)
                 MaterialsList = MaterialsList.OrderBy(material => material.Price).ToList();
+            else
+                MaterialsList = MaterialsList.OrderBy(material => material.Quantity).ToList();
             FillGrid();
         }
 
         private void FillGrid()
         {
             dgvMaterials.DataSource = MaterialsList;
-            btnEdit.Enabled = btnArchive.Enabled = MaterialsList.Any();
         }
 
         private void EditMaterial()
@@ -161,13 +173,15 @@ namespace RBG.PL.Forms
             ResetForm();
         }
 
-        private void ArchiveMaterial()
+        private void ArchiveOrunArchiveMaterial(bool isArchived)
         {
+            var rowIndex = dgvMaterials.SelectedRows[0].Index;
             var material =
                 MaterialManager.GetMaterialById(int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString()));
-            material.IsArchived = true;
+            material.IsArchived = isArchived;
             MaterialManager.UpdateMaterial(material);
             ResetForm();
+            dgvMaterials.Rows[rowIndex].Selected = true;
         }
 
         #endregion

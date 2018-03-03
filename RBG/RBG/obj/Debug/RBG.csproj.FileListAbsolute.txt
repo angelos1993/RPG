@@ -25,3 +25,4 @@ G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmInvoices.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddMaterialQuantity.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmPayInvoice.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmInvoiceDetails.resources
+G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csprojResolveAssemblyReference.cache

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMaterials = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.radName = new System.Windows.Forms.RadioButton();
@@ -41,6 +41,8 @@
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnArchive = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
+            this.btnUnArchive = new DevComponents.DotNetBar.ButtonX();
+            this.radAvailableQuantity = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterials)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -51,14 +53,14 @@
             // 
             this.dgvMaterials.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaterials.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMaterials.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMaterials.Location = new System.Drawing.Point(12, 81);
             this.dgvMaterials.MultiSelect = false;
@@ -66,9 +68,9 @@
             this.dgvMaterials.ReadOnly = true;
             this.dgvMaterials.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaterials.Size = new System.Drawing.Size(785, 319);
+            this.dgvMaterials.Size = new System.Drawing.Size(910, 319);
             this.dgvMaterials.TabIndex = 0;
-            this.dgvMaterials.Click += new System.EventHandler(this.dgvMaterials_Click);
+            this.dgvMaterials.SelectionChanged += new System.EventHandler(this.dgvMaterials_SelectionChanged);
             // 
             // txtSearch
             // 
@@ -90,8 +92,9 @@
             this.radName.AutoSize = true;
             this.radName.BackColor = System.Drawing.Color.Transparent;
             this.radName.Checked = true;
-            this.radName.Location = new System.Drawing.Point(143, 3);
+            this.radName.Location = new System.Drawing.Point(259, 3);
             this.radName.Name = "radName";
+            this.radName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radName.Size = new System.Drawing.Size(54, 24);
             this.radName.TabIndex = 2;
             this.radName.TabStop = true;
@@ -103,8 +106,9 @@
             // 
             this.radCode.AutoSize = true;
             this.radCode.BackColor = System.Drawing.Color.Transparent;
-            this.radCode.Location = new System.Drawing.Point(83, 3);
+            this.radCode.Location = new System.Drawing.Point(199, 3);
             this.radCode.Name = "radCode";
+            this.radCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radCode.Size = new System.Drawing.Size(52, 24);
             this.radCode.TabIndex = 3;
             this.radCode.Text = "الكود";
@@ -115,8 +119,9 @@
             // 
             this.radPrice.AutoSize = true;
             this.radPrice.BackColor = System.Drawing.Color.Transparent;
-            this.radPrice.Location = new System.Drawing.Point(20, 3);
+            this.radPrice.Location = new System.Drawing.Point(134, 3);
             this.radPrice.Name = "radPrice";
+            this.radPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radPrice.Size = new System.Drawing.Size(57, 24);
             this.radPrice.TabIndex = 4;
             this.radPrice.Text = "السعر";
@@ -127,12 +132,13 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.radAvailableQuantity);
             this.groupPanel1.Controls.Add(this.radCode);
             this.groupPanel1.Controls.Add(this.radName);
             this.groupPanel1.Controls.Add(this.radPrice);
             this.groupPanel1.Location = new System.Drawing.Point(221, 12);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(224, 63);
+            this.groupPanel1.Size = new System.Drawing.Size(349, 63);
             // 
             // 
             // 
@@ -172,7 +178,7 @@
             this.grpSearch.CanvasColor = System.Drawing.SystemColors.Control;
             this.grpSearch.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.grpSearch.Controls.Add(this.txtSearch);
-            this.grpSearch.Location = new System.Drawing.Point(451, 12);
+            this.grpSearch.Location = new System.Drawing.Point(576, 12);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(346, 63);
             // 
@@ -215,7 +221,7 @@
             this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEdit.Image = global::RBG.Properties.Resources.Edit;
             this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(475, 406);
+            this.btnEdit.Location = new System.Drawing.Point(543, 406);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 40);
             this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -243,7 +249,7 @@
             this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnClose.Image = global::RBG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(203, 406);
+            this.btnClose.Location = new System.Drawing.Point(135, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -257,7 +263,7 @@
             this.btnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnArchive.Image = global::RBG.Properties.Resources.Archive;
             this.btnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnArchive.Location = new System.Drawing.Point(339, 406);
+            this.btnArchive.Location = new System.Drawing.Point(407, 406);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(130, 40);
             this.btnArchive.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -279,11 +285,39 @@
             this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
             this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
             // 
+            // btnUnArchive
+            // 
+            this.btnUnArchive.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnUnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnUnArchive.Image = global::RBG.Properties.Resources.Archive;
+            this.btnUnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnUnArchive.Location = new System.Drawing.Point(271, 406);
+            this.btnUnArchive.Name = "btnUnArchive";
+            this.btnUnArchive.Size = new System.Drawing.Size(130, 40);
+            this.btnUnArchive.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnUnArchive.TabIndex = 24;
+            this.btnUnArchive.Text = "إسترجاع";
+            this.btnUnArchive.Click += new System.EventHandler(this.btnUnArchive_Click);
+            // 
+            // radAvailableQuantity
+            // 
+            this.radAvailableQuantity.AutoSize = true;
+            this.radAvailableQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.radAvailableQuantity.Location = new System.Drawing.Point(31, 3);
+            this.radAvailableQuantity.Name = "radAvailableQuantity";
+            this.radAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radAvailableQuantity.Size = new System.Drawing.Size(95, 24);
+            this.radAvailableQuantity.TabIndex = 5;
+            this.radAvailableQuantity.Text = "الكمية المتاحة";
+            this.radAvailableQuantity.UseVisualStyleBackColor = false;
+            this.radAvailableQuantity.CheckedChanged += new System.EventHandler(this.radSort_CheckedChanged);
+            // 
             // FrmMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 458);
+            this.ClientSize = new System.Drawing.Size(934, 458);
+            this.Controls.Add(this.btnUnArchive);
             this.Controls.Add(this.btnAddMaterialQuantity);
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.groupPanel1);
@@ -319,5 +353,7 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel grpSearch;
         private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
+        private DevComponents.DotNetBar.ButtonX btnUnArchive;
+        private System.Windows.Forms.RadioButton radAvailableQuantity;
     }
 }
