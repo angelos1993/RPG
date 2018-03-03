@@ -74,7 +74,7 @@ namespace RBG.PL.Forms
         private void dgvInvoices_DoubleClick(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            //todo: diaplay invoice details in a new form
+            new FrmInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
             Cursor = Cursors.Default;
         }
 

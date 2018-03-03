@@ -110,6 +110,7 @@
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
     <Compile Include="DAL\VMs\ClientVm.cs" />
     <Compile Include="DAL\VMs\InvoiceItemVm.cs" />
+    <Compile Include="DAL\VMs\InvoicePaymentVm.cs" />
     <Compile Include="DAL\VMs\InvoiceVm.cs" />
     <Compile Include="DAL\VMs\LightInvoiceVm.cs" />
     <Compile Include="DAL\VMs\LightMaterialVm.cs" />
@@ -155,6 +156,12 @@
     </Compile>
     <Compile Include="PL\Forms\FrmIndex.Designer.cs">
       <DependentUpon>FrmIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Forms\FrmInvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmInvoiceDetails.Designer.cs">
+      <DependentUpon>FrmInvoiceDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmInvoices.cs">
       <SubType>Form</SubType>
@@ -220,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmIndex.resx">
       <DependentUpon>FrmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmInvoiceDetails.resx">
+      <DependentUpon>FrmInvoiceDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmInvoices.resx">
       <DependentUpon>FrmInvoices.cs</DependentUpon>

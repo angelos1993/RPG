@@ -54,6 +54,13 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void dgvInvoices_DoubleClick(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            new FrmInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+            Cursor = Cursors.Default;
+        }
+
         private void dblInTotal_ValueChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;

@@ -51,6 +51,11 @@ namespace RBG.BLL
             UnitOfWork.InvoiceRepository.Update(invoice);
         }
 
+        public Invoice GetInvoiceById(int invoiceId)
+        {
+            return UnitOfWork.InvoiceRepository.GetById(invoiceId);
+        }
+
         #endregion
     }
 }

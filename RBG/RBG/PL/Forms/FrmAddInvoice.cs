@@ -192,7 +192,7 @@ namespace RBG.PL.Forms
                     MaterialId = materialId,
                     MaterialName = ((KeyValuePair<int, string>) cmbMaterials.SelectedItem).Value,
                     Quantity = addedQuantity,
-                    PricePerMeter = GetMaterialPrice(materialId)
+                    TotalPrice = GetMaterialPrice(materialId) * addedQuantity
                 });
             MaterialsList.Find(material => material.Id == materialId).AvailableQuantity -= addedQuantity;
             FillGrid();
@@ -274,12 +274,13 @@ namespace RBG.PL.Forms
                 Quantity = item.Quantity,
                 Price = item.TotalPrice
             }).ToList());
-            InvoicePaymentManager.AddInvoicePayment(new InvoicePayment
-            {
-                InvoiceId = invoice.Id,
-                Date = dtInvoiceDate.Value,
-                Paid = (decimal) dblInPaid.Value
-            });
+            if (invoice.Paid > 0)
+                InvoicePaymentManager.AddInvoicePayment(new InvoicePayment
+                {
+                    InvoiceId = invoice.Id,
+                    Date = dtInvoiceDate.Value,
+                    Paid = (decimal) dblInPaid.Value
+                });
             MaterialManager.UpdateQuantitiesAfterCreatingInvoice(InvoiceItemVms);
             ShowInfoMsg(Resources.InvoiceCreatedSuccessfully);
             Close();
