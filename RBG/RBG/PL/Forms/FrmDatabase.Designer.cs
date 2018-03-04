@@ -33,6 +33,7 @@
             this.btnRestore = new DevComponents.DotNetBar.ButtonX();
             this.btnBackup = new DevComponents.DotNetBar.ButtonX();
             this.btnBackupToDrive = new DevComponents.DotNetBar.ButtonX();
+            this.btnClose = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +109,26 @@
             this.btnBackupToDrive.Text = "نسخ قاعدة البيانات إلي Google Drive";
             this.btnBackupToDrive.Click += new System.EventHandler(this.btnBackupToDrive_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClose.Image = global::RBG.Properties.Resources.Exit;
+            this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(254, 301);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(130, 40);
+            this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "خروج";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 298);
+            this.ClientSize = new System.Drawing.Size(639, 349);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnRestore);
@@ -120,7 +136,7 @@
             this.Controls.Add(this.btnBackupToDrive);
             this.DoubleBuffered = true;
             this.Name = "FrmDatabase";
-            this.Text = "فاعدة البيانات";
+            this.Text = "قاعدة البيانات";
             this.Load += new System.EventHandler(this.FrmDatabase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
@@ -134,5 +150,6 @@
         private DevComponents.DotNetBar.ButtonX btnRestore;
         private DevComponents.DotNetBar.Controls.ProgressBarX progressBar;
         private DevComponents.DotNetBar.LabelX lblProgress;
+        private DevComponents.DotNetBar.ButtonX btnClose;
     }
 }

@@ -74,7 +74,8 @@ namespace RBG.PL.Forms
         private void dgvInvoices_DoubleClick(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            new FrmInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+            if (dgvInvoices.Rows.Count > 0)
+                new FrmInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
             Cursor = Cursors.Default;
         }
 

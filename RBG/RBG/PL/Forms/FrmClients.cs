@@ -101,9 +101,9 @@ namespace RBG.PL.Forms
         private void SearchClients()
         {
             var searchText = txtSearch.Text.FullTrim();
-            ClientsList = Clients
-                .Where(client => client.Name.Contains(searchText) ||
-                                 client.Address.Contains(searchText) || client.Phone.Contains(searchText))
+            ClientsList = Clients.Where(client => client.Name != null && client.Name.Contains(searchText)
+                                                  || client.Address != null && client.Address.Contains(searchText) ||
+                                                  client.Phone != null && client.Phone.Contains(searchText))
                 .Select(client => new ClientVm
                 {
                     Id = client.Id,

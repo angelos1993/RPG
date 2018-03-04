@@ -71,12 +71,7 @@ namespace RBG.PL.Forms
         private void dgvMaterials_SelectionChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            if (dgvMaterials.SelectedRows.Count <= 0)
-                return;
-            var isMaterialArchived = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"]
-                .Value.ToString());
-            btnEdit.Enabled = btnArchive.Enabled = isMaterialArchived;
-            btnUnArchive.Enabled = !isMaterialArchived;
+            SetButtonsAvailability();
             Cursor = Cursors.Default;
         }
 
@@ -164,6 +159,7 @@ namespace RBG.PL.Forms
         private void FillGrid()
         {
             dgvMaterials.DataSource = MaterialsList;
+            SetButtonsAvailability();
         }
 
         private void EditMaterial()
@@ -182,6 +178,19 @@ namespace RBG.PL.Forms
             MaterialManager.UpdateMaterial(material);
             ResetForm();
             dgvMaterials.Rows[rowIndex].Selected = true;
+        }
+
+        private void SetButtonsAvailability()
+        {
+            if (dgvMaterials.SelectedRows.Count <= 0)
+            {
+                btnEdit.Enabled = btnArchive.Enabled = btnUnArchive.Enabled = false;
+                return;
+            }
+            var isMaterialArchived = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"]
+                .Value.ToString());
+            btnEdit.Enabled = btnArchive.Enabled = isMaterialArchived;
+            btnUnArchive.Enabled = !isMaterialArchived;
         }
 
         #endregion

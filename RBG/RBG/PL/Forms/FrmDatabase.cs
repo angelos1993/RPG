@@ -76,6 +76,11 @@ namespace RBG.PL.Forms
             Close();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         #endregion
 
         #region Methods

@@ -45,6 +45,7 @@
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lblRemaining = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoicePayments)).BeginInit();
@@ -54,6 +55,7 @@
             this.groupPanel4.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             this.groupPanel6.SuspendLayout();
+            this.groupPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblClientName
@@ -122,14 +124,15 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInvoicePayments.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvInvoicePayments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoicePayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvInvoicePayments.Location = new System.Drawing.Point(12, 290);
+            this.dgvInvoicePayments.Location = new System.Drawing.Point(0, 0);
             this.dgvInvoicePayments.MultiSelect = false;
             this.dgvInvoicePayments.Name = "dgvInvoicePayments";
             this.dgvInvoicePayments.ReadOnly = true;
             this.dgvInvoicePayments.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvInvoicePayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoicePayments.Size = new System.Drawing.Size(369, 124);
+            this.dgvInvoicePayments.Size = new System.Drawing.Size(363, 97);
             this.dgvInvoicePayments.TabIndex = 25;
             // 
             // btnClose
@@ -464,11 +467,54 @@
             this.lblRemaining.Text = "lblRemaining";
             this.lblRemaining.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // groupPanel7
+            // 
+            this.groupPanel7.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel7.Controls.Add(this.dgvInvoicePayments);
+            this.groupPanel7.Location = new System.Drawing.Point(12, 290);
+            this.groupPanel7.Name = "groupPanel7";
+            this.groupPanel7.Size = new System.Drawing.Size(369, 124);
+            // 
+            // 
+            // 
+            this.groupPanel7.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel7.Style.BackColorGradientAngle = 90;
+            this.groupPanel7.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel7.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel7.Style.BorderBottomWidth = 1;
+            this.groupPanel7.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel7.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel7.Style.BorderLeftWidth = 1;
+            this.groupPanel7.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel7.Style.BorderRightWidth = 1;
+            this.groupPanel7.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel7.Style.BorderTopWidth = 1;
+            this.groupPanel7.Style.Class = "";
+            this.groupPanel7.Style.CornerDiameter = 4;
+            this.groupPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel7.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel7.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel7.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel7.StyleMouseDown.Class = "";
+            this.groupPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel7.StyleMouseOver.Class = "";
+            this.groupPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel7.TabIndex = 34;
+            this.groupPanel7.Text = "المدفوعات";
+            // 
             // FrmInvoiceDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 466);
+            this.Controls.Add(this.groupPanel7);
             this.Controls.Add(this.groupPanel5);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel6);
@@ -476,7 +522,6 @@
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dgvInvoicePayments);
             this.Controls.Add(this.dgvInvoiceItems);
             this.DoubleBuffered = true;
             this.Name = "FrmInvoiceDetails";
@@ -490,6 +535,7 @@
             this.groupPanel4.ResumeLayout(false);
             this.groupPanel5.ResumeLayout(false);
             this.groupPanel6.ResumeLayout(false);
+            this.groupPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -511,5 +557,6 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel5;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel6;
         private DevComponents.DotNetBar.LabelX lblRemaining;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel7;
     }
 }

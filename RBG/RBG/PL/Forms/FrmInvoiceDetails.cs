@@ -56,6 +56,7 @@ namespace RBG.PL.Forms
             lblRemaining.Text =
                 (invoice.Total - invoice.Paid - invoice.Discount).ToString(CultureInfo.InvariantCulture);
             dgvInvoicePayments.DataSource = InvoicePaymentManager.GetInvoicePayments(invoice.Id);
+            dgvInvoiceItems.Columns[0].Visible = false;
         }
 
         #endregion
