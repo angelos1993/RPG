@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoices = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.pnlDate = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.radAllDates = new System.Windows.Forms.RadioButton();
             this.dtInvoiceDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.radSpesificDate = new System.Windows.Forms.RadioButton();
             this.radThisMonth = new System.Windows.Forms.RadioButton();
@@ -43,7 +44,6 @@
             this.radPaidInvoices = new System.Windows.Forms.RadioButton();
             this.radAllStates = new System.Windows.Forms.RadioButton();
             this.pnlClient = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.radAllDates = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.pnlDate.SuspendLayout();
@@ -56,14 +56,14 @@
             // 
             this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoices.Location = new System.Drawing.Point(12, 93);
             this.dgvInvoices.Name = "dgvInvoices";
@@ -162,6 +162,21 @@
             this.pnlDate.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlDate.TabIndex = 21;
             this.pnlDate.Text = "بحث بالتاريخ";
+            // 
+            // radAllDates
+            // 
+            this.radAllDates.AutoSize = true;
+            this.radAllDates.BackColor = System.Drawing.Color.Transparent;
+            this.radAllDates.Checked = true;
+            this.radAllDates.Location = new System.Drawing.Point(372, 10);
+            this.radAllDates.Name = "radAllDates";
+            this.radAllDates.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radAllDates.Size = new System.Drawing.Size(48, 24);
+            this.radAllDates.TabIndex = 14;
+            this.radAllDates.TabStop = true;
+            this.radAllDates.Text = "الكل";
+            this.radAllDates.UseVisualStyleBackColor = false;
+            this.radAllDates.CheckedChanged += new System.EventHandler(this.radInvoiceDate_CheckedChanged);
             // 
             // dtInvoiceDate
             // 
@@ -381,25 +396,11 @@
             this.pnlClient.TabIndex = 23;
             this.pnlClient.Text = "بحث بالعميل";
             // 
-            // radAllDates
-            // 
-            this.radAllDates.AutoSize = true;
-            this.radAllDates.BackColor = System.Drawing.Color.Transparent;
-            this.radAllDates.Checked = true;
-            this.radAllDates.Location = new System.Drawing.Point(372, 10);
-            this.radAllDates.Name = "radAllDates";
-            this.radAllDates.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radAllDates.Size = new System.Drawing.Size(48, 24);
-            this.radAllDates.TabIndex = 14;
-            this.radAllDates.TabStop = true;
-            this.radAllDates.Text = "الكل";
-            this.radAllDates.UseVisualStyleBackColor = false;
-            this.radAllDates.CheckedChanged += new System.EventHandler(this.radInvoiceDate_CheckedChanged);
-            // 
             // FrmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1120, 650);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.pnlInvoiceState);

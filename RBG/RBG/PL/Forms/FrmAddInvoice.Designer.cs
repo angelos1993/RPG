@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoiceItems = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.dblInTotal = new DevComponents.Editors.DoubleInput();
@@ -71,14 +71,14 @@
             // 
             this.dgvInvoiceItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInvoiceItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 136);
             this.dgvInvoiceItems.Name = "dgvInvoiceItems";
@@ -239,6 +239,7 @@
             this.btnAddClient.Size = new System.Drawing.Size(25, 25);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddClient.TabIndex = 22;
+            this.btnAddClient.Tooltip = "إضافة عميل جديد";
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // dtInvoiceDate
@@ -391,10 +392,10 @@
             this.lblMaterialAvailableQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMaterialAvailableQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblMaterialAvailableQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblMaterialAvailableQuantity.Location = new System.Drawing.Point(207, 14);
+            this.lblMaterialAvailableQuantity.Location = new System.Drawing.Point(226, 14);
             this.lblMaterialAvailableQuantity.Name = "lblMaterialAvailableQuantity";
             this.lblMaterialAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblMaterialAvailableQuantity.Size = new System.Drawing.Size(115, 23);
+            this.lblMaterialAvailableQuantity.Size = new System.Drawing.Size(127, 23);
             this.lblMaterialAvailableQuantity.TabIndex = 25;
             // 
             // cmbMaterials
@@ -404,9 +405,9 @@
             this.cmbMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterials.FormattingEnabled = true;
             this.cmbMaterials.ItemHeight = 20;
-            this.cmbMaterials.Location = new System.Drawing.Point(380, 12);
+            this.cmbMaterials.Location = new System.Drawing.Point(401, 12);
             this.cmbMaterials.Name = "cmbMaterials";
-            this.cmbMaterials.Size = new System.Drawing.Size(189, 26);
+            this.cmbMaterials.Size = new System.Drawing.Size(178, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbMaterials.TabIndex = 24;
             this.cmbMaterials.SelectedIndexChanged += new System.EventHandler(this.cmbMaterials_SelectedIndexChanged);
@@ -417,11 +418,12 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RBG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Location = new System.Drawing.Point(328, 13);
+            this.btnAddMaterial.Location = new System.Drawing.Point(359, 12);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(25, 25);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddMaterial.TabIndex = 23;
+            this.btnAddMaterial.Tooltip = "إضافة مادة جديدة";
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
             // btnInsertItem
@@ -432,9 +434,10 @@
             this.btnInsertItem.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnInsertItem.Location = new System.Drawing.Point(3, 12);
             this.btnInsertItem.Name = "btnInsertItem";
-            this.btnInsertItem.Size = new System.Drawing.Size(25, 25);
+            this.btnInsertItem.Size = new System.Drawing.Size(72, 25);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnInsertItem.TabIndex = 21;
+            this.btnInsertItem.Text = "إضافة";
             this.btnInsertItem.Click += new System.EventHandler(this.btnInsertItem_Click);
             // 
             // dblInQuantity
@@ -446,7 +449,7 @@
             this.dblInQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dblInQuantity.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dblInQuantity.Increment = 0.1D;
-            this.dblInQuantity.Location = new System.Drawing.Point(44, 13);
+            this.dblInQuantity.Location = new System.Drawing.Point(81, 13);
             this.dblInQuantity.MinValue = 0D;
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
@@ -461,12 +464,12 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(137, 15);
+            this.labelX6.Location = new System.Drawing.Point(174, 14);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(64, 23);
+            this.labelX6.Size = new System.Drawing.Size(46, 23);
             this.labelX6.TabIndex = 11;
-            this.labelX6.Text = "الكمية (م2)";
+            this.labelX6.Text = "الكمية";
             // 
             // labelX7
             // 
@@ -476,10 +479,10 @@
             // 
             this.labelX7.BackgroundStyle.Class = "";
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(575, 12);
+            this.labelX7.Location = new System.Drawing.Point(585, 12);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX7.Size = new System.Drawing.Size(86, 23);
+            this.labelX7.Size = new System.Drawing.Size(76, 23);
             this.labelX7.TabIndex = 10;
             this.labelX7.Text = "المادة / الخامة";
             // 
