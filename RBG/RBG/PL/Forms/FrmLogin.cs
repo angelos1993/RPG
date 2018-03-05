@@ -58,6 +58,7 @@ namespace RBG.PL.Forms
                 new FrmIndex().Show();
             }
             lblValidationMsg.Visible = true;
+            txtPassword.Clear();
             txtUsername.SelectAll();
             txtUsername.Focus();
         }
