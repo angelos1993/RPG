@@ -40,7 +40,7 @@ namespace RBG.PL.Forms
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            ShowInfoMsg("Not Implemented yet!");
+            ShowInfoMsg("هذه الخدمة لم تنتهي بعد");
             //Cursor = Cursors.WaitCursor;
             //DisableButtons();
             //RestoreDatabase();

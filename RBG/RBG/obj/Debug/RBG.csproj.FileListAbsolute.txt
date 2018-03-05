@@ -1,4 +1,3 @@
-G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.csprojResolveAssemblyReference.cache
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddClient.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddInvoice.resources
 G:\Angelos\RBG\Repo\RBG\RBG\obj\Debug\RBG.PL.Forms.FrmAddMaterial.resources
