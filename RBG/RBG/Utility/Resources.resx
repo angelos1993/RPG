@@ -201,4 +201,7 @@
   <data name="UpdateAdminDataSuccessfully" xml:space="preserve">
     <value>تم تعديل بيانات المستخدم بنجاح</value>
   </data>
+  <data name="UsernameOrPasswordShouldChanged" xml:space="preserve">
+    <value>يجب تغيير اسم المستخدم أو الرقم السري</value>
+  </data>
 </root>

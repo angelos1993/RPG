@@ -83,6 +83,15 @@ namespace RBG.PL.Forms
             }
             if (!isFormValid)
                 return;
+            if (currentAdmin.Username == txtNewUsername.Text &&
+                currentAdmin.Password == txtNewPassword.Text.ToMd5Hash())
+            {
+                ShowErrorMsg(Resources.UsernameOrPasswordShouldChanged);
+                ErrorProvider.SetError(txtNewUsername, Resources.UsernameOrPasswordShouldChanged);
+                ErrorProvider.SetError(txtNewPassword, Resources.UsernameOrPasswordShouldChanged);
+                ErrorProvider.SetError(txtNewPasswordConfirmation, Resources.UsernameOrPasswordShouldChanged);
+                return;
+            }
             currentAdmin.Username = txtNewUsername.Text;
             currentAdmin.Password = txtNewPassword.Text.ToMd5Hash();
             AdminManager.UpdateAdmin(currentAdmin);

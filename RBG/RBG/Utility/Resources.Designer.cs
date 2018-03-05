@@ -311,5 +311,14 @@ namespace RBG.Utility {
                 return ResourceManager.GetString("UpdateAdminDataSuccessfully", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يجب تغيير اسم المستخدم أو الرقم السري.
+        /// </summary>
+        internal static string UsernameOrPasswordShouldChanged {
+            get {
+                return ResourceManager.GetString("UsernameOrPasswordShouldChanged", resourceCulture);
+            }
+        }
     }
 }
