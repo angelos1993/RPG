@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using RBG.Utility.Enums;
 
 namespace RBG.Utility
 {
@@ -22,10 +23,13 @@ namespace RBG.Utility
                 MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
         }
 
-        public static DialogResult ShowConfirmationDialog(string msg)
+        public static DialogResult ShowConfirmationDialog(string msg,
+            DialogDefaultButton defaultButton = DialogDefaultButton.Yes)
         {
             return MessageBox.Show(msg, @"تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+                defaultButton == DialogDefaultButton.Yes
+                    ? MessageBoxDefaultButton.Button1
+                    : MessageBoxDefaultButton.Button2, MessageBoxOptions.RightAlign);
         }
     }
 }

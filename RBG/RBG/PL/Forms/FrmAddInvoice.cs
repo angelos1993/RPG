@@ -185,7 +185,11 @@ namespace RBG.PL.Forms
             var addedQuantity = (decimal) dblInQuantity.Value;
             var materialId = int.Parse(cmbMaterials.SelectedValue.ToString());
             if (InvoiceItemVms.Exists(item => item.MaterialId == materialId))
-                InvoiceItemVms.Find(item => item.MaterialId == materialId).Quantity += addedQuantity;
+            {
+                var invoiceItem = InvoiceItemVms.Find(item => item.MaterialId == materialId);
+                invoiceItem.Quantity += addedQuantity;
+                invoiceItem.TotalPrice = GetMaterialPrice(materialId) * invoiceItem.Quantity;
+            }
             else
                 InvoiceItemVms.Add(new InvoiceItemVm
                 {

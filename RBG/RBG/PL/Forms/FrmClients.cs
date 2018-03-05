@@ -6,6 +6,7 @@ using RBG.BLL;
 using RBG.DAL.Model;
 using RBG.DAL.VMs;
 using RBG.Utility;
+using RBG.Utility.Enums;
 using static RBG.Utility.MessageBoxUtility;
 
 namespace RBG.PL.Forms
@@ -65,7 +66,8 @@ namespace RBG.PL.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (ShowConfirmationDialog(Resources.DeleteClientConfirmationMsg) != DialogResult.Yes)
+            if (ShowConfirmationDialog(Resources.DeleteClientConfirmationMsg, DialogDefaultButton.No) !=
+                DialogResult.Yes)
                 return;
             Cursor = Cursors.WaitCursor;
             DeleteClient();
