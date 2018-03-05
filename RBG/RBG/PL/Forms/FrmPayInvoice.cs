@@ -164,8 +164,8 @@ namespace RBG.PL.Forms
         {
             var msg = new StringBuilder($"{Environment.NewLine}تم الدفع للفواتير الآتية{Environment.NewLine}");
             foreach (var item in paidInvoices)
-                msg.AppendLine($"{item.Key.ToCustomShortDateString()}: {item.Value}{Environment.NewLine}");
-            msg.AppendLine($"المتبقي - {remaining}");
+                msg.AppendLine($"{item.Value} : {item.Key.ToCustomShortDateString()}\n");
+            msg.AppendLine($"{remaining} : المتبقي");
             ShowInfoMsg(msg.ToString());
             Close();
         }
