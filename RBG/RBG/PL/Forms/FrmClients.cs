@@ -25,6 +25,8 @@ namespace RBG.PL.Forms
 
         private ClientManager _clientManager;
         private ClientManager ClientManager => _clientManager ?? (_clientManager = new ClientManager());
+        private InvoiceManager _invoiceManager;
+        private InvoiceManager InvoiceManager => _invoiceManager ?? (_invoiceManager = new InvoiceManager());
         private List<Client> Clients { get; set; }
         private List<ClientVm> ClientsList { get; set; }
 
@@ -129,7 +131,13 @@ namespace RBG.PL.Forms
 
         private void DeleteClient()
         {
-            ClientManager.DeleteClient(int.Parse(dgvClients.SelectedRows[0].Cells[0].Value.ToString()));
+            var clientId = int.Parse(dgvClients.SelectedRows[0].Cells[0].Value.ToString());
+            if (InvoiceManager.IsClientHasInvoices(clientId))
+            {
+                ShowErrorMsg(Resources.ClientNotDeletedDueToHisInvoices);
+                return;
+            }
+            ClientManager.DeleteClient(clientId);
             ResetForm();
         }
 

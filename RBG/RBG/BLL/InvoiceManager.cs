@@ -56,6 +56,11 @@ namespace RBG.BLL
             return UnitOfWork.InvoiceRepository.GetById(invoiceId);
         }
 
+        public bool IsClientHasInvoices(int clientId)
+        {
+            return UnitOfWork.InvoiceRepository.GetAll().Any(invoice => invoice.ClientId == clientId);
+        }
+
         #endregion
     }
 }
