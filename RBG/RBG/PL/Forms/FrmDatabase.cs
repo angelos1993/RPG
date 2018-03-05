@@ -62,11 +62,10 @@ namespace RBG.PL.Forms
 
         private void Restore_Complete(object sender, ServerMessageEventArgs e)
         {
-            ShowInfoMsg("Not Implemented yet!");
-            //Cursor = Cursors.Default;
-            //ShowOrHideControls(false);
-            //ShowInfoMsg(Resources.DatabaseRestoreSuccessfully);
-            //Close();
+            Cursor = Cursors.Default;
+            ShowOrHideControls(false);
+            ShowInfoMsg(Resources.DatabaseRestoreSuccessfully);
+            Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
