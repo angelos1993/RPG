@@ -38,14 +38,6 @@ namespace RBG.PL.Forms
             Cursor = Cursors.Default;
         }
 
-        private void btnBackupToDrive_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            DisableButtons();
-            BackupDatabaseToGoogleDrive();
-            Cursor = Cursors.Default;
-        }
-
         private void btnRestore_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -113,10 +105,6 @@ namespace RBG.PL.Forms
             }
         }
 
-        private void BackupDatabaseToGoogleDrive()
-        {
-            //todo: google drive service
-        }
         private void RestoreDatabase()
         {
             try
@@ -152,7 +140,7 @@ namespace RBG.PL.Forms
 
         private void DisableButtons()
         {
-            btnBackup.Enabled = btnBackupToDrive.Enabled = btnRestore.Enabled = false;
+            btnBackup.Enabled = btnRestore.Enabled = false;
         }
 
         private void ShowOrHideControls(bool isVisible)
