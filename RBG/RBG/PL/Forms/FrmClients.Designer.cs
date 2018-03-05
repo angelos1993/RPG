@@ -49,7 +49,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 40);
             this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnEdit.TabIndex = 22;
+            this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "تعديل";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -64,7 +64,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 21;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 40);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "حذف";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -114,7 +114,7 @@
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(189, 26);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddClient.TabIndex = 25;
+            this.btnAddClient.TabIndex = 1;
             this.btnAddClient.Text = "إضافة عميل جديد";
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
@@ -129,7 +129,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSearch.Size = new System.Drawing.Size(336, 26);
-            this.txtSearch.TabIndex = 24;
+            this.txtSearch.TabIndex = 0;
             this.txtSearch.WatermarkText = "بحث في العملاء ...";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 

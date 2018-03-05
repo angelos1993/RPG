@@ -64,7 +64,7 @@
             this.txtUsername.Location = new System.Drawing.Point(142, 12);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(264, 26);
-            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
@@ -77,7 +77,7 @@
             this.txtPassword.Location = new System.Drawing.Point(142, 44);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 26);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -122,7 +122,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(130, 40);
             this.btnLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "دخول";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -147,7 +147,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

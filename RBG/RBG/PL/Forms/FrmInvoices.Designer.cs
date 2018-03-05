@@ -85,7 +85,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 19;
+            this.btnClose.TabIndex = 0;
             this.btnClose.Text = "خروج";
             // 
             // txtClientName
@@ -99,7 +99,7 @@
             this.txtClientName.Name = "txtClientName";
             this.txtClientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtClientName.Size = new System.Drawing.Size(305, 26);
-            this.txtClientName.TabIndex = 9;
+            this.txtClientName.TabIndex = 0;
             this.txtClientName.TextChanged += new System.EventHandler(this.txtClientName_TextChanged);
             // 
             // labelX1
@@ -172,7 +172,7 @@
             this.radAllDates.Name = "radAllDates";
             this.radAllDates.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radAllDates.Size = new System.Drawing.Size(48, 24);
-            this.radAllDates.TabIndex = 14;
+            this.radAllDates.TabIndex = 0;
             this.radAllDates.TabStop = true;
             this.radAllDates.Text = "الكل";
             this.radAllDates.UseVisualStyleBackColor = false;
@@ -226,7 +226,7 @@
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Size = new System.Drawing.Size(129, 26);
             this.dtInvoiceDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtInvoiceDate.TabIndex = 13;
+            this.dtInvoiceDate.TabIndex = 4;
             this.dtInvoiceDate.ValueChanged += new System.EventHandler(this.dtInvoiceDate_ValueChanged);
             // 
             // radSpesificDate

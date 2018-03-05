@@ -74,7 +74,7 @@
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(200, 200);
             this.btnRestore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnRestore.TabIndex = 11;
+            this.btnRestore.TabIndex = 1;
             this.btnRestore.Text = "إستعادة قاعدة البيانات";
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
@@ -89,7 +89,7 @@
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(200, 200);
             this.btnBackup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnBackup.TabIndex = 10;
+            this.btnBackup.TabIndex = 0;
             this.btnBackup.Text = "نسخ قاعدة البيانات";
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
@@ -104,7 +104,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 14;
+            this.btnClose.TabIndex = 2;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

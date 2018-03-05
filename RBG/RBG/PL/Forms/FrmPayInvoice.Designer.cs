@@ -89,7 +89,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 27;
+            this.btnClose.TabIndex = 1;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -104,7 +104,7 @@
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(130, 40);
             this.btnPay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPay.TabIndex = 26;
+            this.btnPay.TabIndex = 0;
             this.btnPay.Text = "دفع";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
@@ -118,7 +118,7 @@
             this.btnShowInvoices.Name = "btnShowInvoices";
             this.btnShowInvoices.Size = new System.Drawing.Size(203, 26);
             this.btnShowInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnShowInvoices.TabIndex = 24;
+            this.btnShowInvoices.TabIndex = 1;
             this.btnShowInvoices.Text = "عرض الفواتير";
             this.btnShowInvoices.Click += new System.EventHandler(this.btnShowInvoices_Click);
             // 
@@ -176,7 +176,7 @@
             this.txtClientName.Name = "txtClientName";
             this.txtClientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtClientName.Size = new System.Drawing.Size(271, 26);
-            this.txtClientName.TabIndex = 9;
+            this.txtClientName.TabIndex = 0;
             // 
             // labelX3
             // 
@@ -288,7 +288,7 @@
             this.dblInPaid.Name = "dblInPaid";
             this.dblInPaid.ShowUpDown = true;
             this.dblInPaid.Size = new System.Drawing.Size(150, 26);
-            this.dblInPaid.TabIndex = 18;
+            this.dblInPaid.TabIndex = 1;
             this.dblInPaid.ValueChanged += new System.EventHandler(this.dblInPaid_ValueChanged);
             // 
             // labelX4
@@ -387,7 +387,7 @@
             this.dtPaymentDate.Name = "dtPaymentDate";
             this.dtPaymentDate.Size = new System.Drawing.Size(183, 26);
             this.dtPaymentDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtPaymentDate.TabIndex = 14;
+            this.dtPaymentDate.TabIndex = 0;
             // 
             // labelX2
             // 

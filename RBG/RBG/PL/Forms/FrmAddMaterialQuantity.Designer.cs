@@ -49,7 +49,7 @@
             this.cmbMaterials.Name = "cmbMaterials";
             this.cmbMaterials.Size = new System.Drawing.Size(245, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaterials.TabIndex = 26;
+            this.cmbMaterials.TabIndex = 0;
             // 
             // labelX7
             // 
@@ -95,7 +95,7 @@
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
             this.dblInQuantity.Size = new System.Drawing.Size(118, 26);
-            this.dblInQuantity.TabIndex = 28;
+            this.dblInQuantity.TabIndex = 1;
             // 
             // btnClose
             // 
@@ -108,7 +108,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 30;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -122,7 +122,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 29;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

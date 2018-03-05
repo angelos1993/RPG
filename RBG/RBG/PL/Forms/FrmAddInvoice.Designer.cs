@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoiceItems = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.dblInTotal = new DevComponents.Editors.DoubleInput();
@@ -71,14 +71,14 @@
             // 
             this.dgvInvoiceItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoiceItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 136);
             this.dgvInvoiceItems.Name = "dgvInvoiceItems";
@@ -135,7 +135,7 @@
             this.dblInPaid.Name = "dblInPaid";
             this.dblInPaid.ShowUpDown = true;
             this.dblInPaid.Size = new System.Drawing.Size(150, 26);
-            this.dblInPaid.TabIndex = 14;
+            this.dblInPaid.TabIndex = 0;
             this.dblInPaid.ValueChanged += new System.EventHandler(this.dblInPaid_ValueChanged);
             // 
             // labelX4
@@ -238,7 +238,7 @@
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(25, 25);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddClient.TabIndex = 22;
+            this.btnAddClient.TabIndex = 1;
             this.btnAddClient.Tooltip = "إضافة عميل جديد";
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
@@ -290,7 +290,7 @@
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Size = new System.Drawing.Size(183, 26);
             this.dtInvoiceDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtInvoiceDate.TabIndex = 12;
+            this.dtInvoiceDate.TabIndex = 0;
             // 
             // labelX2
             // 
@@ -318,7 +318,7 @@
             this.txtClientName.Name = "txtClientName";
             this.txtClientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtClientName.Size = new System.Drawing.Size(271, 26);
-            this.txtClientName.TabIndex = 9;
+            this.txtClientName.TabIndex = 0;
             // 
             // labelX1
             // 
@@ -409,7 +409,7 @@
             this.cmbMaterials.Name = "cmbMaterials";
             this.cmbMaterials.Size = new System.Drawing.Size(178, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaterials.TabIndex = 24;
+            this.cmbMaterials.TabIndex = 0;
             this.cmbMaterials.SelectedIndexChanged += new System.EventHandler(this.cmbMaterials_SelectedIndexChanged);
             // 
             // btnAddMaterial
@@ -436,7 +436,7 @@
             this.btnInsertItem.Name = "btnInsertItem";
             this.btnInsertItem.Size = new System.Drawing.Size(72, 25);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnInsertItem.TabIndex = 21;
+            this.btnInsertItem.TabIndex = 2;
             this.btnInsertItem.Text = "إضافة";
             this.btnInsertItem.Click += new System.EventHandler(this.btnInsertItem_Click);
             // 
@@ -454,7 +454,7 @@
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
             this.dblInQuantity.Size = new System.Drawing.Size(87, 26);
-            this.dblInQuantity.TabIndex = 21;
+            this.dblInQuantity.TabIndex = 1;
             // 
             // labelX6
             // 
@@ -497,7 +497,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 18;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -511,7 +511,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 17;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -559,7 +559,7 @@
             this.dblInDiscount.Name = "dblInDiscount";
             this.dblInDiscount.ShowUpDown = true;
             this.dblInDiscount.Size = new System.Drawing.Size(150, 26);
-            this.dblInDiscount.TabIndex = 23;
+            this.dblInDiscount.TabIndex = 1;
             this.dblInDiscount.ValueChanged += new System.EventHandler(this.dblInDiscount_ValueChanged);
             // 
             // FrmAddInvoice
