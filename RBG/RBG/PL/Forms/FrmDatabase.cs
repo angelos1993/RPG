@@ -40,10 +40,11 @@ namespace RBG.PL.Forms
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
-            DisableButtons();
-            RestoreDatabase();
-            Cursor = Cursors.Default;
+            ShowInfoMsg("Not Implemented yet!");
+            //Cursor = Cursors.WaitCursor;
+            //DisableButtons();
+            //RestoreDatabase();
+            //Cursor = Cursors.Default;
         }
 
         private void PercentComplete(object sender, PercentCompleteEventArgs e)
