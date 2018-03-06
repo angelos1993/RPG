@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=9.1.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -317,6 +320,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Logo.ico" />
     <Content Include="Resources\Add.png" />
     <None Include="Resources\UnArchive.png" />
     <None Include="Resources\TurnOff.png" />
@@ -340,6 +344,7 @@
     <None Include="Resources\GoogleDrive.png" />
     <Content Include="Resources\Login.gif" />
     <None Include="Resources\Pay.png" />
+    <None Include="Resources\Logo.png" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />
