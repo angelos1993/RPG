@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="98f4216640e5460682cafd37d016ee89" Name="Diagram1">
+      <Diagram DiagramId="51c8e2f713954e9eb9483768c247646c" Name="Diagram1">
         <EntityTypeShape EntityType="RBGModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.Client" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="RBGModel.InvoiceItem" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />

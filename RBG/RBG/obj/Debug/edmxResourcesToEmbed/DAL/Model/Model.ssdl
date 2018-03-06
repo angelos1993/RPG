@@ -34,7 +34,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="InvoiceId" Type="int" Nullable="false" />
     <Property Name="Date" Type="datetime" Nullable="false" />
-    <Property Name="Paid" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="Invoices">
     <Key>
