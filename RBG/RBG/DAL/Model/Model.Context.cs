@@ -13,10 +13,10 @@ namespace RBG.DAL.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RBGEntities : DbContext
+    public partial class RPGEntities : DbContext
     {
-        public RBGEntities()
-            : base("name=RBGEntities")
+        public RPGEntities()
+            : base("name=RPGEntities")
         {
         }
     

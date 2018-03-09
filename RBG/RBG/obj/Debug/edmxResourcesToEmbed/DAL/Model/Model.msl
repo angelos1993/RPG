@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="RBGModelStoreContainer" CdmEntityContainer="RBGEntities">
+  <EntityContainerMapping StorageEntityContainer="RPGModelStoreContainer" CdmEntityContainer="RPGEntities">
     <EntitySetMapping Name="Admins">
-      <EntityTypeMapping TypeName="RBGModel.Admin">
+      <EntityTypeMapping TypeName="RPGModel.Admin">
         <MappingFragment StoreEntitySet="Admins">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clients">
-      <EntityTypeMapping TypeName="RBGModel.Client">
+      <EntityTypeMapping TypeName="RPGModel.Client">
         <MappingFragment StoreEntitySet="Clients">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="InvoiceItems">
-      <EntityTypeMapping TypeName="RBGModel.InvoiceItem">
+      <EntityTypeMapping TypeName="RPGModel.InvoiceItem">
         <MappingFragment StoreEntitySet="InvoiceItems">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
@@ -32,7 +32,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="InvoicePayments">
-      <EntityTypeMapping TypeName="RBGModel.InvoicePayment">
+      <EntityTypeMapping TypeName="RPGModel.InvoicePayment">
         <MappingFragment StoreEntitySet="InvoicePayments">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
@@ -42,7 +42,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Invoices">
-      <EntityTypeMapping TypeName="RBGModel.Invoice">
+      <EntityTypeMapping TypeName="RPGModel.Invoice">
         <MappingFragment StoreEntitySet="Invoices">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Date" ColumnName="Date" />
@@ -54,7 +54,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Materials">
-      <EntityTypeMapping TypeName="RBGModel.Material">
+      <EntityTypeMapping TypeName="RPGModel.Material">
         <MappingFragment StoreEntitySet="Materials">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Code" ColumnName="Code" />
@@ -66,7 +66,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="RBGModel.sysdiagram">
+      <EntityTypeMapping TypeName="RPGModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />

@@ -8,7 +8,7 @@ namespace RBG.DAL.Repositories.Infrastructure
 {
     internal interface IRepository<T> : IDisposable where T : class
     {
-        RBGEntities Context { get; }
+        RPGEntities Context { get; }
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
@@ -22,7 +22,7 @@ namespace RBG.DAL.Repositories.Infrastructure
     {
         #region Properties
 
-        public RBGEntities Context => RgbContext.Instance;
+        public RPGEntities Context => RgbContext.Instance;
 
         private DbSet<T> _dbSet;
         public DbSet<T> DbSet => _dbSet ?? (_dbSet = Context.Set<T>());
