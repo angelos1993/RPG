@@ -168,7 +168,7 @@
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
             this.Name = "FrmLogin";
-            this.Text = "RBG - تسجيل الدخول";
+            this.Text = "RPG - تسجيل الدخول";
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
