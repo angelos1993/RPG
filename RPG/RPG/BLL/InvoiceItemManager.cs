@@ -25,6 +25,7 @@ namespace RPG.BLL
                 .Select(invoiceItem => new InvoiceItemVm
                 {
                     MaterialId = invoiceItem.MaterialId,
+                    MaterialCode = invoiceItem.Material.Code,
                     MaterialName = invoiceItem.Material.Name,
                     Quantity = invoiceItem.Quantity,
                     TotalPrice = invoiceItem.Price

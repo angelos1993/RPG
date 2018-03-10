@@ -152,6 +152,7 @@ namespace RPG.PL.Forms
             MaterialsList = Materials.Select(material => new LightMaterialVm
             {
                 Id = material.Id,
+                Code = material.Code,
                 Name = material.Name,
                 Price = material.Price,
                 AvailableQuantity = material.Quantity
@@ -192,6 +193,7 @@ namespace RPG.PL.Forms
                 InvoiceItemVms.Add(new InvoiceItemVm
                 {
                     MaterialId = materialId,
+                    MaterialCode = MaterialsList.FirstOrDefault(material => material.Id == materialId)?.Code,
                     MaterialName = ((KeyValuePair<int, string>) cmbMaterials.SelectedItem).Value,
                     Quantity = addedQuantity,
                     TotalPrice = GetMaterialPrice(materialId) * addedQuantity

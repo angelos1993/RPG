@@ -6,6 +6,9 @@ namespace RPG.DAL.VMs
     {
         public int MaterialId { get; set; }
 
+        [DisplayName("الكود")]
+        public string MaterialCode { get; set; }
+
         [DisplayName("المادة / الخامة")]
         public string MaterialName { get; set; }
 
