@@ -57,8 +57,8 @@ namespace RPG.PL.Forms
                 Hide();
                 new FrmIndex().Show();
             }
-            lblValidationMsg.Visible = true;
             txtPassword.Clear();
+            lblValidationMsg.Visible = true;
             txtUsername.SelectAll();
             txtUsername.Focus();
         }
