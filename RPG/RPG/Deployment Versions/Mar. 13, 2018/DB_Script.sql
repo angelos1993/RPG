@@ -1,0 +1,1 @@
+ALTER TABLE InvoiceItems ADD Notes NVARCHAR(MAX) NULL

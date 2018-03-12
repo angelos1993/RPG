@@ -66,3 +66,4 @@ G:\Angelos\RPG\Repo\RPG\RPG\bin\Debug\EntityFramework.xml
 G:\Angelos\RPG\Repo\RPG\RPG\bin\Debug\EntityFramework.SqlServer.xml
 G:\Angelos\RPG\Repo\RPG\RPG\obj\Debug\RPG.exe
 G:\Angelos\RPG\Repo\RPG\RPG\obj\Debug\RPG.pdb
+G:\Angelos\RPG\Repo\RPG\RPG\obj\Debug\RPG.csprojResolveAssemblyReference.cache

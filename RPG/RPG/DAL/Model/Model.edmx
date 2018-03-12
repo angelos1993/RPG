@@ -31,6 +31,7 @@
           <Property Name="MaterialId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="InvoicePayments">
           <Key>
@@ -178,6 +179,7 @@
           <Property Name="MaterialId" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Invoice" Relationship="Self.FK_InvoiceItems_Invoices" FromRole="InvoiceItems" ToRole="Invoices" />
           <NavigationProperty Name="Material" Relationship="Self.FK_InvoiceItems_Materials" FromRole="InvoiceItems" ToRole="Materials" />
         </EntityType>
@@ -333,6 +335,7 @@
                 <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

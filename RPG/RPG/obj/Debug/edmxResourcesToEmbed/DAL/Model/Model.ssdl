@@ -26,6 +26,7 @@
     <Property Name="MaterialId" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="InvoicePayments">
     <Key>

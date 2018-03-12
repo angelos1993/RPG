@@ -28,6 +28,7 @@
           <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

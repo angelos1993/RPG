@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6f39572cce1e4fdaa319dbaf48197b5c" Name="Diagram1">
+      <Diagram DiagramId="350e4b67f9fd4f43882e078786177692" Name="Diagram1">
         <EntityTypeShape EntityType="RPGModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.Client" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Client" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RPGModel.InvoiceItem" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.InvoicePayment" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.Invoice" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.InvoicePayment" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Invoice" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="RPGModel.Material" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="RPGModel.sysdiagram" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="RPGModel.FK_Invoices_Clients" ManuallyRouted="false" />

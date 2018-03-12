@@ -27,6 +27,7 @@
     <Property Name="MaterialId" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Invoice" Relationship="Self.FK_InvoiceItems_Invoices" FromRole="InvoiceItems" ToRole="Invoices" />
     <NavigationProperty Name="Material" Relationship="Self.FK_InvoiceItems_Materials" FromRole="InvoiceItems" ToRole="Materials" />
   </EntityType>

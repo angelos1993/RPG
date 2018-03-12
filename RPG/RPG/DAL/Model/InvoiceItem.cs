@@ -19,6 +19,7 @@ namespace RPG.DAL.Model
         public int MaterialId { get; set; }
         public decimal Quantity { get; set; }
         public decimal Price { get; set; }
+        public string Notes { get; set; }
     
         public virtual Invoice Invoice { get; set; }
         public virtual Material Material { get; set; }
