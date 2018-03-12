@@ -307,9 +307,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deployment Versions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -321,6 +319,15 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Deployment Versions\Mar. 10, 2018\DB_Script.sql" />
+    <Content Include="Deployment Versions\Mar. 10, 2018\Output\RPG.exe" />
+    <Content Include="Deployment Versions\Mar. 10, 2018\RPG_Script.iss" />
+    <Content Include="Deployment Versions\Mar. 13, 2018\DB_Script.sql" />
+    <Content Include="Deployment Versions\Mar. 13, 2018\Output\RPG.exe" />
+    <Content Include="Deployment Versions\Mar. 13, 2018\Script.iss" />
+    <Content Include="Deployment Versions\Mar. 9, 2018\DB_Script.sql" />
+    <Content Include="Deployment Versions\Mar. 9, 2018\Output\RBG.exe" />
+    <Content Include="Deployment Versions\Mar. 9, 2018\RBG_Script.iss" />
     <Content Include="Logo.ico" />
     <Content Include="Resources\Add.png" />
     <None Include="Resources\UnArchive.png" />
