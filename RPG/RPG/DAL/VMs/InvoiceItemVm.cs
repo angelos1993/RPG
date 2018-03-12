@@ -20,5 +20,8 @@ namespace RPG.DAL.VMs
 
         [DisplayName("السعر الكلي")]
         public decimal TotalPrice { get; set; }
+
+        [DisplayName("ملاحظات")]
+        public string Notes { get; set; }
     }
 }

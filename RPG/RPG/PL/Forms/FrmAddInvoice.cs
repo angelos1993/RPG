@@ -196,7 +196,8 @@ namespace RPG.PL.Forms
                     MaterialCode = MaterialsList.FirstOrDefault(material => material.Id == materialId)?.Code,
                     MaterialName = ((KeyValuePair<int, string>) cmbMaterials.SelectedItem).Value,
                     Quantity = addedQuantity,
-                    TotalPrice = GetMaterialPrice(materialId) * addedQuantity
+                    TotalPrice = GetMaterialPrice(materialId) * addedQuantity,
+                    Notes = txtNotes.Text.FullTrim()
                 });
             MaterialsList.Find(material => material.Id == materialId).AvailableQuantity -= addedQuantity;
             FillGrid();
@@ -276,7 +277,8 @@ namespace RPG.PL.Forms
                 InvoiceId = invoice.Id,
                 MaterialId = item.MaterialId,
                 Quantity = item.Quantity,
-                Price = item.TotalPrice
+                Price = item.TotalPrice,
+                Notes = item.Notes
             }).ToList());
             if (invoice.Paid > 0)
                 InvoicePaymentManager.AddInvoicePayment(new InvoicePayment

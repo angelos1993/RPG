@@ -55,6 +55,8 @@
             this.btnDeleteItem = new DevComponents.DotNetBar.ButtonX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.dblInDiscount = new DevComponents.Editors.DoubleInput();
+            this.txtNotes = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).BeginInit();
@@ -80,12 +82,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoiceItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 136);
+            this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 165);
             this.dgvInvoiceItems.Name = "dgvInvoiceItems";
             this.dgvInvoiceItems.ReadOnly = true;
             this.dgvInvoiceItems.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvInvoiceItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoiceItems.Size = new System.Drawing.Size(675, 318);
+            this.dgvInvoiceItems.Size = new System.Drawing.Size(675, 289);
             this.dgvInvoiceItems.TabIndex = 9;
             // 
             // labelX3
@@ -339,6 +341,8 @@
             // 
             this.pnlMaterial.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlMaterial.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlMaterial.Controls.Add(this.labelX9);
+            this.pnlMaterial.Controls.Add(this.txtNotes);
             this.pnlMaterial.Controls.Add(this.lblMaterialAvailableQuantity);
             this.pnlMaterial.Controls.Add(this.cmbMaterials);
             this.pnlMaterial.Controls.Add(this.btnAddMaterial);
@@ -348,7 +352,7 @@
             this.pnlMaterial.Controls.Add(this.labelX7);
             this.pnlMaterial.Location = new System.Drawing.Point(12, 74);
             this.pnlMaterial.Name = "pnlMaterial";
-            this.pnlMaterial.Size = new System.Drawing.Size(675, 56);
+            this.pnlMaterial.Size = new System.Drawing.Size(675, 85);
             // 
             // 
             // 
@@ -432,9 +436,10 @@
             this.btnInsertItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnInsertItem.Image = global::RPG.Properties.Resources.Insert;
             this.btnInsertItem.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnInsertItem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnInsertItem.Location = new System.Drawing.Point(3, 12);
             this.btnInsertItem.Name = "btnInsertItem";
-            this.btnInsertItem.Size = new System.Drawing.Size(72, 25);
+            this.btnInsertItem.Size = new System.Drawing.Size(72, 57);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnInsertItem.TabIndex = 2;
             this.btnInsertItem.Text = "إضافة";
@@ -562,6 +567,34 @@
             this.dblInDiscount.TabIndex = 1;
             this.dblInDiscount.ValueChanged += new System.EventHandler(this.dblInDiscount_ValueChanged);
             // 
+            // txtNotes
+            // 
+            // 
+            // 
+            // 
+            this.txtNotes.Border.Class = "TextBoxBorder";
+            this.txtNotes.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNotes.Location = new System.Drawing.Point(81, 43);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtNotes.Size = new System.Drawing.Size(498, 26);
+            this.txtNotes.TabIndex = 12;
+            // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.Class = "";
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Location = new System.Drawing.Point(585, 44);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX9.Size = new System.Drawing.Size(76, 23);
+            this.labelX9.TabIndex = 26;
+            this.labelX9.Text = "ملاحظات";
+            // 
             // FrmAddInvoice
             // 
             this.AcceptButton = this.btnSave;
@@ -628,5 +661,7 @@
         private DevComponents.DotNetBar.LabelX lblMaterialAvailableQuantity;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.Editors.DoubleInput dblInDiscount;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNotes;
     }
 }

@@ -28,7 +28,8 @@ namespace RPG.BLL
                     MaterialCode = invoiceItem.Material.Code,
                     MaterialName = invoiceItem.Material.Name,
                     Quantity = invoiceItem.Quantity,
-                    TotalPrice = invoiceItem.Price
+                    TotalPrice = invoiceItem.Price,
+                    Notes = invoiceItem.Notes
                 }).ToList();
         }
 
