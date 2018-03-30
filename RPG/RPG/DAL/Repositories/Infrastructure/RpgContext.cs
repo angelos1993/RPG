@@ -2,11 +2,11 @@
 
 namespace RPG.DAL.Repositories.Infrastructure
 {
-    public class RgbContext
+    public class RpgContext
     {
         private static RPGEntities _instance;
 
-        private RgbContext()
+        private RpgContext()
         {
         }
 

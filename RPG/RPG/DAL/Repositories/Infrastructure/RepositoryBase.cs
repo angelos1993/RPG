@@ -22,7 +22,7 @@ namespace RPG.DAL.Repositories.Infrastructure
     {
         #region Properties
 
-        public RPGEntities Context => RgbContext.Instance;
+        public RPGEntities Context => RpgContext.Instance;
 
         private DbSet<T> _dbSet;
         public DbSet<T> DbSet => _dbSet ?? (_dbSet = Context.Set<T>());
