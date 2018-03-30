@@ -331,6 +331,8 @@
     <Content Include="Deployment Versions\1. Mar. 9, 2018\RBG_Script.iss" />
     <Content Include="Logo.ico" />
     <Content Include="Resources\Add.png" />
+    <None Include="Resources\Viber.png" />
+    <None Include="Resources\WhatsApp.png" />
     <None Include="Resources\UnArchive.png" />
     <None Include="Resources\TurnOff.png" />
     <None Include="Resources\ShowAllMaterials.png" />
@@ -343,6 +345,7 @@
     <Content Include="Resources\DB.png" />
     <None Include="Resources\Delete.png" />
     <Content Include="Resources\Edit.png" />
+    <None Include="Resources\Email.png" />
     <Content Include="Resources\Entry.png" />
     <Content Include="Resources\Exit.png" />
     <None Include="Resources\Invoice.png" />
@@ -351,9 +354,12 @@
     <None Include="Resources\Insert.png" />
     <None Include="Resources\IncreaseQuantity.png" />
     <None Include="Resources\GoogleDrive.png" />
+    <None Include="Resources\Facebool.png" />
     <Content Include="Resources\Login.gif" />
     <None Include="Resources\Pay.png" />
     <None Include="Resources\Logo.png" />
+    <None Include="Resources\Phone.png" />
+    <None Include="Resources\Phone1.png" />
     <Content Include="Resources\Restore.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />

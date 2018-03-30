@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.Utility;
@@ -29,14 +30,24 @@ namespace RPG.PL.Forms
 
         #region Events
 
-        private void btnSave_Click(object sender, System.EventArgs e)
+        private void chkBoxViber_CheckedChanged(object sender, EventArgs e)
+        {
+            txtViber.Text = chkBoxViber.Checked ? txtPhone.Text : string.Empty;
+        }
+
+        private void chkBoxWhatsApp_CheckedChanged(object sender, EventArgs e)
+        {
+            txtWhatsApp.Text = chkBoxWhatsApp.Checked ? txtPhone.Text : string.Empty;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             SaveClient();
             Cursor = Cursors.Default;
         }
 
-        private void btnClose_Click(object sender, System.EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
