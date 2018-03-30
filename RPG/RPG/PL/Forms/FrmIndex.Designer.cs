@@ -76,9 +76,9 @@
             this.pnlInvoices.Controls.Add(this.btnListInvoices);
             this.pnlInvoices.Controls.Add(this.btnAddInvoice);
             this.pnlInvoices.Controls.Add(this.picInvoices);
-            this.pnlInvoices.Location = new System.Drawing.Point(846, 62);
+            this.pnlInvoices.Location = new System.Drawing.Point(948, 61);
             this.pnlInvoices.Name = "pnlInvoices";
-            this.pnlInvoices.Size = new System.Drawing.Size(400, 200);
+            this.pnlInvoices.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -119,7 +119,7 @@
             this.btnPayInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnPayInvoice.Image = global::RPG.Properties.Resources.Pay;
             this.btnPayInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnPayInvoice.Location = new System.Drawing.Point(185, 66);
+            this.btnPayInvoice.Location = new System.Drawing.Point(109, 67);
             this.btnPayInvoice.Name = "btnPayInvoice";
             this.btnPayInvoice.Size = new System.Drawing.Size(200, 40);
             this.btnPayInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -133,7 +133,7 @@
             this.btnListInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListInvoices.Image = global::RPG.Properties.Resources.List;
             this.btnListInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListInvoices.Location = new System.Drawing.Point(185, 112);
+            this.btnListInvoices.Location = new System.Drawing.Point(109, 113);
             this.btnListInvoices.Name = "btnListInvoices";
             this.btnListInvoices.Size = new System.Drawing.Size(200, 40);
             this.btnListInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -147,7 +147,7 @@
             this.btnAddInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddInvoice.Image = global::RPG.Properties.Resources.Add;
             this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddInvoice.Location = new System.Drawing.Point(185, 19);
+            this.btnAddInvoice.Location = new System.Drawing.Point(109, 20);
             this.btnAddInvoice.Name = "btnAddInvoice";
             this.btnAddInvoice.Size = new System.Drawing.Size(200, 40);
             this.btnAddInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -159,9 +159,9 @@
             // 
             this.picInvoices.BackColor = System.Drawing.Color.Transparent;
             this.picInvoices.Image = global::RPG.Properties.Resources.Invoice;
-            this.picInvoices.Location = new System.Drawing.Point(31, 19);
+            this.picInvoices.Location = new System.Drawing.Point(3, 39);
             this.picInvoices.Name = "picInvoices";
-            this.picInvoices.Size = new System.Drawing.Size(120, 120);
+            this.picInvoices.Size = new System.Drawing.Size(100, 100);
             this.picInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInvoices.TabIndex = 0;
             this.picInvoices.TabStop = false;
@@ -175,9 +175,9 @@
             this.pnlMaterials.Controls.Add(this.btnListMaterials);
             this.pnlMaterials.Controls.Add(this.btnAddMaterial);
             this.pnlMaterials.Controls.Add(this.picMaterials);
-            this.pnlMaterials.Location = new System.Drawing.Point(846, 268);
+            this.pnlMaterials.Location = new System.Drawing.Point(948, 267);
             this.pnlMaterials.Name = "pnlMaterials";
-            this.pnlMaterials.Size = new System.Drawing.Size(400, 200);
+            this.pnlMaterials.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -218,7 +218,7 @@
             this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterialQuantity.Image = global::RPG.Properties.Resources.IncreaseQuantity;
             this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(185, 66);
+            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(109, 60);
             this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
             this.btnAddMaterialQuantity.Size = new System.Drawing.Size(200, 40);
             this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -232,7 +232,7 @@
             this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListMaterials.Image = global::RPG.Properties.Resources.ShowAllMaterials;
             this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListMaterials.Location = new System.Drawing.Point(185, 112);
+            this.btnListMaterials.Location = new System.Drawing.Point(109, 106);
             this.btnListMaterials.Name = "btnListMaterials";
             this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
             this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -246,7 +246,7 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RPG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterial.Location = new System.Drawing.Point(185, 20);
+            this.btnAddMaterial.Location = new System.Drawing.Point(109, 14);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -258,9 +258,9 @@
             // 
             this.picMaterials.BackColor = System.Drawing.Color.Transparent;
             this.picMaterials.Image = global::RPG.Properties.Resources.Materials;
-            this.picMaterials.Location = new System.Drawing.Point(27, 19);
+            this.picMaterials.Location = new System.Drawing.Point(3, 33);
             this.picMaterials.Name = "picMaterials";
-            this.picMaterials.Size = new System.Drawing.Size(120, 120);
+            this.picMaterials.Size = new System.Drawing.Size(100, 100);
             this.picMaterials.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMaterials.TabIndex = 0;
             this.picMaterials.TabStop = false;
@@ -273,9 +273,9 @@
             this.pnlClients.Controls.Add(this.btnListClients);
             this.pnlClients.Controls.Add(this.btnAddClient);
             this.pnlClients.Controls.Add(this.picClients);
-            this.pnlClients.Location = new System.Drawing.Point(440, 268);
+            this.pnlClients.Location = new System.Drawing.Point(622, 268);
             this.pnlClients.Name = "pnlClients";
-            this.pnlClients.Size = new System.Drawing.Size(400, 200);
+            this.pnlClients.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -316,7 +316,7 @@
             this.btnListClients.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListClients.Image = global::RPG.Properties.Resources.ShowAllClients;
             this.btnListClients.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListClients.Location = new System.Drawing.Point(185, 79);
+            this.btnListClients.Location = new System.Drawing.Point(109, 87);
             this.btnListClients.Name = "btnListClients";
             this.btnListClients.Size = new System.Drawing.Size(200, 40);
             this.btnListClients.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -330,7 +330,7 @@
             this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddClient.Image = global::RPG.Properties.Resources.Add;
             this.btnAddClient.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddClient.Location = new System.Drawing.Point(185, 33);
+            this.btnAddClient.Location = new System.Drawing.Point(109, 41);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(200, 40);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -342,9 +342,9 @@
             // 
             this.picClients.BackColor = System.Drawing.Color.Transparent;
             this.picClients.Image = global::RPG.Properties.Resources.Clients;
-            this.picClients.Location = new System.Drawing.Point(31, 19);
+            this.picClients.Location = new System.Drawing.Point(3, 33);
             this.picClients.Name = "picClients";
-            this.picClients.Size = new System.Drawing.Size(120, 120);
+            this.picClients.Size = new System.Drawing.Size(100, 100);
             this.picClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picClients.TabIndex = 0;
             this.picClients.TabStop = false;
@@ -356,9 +356,9 @@
             this.pnlAdmins.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.pnlAdmins.Controls.Add(this.btnEditAdmin);
             this.pnlAdmins.Controls.Add(this.picAdmins);
-            this.pnlAdmins.Location = new System.Drawing.Point(846, 474);
+            this.pnlAdmins.Location = new System.Drawing.Point(948, 473);
             this.pnlAdmins.Name = "pnlAdmins";
-            this.pnlAdmins.Size = new System.Drawing.Size(400, 200);
+            this.pnlAdmins.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -399,7 +399,7 @@
             this.btnEditAdmin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEditAdmin.Image = global::RPG.Properties.Resources.Edit;
             this.btnEditAdmin.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEditAdmin.Location = new System.Drawing.Point(185, 60);
+            this.btnEditAdmin.Location = new System.Drawing.Point(109, 60);
             this.btnEditAdmin.Name = "btnEditAdmin";
             this.btnEditAdmin.Size = new System.Drawing.Size(200, 40);
             this.btnEditAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -411,9 +411,9 @@
             // 
             this.picAdmins.BackColor = System.Drawing.Color.Transparent;
             this.picAdmins.Image = global::RPG.Properties.Resources.Admin;
-            this.picAdmins.Location = new System.Drawing.Point(27, 19);
+            this.picAdmins.Location = new System.Drawing.Point(3, 32);
             this.picAdmins.Name = "picAdmins";
-            this.picAdmins.Size = new System.Drawing.Size(120, 120);
+            this.picAdmins.Size = new System.Drawing.Size(100, 100);
             this.picAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAdmins.TabIndex = 0;
             this.picAdmins.TabStop = false;
@@ -425,9 +425,9 @@
             this.pnlDB.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.pnlDB.Controls.Add(this.btnDatabase);
             this.pnlDB.Controls.Add(this.picDB);
-            this.pnlDB.Location = new System.Drawing.Point(440, 474);
+            this.pnlDB.Location = new System.Drawing.Point(622, 473);
             this.pnlDB.Name = "pnlDB";
-            this.pnlDB.Size = new System.Drawing.Size(400, 200);
+            this.pnlDB.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -468,21 +468,21 @@
             this.btnDatabase.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnDatabase.Image = global::RPG.Properties.Resources.DB;
             this.btnDatabase.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnDatabase.Location = new System.Drawing.Point(185, 60);
+            this.btnDatabase.Location = new System.Drawing.Point(109, 60);
             this.btnDatabase.Name = "btnDatabase";
             this.btnDatabase.Size = new System.Drawing.Size(200, 40);
             this.btnDatabase.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnDatabase.TabIndex = 0;
-            this.btnDatabase.Text = "نسخ / إسترجاع قاعدة البيانات";
+            this.btnDatabase.Text = "نسخ / إسترجاع";
             this.btnDatabase.Click += new System.EventHandler(this.btnDatabase_Click);
             // 
             // picDB
             // 
             this.picDB.BackColor = System.Drawing.Color.Transparent;
             this.picDB.Image = global::RPG.Properties.Resources.DB;
-            this.picDB.Location = new System.Drawing.Point(31, 22);
+            this.picDB.Location = new System.Drawing.Point(3, 32);
             this.picDB.Name = "picDB";
-            this.picDB.Size = new System.Drawing.Size(120, 120);
+            this.picDB.Size = new System.Drawing.Size(100, 100);
             this.picDB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDB.TabIndex = 0;
             this.picDB.TabStop = false;
@@ -494,9 +494,9 @@
             this.pnlCloseApplication.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.pnlCloseApplication.Controls.Add(this.pictureBox1);
             this.pnlCloseApplication.Controls.Add(this.btnClose);
-            this.pnlCloseApplication.Location = new System.Drawing.Point(34, 474);
+            this.pnlCloseApplication.Location = new System.Drawing.Point(296, 473);
             this.pnlCloseApplication.Name = "pnlCloseApplication";
-            this.pnlCloseApplication.Size = new System.Drawing.Size(400, 200);
+            this.pnlCloseApplication.Size = new System.Drawing.Size(320, 200);
             // 
             // 
             // 
@@ -535,9 +535,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RPG.Properties.Resources.TurnOff;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -549,7 +549,7 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RPG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(191, 60);
+            this.btnClose.Location = new System.Drawing.Point(109, 62);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoiceItems = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.dblInTotal = new DevComponents.Editors.DoubleInput();
@@ -43,6 +43,8 @@
             this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.pnlMaterial = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.txtNotes = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblMaterialAvailableQuantity = new DevComponents.DotNetBar.LabelX();
             this.cmbMaterials = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
@@ -55,8 +57,6 @@
             this.btnDeleteItem = new DevComponents.DotNetBar.ButtonX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.dblInDiscount = new DevComponents.Editors.DoubleInput();
-            this.txtNotes = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInTotal)).BeginInit();
@@ -73,14 +73,14 @@
             // 
             this.dgvInvoiceItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInvoiceItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 165);
             this.dgvInvoiceItems.Name = "dgvInvoiceItems";
@@ -181,7 +181,7 @@
             this.labelX5.Location = new System.Drawing.Point(172, 460);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX5.Size = new System.Drawing.Size(44, 23);
+            this.labelX5.Size = new System.Drawing.Size(68, 23);
             this.labelX5.TabIndex = 15;
             this.labelX5.Text = "الباقي";
             // 
@@ -386,6 +386,34 @@
             this.pnlMaterial.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlMaterial.TabIndex = 20;
             // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.Class = "";
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Location = new System.Drawing.Point(575, 44);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX9.Size = new System.Drawing.Size(86, 23);
+            this.labelX9.TabIndex = 26;
+            this.labelX9.Text = "ملاحظات";
+            // 
+            // txtNotes
+            // 
+            // 
+            // 
+            // 
+            this.txtNotes.Border.Class = "TextBoxBorder";
+            this.txtNotes.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNotes.Location = new System.Drawing.Point(81, 43);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtNotes.Size = new System.Drawing.Size(488, 26);
+            this.txtNotes.TabIndex = 12;
+            // 
             // lblMaterialAvailableQuantity
             // 
             this.lblMaterialAvailableQuantity.BackColor = System.Drawing.Color.Transparent;
@@ -396,7 +424,7 @@
             this.lblMaterialAvailableQuantity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMaterialAvailableQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblMaterialAvailableQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblMaterialAvailableQuantity.Location = new System.Drawing.Point(226, 14);
+            this.lblMaterialAvailableQuantity.Location = new System.Drawing.Point(215, 14);
             this.lblMaterialAvailableQuantity.Name = "lblMaterialAvailableQuantity";
             this.lblMaterialAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblMaterialAvailableQuantity.Size = new System.Drawing.Size(127, 23);
@@ -409,7 +437,7 @@
             this.cmbMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterials.FormattingEnabled = true;
             this.cmbMaterials.ItemHeight = 20;
-            this.cmbMaterials.Location = new System.Drawing.Point(401, 12);
+            this.cmbMaterials.Location = new System.Drawing.Point(391, 12);
             this.cmbMaterials.Name = "cmbMaterials";
             this.cmbMaterials.Size = new System.Drawing.Size(178, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -422,7 +450,7 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RPG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Location = new System.Drawing.Point(359, 12);
+            this.btnAddMaterial.Location = new System.Drawing.Point(349, 12);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(25, 25);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -458,7 +486,7 @@
             this.dblInQuantity.MinValue = 0D;
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
-            this.dblInQuantity.Size = new System.Drawing.Size(87, 26);
+            this.dblInQuantity.Size = new System.Drawing.Size(79, 26);
             this.dblInQuantity.TabIndex = 1;
             // 
             // labelX6
@@ -469,10 +497,10 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(174, 14);
+            this.labelX6.Location = new System.Drawing.Point(166, 14);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(46, 23);
+            this.labelX6.Size = new System.Drawing.Size(43, 23);
             this.labelX6.TabIndex = 11;
             this.labelX6.Text = "الكمية";
             // 
@@ -484,10 +512,10 @@
             // 
             this.labelX7.BackgroundStyle.Class = "";
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(585, 12);
+            this.labelX7.Location = new System.Drawing.Point(568, 12);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX7.Size = new System.Drawing.Size(76, 23);
+            this.labelX7.Size = new System.Drawing.Size(93, 23);
             this.labelX7.TabIndex = 10;
             this.labelX7.Text = "المادة / الخامة";
             // 
@@ -545,7 +573,7 @@
             this.labelX8.Location = new System.Drawing.Point(172, 498);
             this.labelX8.Name = "labelX8";
             this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX8.Size = new System.Drawing.Size(44, 23);
+            this.labelX8.Size = new System.Drawing.Size(68, 23);
             this.labelX8.TabIndex = 22;
             this.labelX8.Text = "تخفيض";
             // 
@@ -566,34 +594,6 @@
             this.dblInDiscount.Size = new System.Drawing.Size(150, 26);
             this.dblInDiscount.TabIndex = 1;
             this.dblInDiscount.ValueChanged += new System.EventHandler(this.dblInDiscount_ValueChanged);
-            // 
-            // txtNotes
-            // 
-            // 
-            // 
-            // 
-            this.txtNotes.Border.Class = "TextBoxBorder";
-            this.txtNotes.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNotes.Location = new System.Drawing.Point(81, 43);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtNotes.Size = new System.Drawing.Size(498, 26);
-            this.txtNotes.TabIndex = 12;
-            // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.Class = "";
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(585, 44);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX9.Size = new System.Drawing.Size(76, 23);
-            this.labelX9.TabIndex = 26;
-            this.labelX9.Text = "ملاحظات";
             // 
             // FrmAddInvoice
             // 
