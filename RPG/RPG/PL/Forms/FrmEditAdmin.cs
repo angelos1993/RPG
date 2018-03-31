@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using RPG.BLL;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -85,7 +86,7 @@ namespace RPG.PL.Forms
             if (currentAdmin.Username == txtNewUsername.Text &&
                 currentAdmin.Password == txtNewPassword.Text.ToMd5Hash())
             {
-                MessageBoxUtility.ShowErrorMsg(Resources.UsernameOrPasswordShouldChanged);
+                ShowErrorMsg(Resources.UsernameOrPasswordShouldChanged);
                 ErrorProvider.SetError(txtNewUsername, Resources.UsernameOrPasswordShouldChanged);
                 ErrorProvider.SetError(txtNewPassword, Resources.UsernameOrPasswordShouldChanged);
                 ErrorProvider.SetError(txtNewPasswordConfirmation, Resources.UsernameOrPasswordShouldChanged);
@@ -94,7 +95,7 @@ namespace RPG.PL.Forms
             currentAdmin.Username = txtNewUsername.Text;
             currentAdmin.Password = txtNewPassword.Text.ToMd5Hash();
             AdminManager.UpdateAdmin(currentAdmin);
-            MessageBoxUtility.ShowInfoMsg(Resources.UpdateAdminDataSuccessfully);
+            ShowInfoMsg(Resources.UpdateAdminDataSuccessfully);
             Close();
         }
 

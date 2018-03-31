@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -106,7 +107,7 @@ namespace RPG.PL.Forms
                 Client.Other = txtOther.Text.FullTrim();
                 ClientManager.UpdateClient(Client);
             }
-            MessageBoxUtility.ShowInfoMsg(IsEditMode ? Resources.ClientEditedSeccessfully : Resources.ClientAddedSeccessfully);
+            ShowInfoMsg(IsEditMode ? Resources.ClientEditedSeccessfully : Resources.ClientAddedSeccessfully);
             Close();
         }
 

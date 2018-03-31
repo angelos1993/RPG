@@ -21,17 +21,17 @@ namespace RPG.BLL
 
         public bool IsMaterialCodeExists(string materialCode)
         {
-            return UnitOfWork.MaterialRepository.Get(material => material.Code == materialCode).Any();
+            return GetAllMaterials().Any(material => material.Code == materialCode);
         }
 
         public bool IsMaterialNameExists(string materialName)
         {
-            return UnitOfWork.MaterialRepository.Get(material => material.Name == materialName).Any();
+            return GetAllMaterials().Any(material => material.Name == materialName);
         }
 
         public IQueryable<Material> GetAllMaterials()
         {
-            return UnitOfWork.MaterialRepository.GetAll();
+            return UnitOfWork.MaterialRepository.GetAll().Where(material => !material.IsDeleted);
         }
 
         public IQueryable<Material> GetAllUnArchivedMaterials()

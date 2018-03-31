@@ -43,6 +43,7 @@
             this.btnArchive = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             this.btnUnArchive = new DevComponents.DotNetBar.ButtonX();
+            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterials)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -234,7 +235,7 @@
             this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEdit.Image = global::RPG.Properties.Resources.Edit;
             this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(543, 406);
+            this.btnEdit.Location = new System.Drawing.Point(685, 406);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 40);
             this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -263,7 +264,7 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RPG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(135, 406);
+            this.btnClose.Location = new System.Drawing.Point(141, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -277,7 +278,7 @@
             this.btnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnArchive.Image = global::RPG.Properties.Resources.Archive;
             this.btnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnArchive.Location = new System.Drawing.Point(407, 406);
+            this.btnArchive.Location = new System.Drawing.Point(549, 406);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(130, 40);
             this.btnArchive.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -305,7 +306,7 @@
             this.btnUnArchive.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnUnArchive.Image = global::RPG.Properties.Resources.UnArchive;
             this.btnUnArchive.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnUnArchive.Location = new System.Drawing.Point(271, 406);
+            this.btnUnArchive.Location = new System.Drawing.Point(413, 406);
             this.btnUnArchive.Name = "btnUnArchive";
             this.btnUnArchive.Size = new System.Drawing.Size(130, 40);
             this.btnUnArchive.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -313,12 +314,27 @@
             this.btnUnArchive.Text = "إسترجاع";
             this.btnUnArchive.Click += new System.EventHandler(this.btnUnArchive_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDelete.Image = global::RPG.Properties.Resources.Delete;
+            this.btnDelete.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnDelete.Location = new System.Drawing.Point(277, 406);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(130, 40);
+            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDelete.TabIndex = 23;
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FrmMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(934, 458);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUnArchive);
             this.Controls.Add(this.btnAddMaterialQuantity);
             this.Controls.Add(this.grpSearch);
@@ -357,5 +373,6 @@
         private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
         private DevComponents.DotNetBar.ButtonX btnUnArchive;
         private System.Windows.Forms.RadioButton radAvailableQuantity;
+        private DevComponents.DotNetBar.ButtonX btnDelete;
     }
 }

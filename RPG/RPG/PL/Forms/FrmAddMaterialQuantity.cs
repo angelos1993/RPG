@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -85,7 +86,7 @@ namespace RPG.PL.Forms
             {
                 selectedMaterial.Quantity += (decimal) dblInQuantity.Value;
                 MaterialManager.UpdateMaterial(selectedMaterial);
-                MessageBoxUtility.ShowInfoMsg(Resources.MaterialQuantityAddedSeccessfully);
+                ShowInfoMsg(Resources.MaterialQuantityAddedSeccessfully);
             }
             Close();
         }

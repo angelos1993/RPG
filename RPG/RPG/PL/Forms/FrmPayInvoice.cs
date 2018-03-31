@@ -7,6 +7,7 @@ using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.DAL.VMs;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -111,7 +112,7 @@ namespace RPG.PL.Forms
             if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
             {
                 isFormValid = false;
-                MessageBoxUtility.ShowErrorMsg(Resources.MakeSureOfClientName);
+                ShowErrorMsg(Resources.MakeSureOfClientName);
             }
             if (!isFormValid)
                 return;
@@ -124,7 +125,7 @@ namespace RPG.PL.Forms
             }
             else
             {
-                MessageBoxUtility.ShowInfoMsg(Resources.ClientHasNoRemainingInvoices);
+                ShowInfoMsg(Resources.ClientHasNoRemainingInvoices);
                 dblInTotal.Value = 0;
             }
         }
@@ -164,7 +165,7 @@ namespace RPG.PL.Forms
             foreach (var item in paidInvoices)
                 msg.AppendLine($"{item.Value} : {item.Key.ToCustomShortDateString()}\n");
             msg.AppendLine($"{remaining} : المتبقي");
-            MessageBoxUtility.ShowInfoMsg(msg.ToString());
+            ShowInfoMsg(msg.ToString());
             Close();
         }
 

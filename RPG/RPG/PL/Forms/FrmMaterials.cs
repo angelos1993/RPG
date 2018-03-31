@@ -6,6 +6,8 @@ using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.DAL.VMs;
 using RPG.Utility;
+using RPG.Utility.Enums;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -96,6 +98,16 @@ namespace RPG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog(Resources.DeleteMaterialConfirmationMsg, DialogDefaultButton.No) !=
+                DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            DeleteMaterial();
+            Cursor = Cursors.Default;
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -180,17 +192,27 @@ namespace RPG.PL.Forms
             dgvMaterials.Rows[rowIndex].Selected = true;
         }
 
+        private void DeleteMaterial()
+        {
+            var material =
+                MaterialManager.GetMaterialById(int.Parse(dgvMaterials.SelectedRows[0].Cells[0].Value.ToString()));
+            material.IsDeleted = true;
+            MaterialManager.UpdateMaterial(material);
+            ResetForm();
+        }
+
         private void SetButtonsAvailability()
         {
             if (dgvMaterials.SelectedRows.Count <= 0)
             {
-                btnEdit.Enabled = btnArchive.Enabled = btnUnArchive.Enabled = false;
+                btnEdit.Enabled = btnArchive.Enabled = btnUnArchive.Enabled = btnDelete.Enabled = false;
                 return;
             }
             var isMaterialArchived = !bool.Parse(dgvMaterials.SelectedRows[0].Cells["IsArchived"]
                 .Value.ToString());
             btnEdit.Enabled = btnArchive.Enabled = isMaterialArchived;
             btnUnArchive.Enabled = !isMaterialArchived;
+            btnDelete.Enabled = true;
         }
 
         #endregion

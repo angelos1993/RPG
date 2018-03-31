@@ -7,6 +7,7 @@ using RPG.DAL.Model;
 using RPG.DAL.VMs;
 using RPG.Utility;
 using RPG.Utility.Enums;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -65,7 +66,7 @@ namespace RPG.PL.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBoxUtility.ShowConfirmationDialog(Resources.DeleteClientConfirmationMsg, DialogDefaultButton.No) !=
+            if (ShowConfirmationDialog(Resources.DeleteClientConfirmationMsg, DialogDefaultButton.No) !=
                 DialogResult.Yes)
                 return;
             Cursor = Cursors.WaitCursor;
@@ -150,7 +151,7 @@ namespace RPG.PL.Forms
             var clientId = int.Parse(dgvClients.SelectedRows[0].Cells[0].Value.ToString());
             if (InvoiceManager.IsClientHasInvoices(clientId))
             {
-                MessageBoxUtility.ShowErrorMsg(Resources.ClientNotDeletedDueToHisInvoices);
+                ShowErrorMsg(Resources.ClientNotDeletedDueToHisInvoices);
                 return;
             }
             ClientManager.DeleteClient(clientId);

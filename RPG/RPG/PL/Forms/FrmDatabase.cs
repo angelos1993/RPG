@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -38,7 +39,7 @@ namespace RPG.PL.Forms
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            MessageBoxUtility.ShowInfoMsg("هذه الخدمة لم تنتهي بعد");
+            ShowInfoMsg("هذه الخدمة لم تنتهي بعد");
             //Cursor = Cursors.WaitCursor;
             //DisableButtons();
             //RestoreDatabase();
@@ -55,7 +56,7 @@ namespace RPG.PL.Forms
         {
             Cursor = Cursors.Default;
             ShowOrHideControls(false);
-            MessageBoxUtility.ShowInfoMsg(Resources.DatabaseBackupSuccessfully);
+            ShowInfoMsg(Resources.DatabaseBackupSuccessfully);
             Close();
         }
 
@@ -63,7 +64,7 @@ namespace RPG.PL.Forms
         {
             Cursor = Cursors.Default;
             ShowOrHideControls(false);
-            MessageBoxUtility.ShowInfoMsg(Resources.DatabaseRestoreSuccessfully);
+            ShowInfoMsg(Resources.DatabaseRestoreSuccessfully);
             Close();
         }
 
@@ -100,7 +101,7 @@ namespace RPG.PL.Forms
             catch
             {
                 Cursor = Cursors.Default;
-                MessageBoxUtility.ShowErrorMsg(Resources.DatabaseBackupFailed);
+                ShowErrorMsg(Resources.DatabaseBackupFailed);
             }
         }
 
@@ -133,7 +134,7 @@ namespace RPG.PL.Forms
             catch
             {
                 Cursor = Cursors.Default;
-                MessageBoxUtility.ShowErrorMsg(Resources.DatabaseRestoreFailes);
+                ShowErrorMsg(Resources.DatabaseRestoreFailes);
             }
         }
 

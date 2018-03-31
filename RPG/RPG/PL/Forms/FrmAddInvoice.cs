@@ -6,6 +6,7 @@ using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.DAL.VMs;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -248,19 +249,19 @@ namespace RPG.PL.Forms
             }
             else if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
             {
-                isFormValid = MessageBoxUtility.ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
+                isFormValid = ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
                 ClientManager.AddClient(new Client {Name = txtClientName.Text.FullTrim()});
             }
             if (!InvoiceItemVms.Any())
             {
                 isFormValid = false;
-                MessageBoxUtility.ShowErrorMsg(Resources.InvoiceWithoutItems);
+                ShowErrorMsg(Resources.InvoiceWithoutItems);
             }
             if (!isFormValid)
                 return;
             if (!InvoiceItemVms.Any())
             {
-                MessageBoxUtility.ShowErrorMsg(Resources.NoItemsAdded);
+                ShowErrorMsg(Resources.NoItemsAdded);
                 return;
             }
             var invoice = new Invoice
@@ -288,7 +289,7 @@ namespace RPG.PL.Forms
                     Paid = (decimal) dblInPaid.Value
                 });
             MaterialManager.UpdateQuantitiesAfterCreatingInvoice(InvoiceItemVms);
-            MessageBoxUtility.ShowInfoMsg(Resources.InvoiceCreatedSuccessfully);
+            ShowInfoMsg(Resources.InvoiceCreatedSuccessfully);
             Close();
         }
 

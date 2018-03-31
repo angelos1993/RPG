@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -79,11 +80,11 @@ namespace RPG.PL.Forms
                 : txtName.Text.FullTrim() != Material.Name &&
                   MaterialManager.IsMaterialNameExists(txtName.Text.FullTrim());
             if (isMaterialNameExists && isMaterialCodeExists)
-                isFormValid = MessageBoxUtility.ShowConfirmationDialog(Resources.MaterialCodeAndNameAlreadyUsed) == DialogResult.Yes;
+                isFormValid = ShowConfirmationDialog(Resources.MaterialCodeAndNameAlreadyUsed) == DialogResult.Yes;
             else if (isMaterialNameExists)
-                isFormValid = MessageBoxUtility.ShowConfirmationDialog(Resources.MaterialNameAlreadyUsed) == DialogResult.Yes;
+                isFormValid = ShowConfirmationDialog(Resources.MaterialNameAlreadyUsed) == DialogResult.Yes;
             else if (isMaterialCodeExists)
-                isFormValid = MessageBoxUtility.ShowConfirmationDialog(Resources.MaterialCodeAlreadyUsed) == DialogResult.Yes;
+                isFormValid = ShowConfirmationDialog(Resources.MaterialCodeAlreadyUsed) == DialogResult.Yes;
             if (!isFormValid)
                 return;
             if (!IsEditMode)
@@ -105,7 +106,7 @@ namespace RPG.PL.Forms
                 Material.Quantity = (decimal) dblInQuantity.Value;
                 MaterialManager.UpdateMaterial(Material);
             }
-            MessageBoxUtility.ShowInfoMsg(IsEditMode ? Resources.MaterialEditedSuccessfully : Resources.MaterialAddedSuccessfully);
+            ShowInfoMsg(IsEditMode ? Resources.MaterialEditedSuccessfully : Resources.MaterialAddedSuccessfully);
             Close();
         }
 
