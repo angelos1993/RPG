@@ -68,6 +68,7 @@
           <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="IsArchived" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -227,6 +228,7 @@
           <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="IsArchived" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="InvoiceItems" Relationship="Self.FK_InvoiceItems_Materials" FromRole="Materials" ToRole="InvoiceItems" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -385,6 +387,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

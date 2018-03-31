@@ -63,6 +63,7 @@
     <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="IsArchived" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

@@ -70,6 +70,7 @@
     <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="IsArchived" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="InvoiceItems" Relationship="Self.FK_InvoiceItems_Materials" FromRole="Materials" ToRole="InvoiceItems" />
   </EntityType>
   <EntityType Name="sysdiagram">

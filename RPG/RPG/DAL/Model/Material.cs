@@ -26,6 +26,7 @@ namespace RPG.DAL.Model
         public decimal Price { get; set; }
         public decimal Quantity { get; set; }
         public bool IsArchived { get; set; }
+        public bool IsDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
