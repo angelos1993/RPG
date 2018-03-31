@@ -155,7 +155,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtEmail.Size = new System.Drawing.Size(248, 26);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 3;
             // 
             // labelX4
             // 
@@ -182,7 +182,7 @@
             this.txtFacebook.Name = "txtFacebook";
             this.txtFacebook.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFacebook.Size = new System.Drawing.Size(248, 26);
-            this.txtFacebook.TabIndex = 11;
+            this.txtFacebook.TabIndex = 4;
             // 
             // labelX5
             // 
@@ -209,7 +209,7 @@
             this.txtViber.Name = "txtViber";
             this.txtViber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtViber.Size = new System.Drawing.Size(248, 26);
-            this.txtViber.TabIndex = 13;
+            this.txtViber.TabIndex = 5;
             // 
             // txtWhatsApp
             // 
@@ -222,7 +222,7 @@
             this.txtWhatsApp.Name = "txtWhatsApp";
             this.txtWhatsApp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtWhatsApp.Size = new System.Drawing.Size(248, 26);
-            this.txtWhatsApp.TabIndex = 14;
+            this.txtWhatsApp.TabIndex = 6;
             // 
             // txtOther
             // 
@@ -235,7 +235,7 @@
             this.txtOther.Name = "txtOther";
             this.txtOther.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtOther.Size = new System.Drawing.Size(248, 26);
-            this.txtOther.TabIndex = 15;
+            this.txtOther.TabIndex = 7;
             // 
             // labelX6
             // 
@@ -289,7 +289,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -304,7 +304,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 4;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

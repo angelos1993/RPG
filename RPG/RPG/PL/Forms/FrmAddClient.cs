@@ -86,7 +86,12 @@ namespace RPG.PL.Forms
                 {
                     Name = txtName.Text.FullTrim(),
                     Address = txtAddress.Text.FullTrim(),
-                    Phone = txtPhone.Text.FullTrim()
+                    Phone = txtPhone.Text.FullTrim(),
+                    Email = txtEmail.Text.FullTrim(),
+                    Facebook = txtFacebook.Text.FullTrim(),
+                    Viber = txtViber.Text.FullTrim(),
+                    WhatsApp = txtWhatsApp.Text.FullTrim(),
+                    Other = txtOther.Text.FullTrim()
                 });
             }
             else
@@ -94,6 +99,11 @@ namespace RPG.PL.Forms
                 Client.Name = txtName.Text.FullTrim();
                 Client.Address = txtAddress.Text.FullTrim();
                 Client.Phone = txtPhone.Text.FullTrim();
+                Client.Email = txtEmail.Text.FullTrim();
+                Client.Facebook = txtFacebook.Text.FullTrim();
+                Client.Viber = txtViber.Text.FullTrim();
+                Client.WhatsApp = txtWhatsApp.Text.FullTrim();
+                Client.Other = txtOther.Text.FullTrim();
                 ClientManager.UpdateClient(Client);
             }
             MessageBoxUtility.ShowInfoMsg(IsEditMode ? Resources.ClientEditedSeccessfully : Resources.ClientAddedSeccessfully);
@@ -108,6 +118,11 @@ namespace RPG.PL.Forms
             txtName.Text = Client.Name;
             txtAddress.Text = Client.Address;
             txtPhone.Text = Client.Phone;
+            txtEmail.Text = Client.Email;
+            txtFacebook.Text = Client.Facebook;
+            txtViber.Text = Client.Viber;
+            txtWhatsApp.Text = Client.WhatsApp;
+            txtOther.Text = Client.Other;
         }
 
         #endregion

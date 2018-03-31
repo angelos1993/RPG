@@ -97,7 +97,12 @@ namespace RPG.PL.Forms
                 Id = client.Id,
                 Name = client.Name,
                 Address = client.Address,
-                Phone = client.Phone
+                Phone = client.Phone,
+                Email = client.Email,
+                Facebook = client.Facebook,
+                Viber = client.Viber,
+                WhatsApp = client.WhatsApp,
+                Other = client.Other
             }).ToList();
         }
 
@@ -106,13 +111,23 @@ namespace RPG.PL.Forms
             var searchText = txtSearch.Text.FullTrim();
             ClientsList = Clients.Where(client => client.Name != null && client.Name.Contains(searchText)
                                                   || client.Address != null && client.Address.Contains(searchText) ||
-                                                  client.Phone != null && client.Phone.Contains(searchText))
+                                                  client.Phone != null && client.Phone.Contains(searchText) ||
+                                                  client.Email != null && client.Email.Contains(searchText) ||
+                                                  client.Facebook != null && client.Facebook.Contains(searchText) ||
+                                                  client.Viber != null && client.Viber.Contains(searchText) ||
+                                                  client.WhatsApp != null && client.WhatsApp.Contains(searchText) ||
+                                                  client.Other != null && client.Other.Contains(searchText))
                 .Select(client => new ClientVm
                 {
                     Id = client.Id,
                     Name = client.Name,
                     Address = client.Address,
-                    Phone = client.Phone
+                    Phone = client.Phone,
+                    Email = client.Email,
+                    Facebook = client.Facebook,
+                    Viber = client.Viber,
+                    WhatsApp = client.WhatsApp,
+                    Other = client.Other
                 }).ToList();
             FillGrid();
         }

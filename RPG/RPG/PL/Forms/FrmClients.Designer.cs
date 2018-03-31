@@ -45,7 +45,7 @@
             this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEdit.Image = global::RPG.Properties.Resources.Edit;
             this.btnEdit.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(312, 428);
+            this.btnEdit.Location = new System.Drawing.Point(680, 428);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 40);
             this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -60,7 +60,7 @@
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Image = global::RPG.Properties.Resources.Exit;
             this.btnClose.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(40, 428);
+            this.btnClose.Location = new System.Drawing.Point(408, 428);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -74,7 +74,7 @@
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnDelete.Image = global::RPG.Properties.Resources.Delete;
             this.btnDelete.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(176, 428);
+            this.btnDelete.Location = new System.Drawing.Point(544, 428);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 40);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -101,7 +101,7 @@
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(531, 378);
+            this.dgvClients.Size = new System.Drawing.Size(1195, 378);
             this.dgvClients.TabIndex = 23;
             // 
             // btnAddClient
@@ -128,7 +128,7 @@
             this.txtSearch.Location = new System.Drawing.Point(207, 12);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSearch.Size = new System.Drawing.Size(336, 26);
+            this.txtSearch.Size = new System.Drawing.Size(1000, 26);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.WatermarkText = "بحث في العملاء ...";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -138,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(555, 480);
+            this.ClientSize = new System.Drawing.Size(1219, 480);
             this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvClients);
