@@ -101,6 +101,7 @@
             this.txtPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPhone.Size = new System.Drawing.Size(248, 26);
             this.txtPhone.TabIndex = 2;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // labelX2
             // 

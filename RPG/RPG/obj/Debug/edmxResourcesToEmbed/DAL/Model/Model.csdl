@@ -16,6 +16,11 @@
     <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Facebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Viber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WhatsApp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Clients" FromRole="Clients" ToRole="Invoices" />
   </EntityType>
   <EntityType Name="InvoiceItem">

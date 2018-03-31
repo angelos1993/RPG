@@ -21,6 +21,11 @@
           <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Facebook" Type="nvarchar(max)" />
+          <Property Name="Viber" Type="nvarchar(max)" />
+          <Property Name="WhatsApp" Type="nvarchar(max)" />
+          <Property Name="Other" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="InvoiceItems">
           <Key>
@@ -168,6 +173,11 @@
           <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Facebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Viber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WhatsApp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Clients" FromRole="Clients" ToRole="Invoices" />
         </EntityType>
         <EntityType Name="InvoiceItem">
@@ -324,6 +334,11 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="Viber" ColumnName="Viber" />
+                <ScalarProperty Name="WhatsApp" ColumnName="WhatsApp" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

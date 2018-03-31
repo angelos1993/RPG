@@ -33,11 +33,21 @@ namespace RPG.PL.Forms
         private void chkBoxViber_CheckedChanged(object sender, EventArgs e)
         {
             txtViber.Text = chkBoxViber.Checked ? txtPhone.Text : string.Empty;
+            txtViber.Enabled = !chkBoxViber.Checked;
         }
 
         private void chkBoxWhatsApp_CheckedChanged(object sender, EventArgs e)
         {
             txtWhatsApp.Text = chkBoxWhatsApp.Checked ? txtPhone.Text : string.Empty;
+            txtWhatsApp.Enabled = !chkBoxWhatsApp.Checked;
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (chkBoxViber.Checked)
+                txtViber.Text = txtPhone.Text;
+            if (chkBoxWhatsApp.Checked)
+                txtWhatsApp.Text = txtPhone.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

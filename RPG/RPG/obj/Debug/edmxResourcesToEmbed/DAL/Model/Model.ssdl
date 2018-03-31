@@ -16,6 +16,11 @@
     <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Facebook" Type="nvarchar(max)" />
+    <Property Name="Viber" Type="nvarchar(max)" />
+    <Property Name="WhatsApp" Type="nvarchar(max)" />
+    <Property Name="Other" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="InvoiceItems">
     <Key>
