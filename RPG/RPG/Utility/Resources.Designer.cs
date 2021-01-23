@@ -19,7 +19,7 @@ namespace RPG.Utility {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -169,7 +169,7 @@ namespace RPG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذا العميل ؟.
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذا العميل؟.
         /// </summary>
         internal static string DeleteClientConfirmationMsg {
             get {
@@ -178,7 +178,16 @@ namespace RPG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟.
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذه الفاتورة؟.
+        /// </summary>
+        internal static string DeleteInvoiceConfirmationMsg {
+            get {
+                return ResourceManager.GetString("DeleteInvoiceConfirmationMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة؟.
         /// </summary>
         internal static string DeleteMaterialConfirmationMsg {
             get {
@@ -232,7 +241,7 @@ namespace RPG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟.
+        ///   Looks up a localized string similar to الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار؟.
         /// </summary>
         internal static string MaterialCodeAlreadyUsed {
             get {
@@ -241,7 +250,7 @@ namespace RPG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to الكود والاسم مستخدمان من قبل. هل تريد الاستمرار ؟.
+        ///   Looks up a localized string similar to الكود والاسم مستخدمان من قبل. هل تريد الاستمرار؟.
         /// </summary>
         internal static string MaterialCodeAndNameAlreadyUsed {
             get {
@@ -259,7 +268,7 @@ namespace RPG.Utility {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟.
+        ///   Looks up a localized string similar to الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار؟.
         /// </summary>
         internal static string MaterialNameAlreadyUsed {
             get {

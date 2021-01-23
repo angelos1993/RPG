@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -40,6 +41,12 @@ namespace RPG.DAL.Repositories.Infrastructure
         public void Delete(T entity)
         {
             DbSet.Remove(entity);
+            Save();
+        }
+
+        public void DeleteRange(List<T> entities)
+        {
+            DbSet.RemoveRange(entities);
             Save();
         }
 

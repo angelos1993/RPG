@@ -61,6 +61,11 @@ namespace RPG.BLL
             return UnitOfWork.InvoiceRepository.GetAll().Any(invoice => invoice.ClientId == clientId);
         }
 
+        public void DeleteInvoice(Invoice invoice)
+        {
+            UnitOfWork.InvoiceRepository.Delete(invoice);
+        }
+
         #endregion
     }
 }

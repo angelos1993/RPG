@@ -154,10 +154,13 @@
     <value>تم إستعادة قاعدة البيانات بنجاح</value>
   </data>
   <data name="DeleteClientConfirmationMsg" xml:space="preserve">
-    <value>هل أنت متأكد من أنك تريد حذف هذا العميل ؟</value>
+    <value>هل أنت متأكد من أنك تريد حذف هذا العميل؟</value>
+  </data>
+  <data name="DeleteInvoiceConfirmationMsg" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد حذف هذه الفاتورة؟</value>
   </data>
   <data name="DeleteMaterialConfirmationMsg" xml:space="preserve">
-    <value>هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة ؟</value>
+    <value>هل أنت متأكد من أنك تريد حذف هذه المادة / الخامة؟</value>
   </data>
   <data name="InvoiceCreatedSuccessfully" xml:space="preserve">
     <value>تم إدخال الفاتورة بنجاح</value>
@@ -175,16 +178,16 @@
     <value>الكمية المتاحة {0}</value>
   </data>
   <data name="MaterialCodeAlreadyUsed" xml:space="preserve">
-    <value>الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟</value>
+    <value>الكود الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار؟</value>
   </data>
   <data name="MaterialCodeAndNameAlreadyUsed" xml:space="preserve">
-    <value>الكود والاسم مستخدمان من قبل. هل تريد الاستمرار ؟</value>
+    <value>الكود والاسم مستخدمان من قبل. هل تريد الاستمرار؟</value>
   </data>
   <data name="MaterialEditedSuccessfully" xml:space="preserve">
     <value>تم تعديل المادة / الخامة بنجاح</value>
   </data>
   <data name="MaterialNameAlreadyUsed" xml:space="preserve">
-    <value>الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار ؟</value>
+    <value>الاسم الذي أدخلتة مستخدم من قبل. هل تريد الاستمرار؟</value>
   </data>
   <data name="MaterialQuantityAddedSeccessfully" xml:space="preserve">
     <value>تم إضافة الكمية بنجاح</value>

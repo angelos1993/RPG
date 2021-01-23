@@ -26,6 +26,11 @@ namespace RPG.BLL
                 .ToList();
         }
 
+        public void DeleteInvoicePayments(List<InvoicePayment> invoicePayments)
+        {
+            UnitOfWork.InvoicePaymentRepository.DeleteRange(invoicePayments);
+        }
+
         #endregion
     }
 }

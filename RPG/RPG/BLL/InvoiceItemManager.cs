@@ -19,6 +19,11 @@ namespace RPG.BLL
             invoiceItems.ForEach(invoiceItem => UnitOfWork.InvoiceItemRepository.Add(invoiceItem));
         }
 
+        public void DeleteInvoiceItems(List<InvoiceItem> invoiceItems)
+        {
+            UnitOfWork.InvoiceItemRepository.DeleteRange(invoiceItems);
+        }
+
         public List<InvoiceItemVm> GetInvoiceItems(int invoiceId)
         {
             return UnitOfWork.InvoiceItemRepository.Get(invoiceItem => invoiceItem.InvoiceId == invoiceId)

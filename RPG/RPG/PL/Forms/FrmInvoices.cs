@@ -6,6 +6,7 @@ using RPG.BLL;
 using RPG.DAL.Model;
 using RPG.DAL.VMs;
 using RPG.Utility;
+using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
@@ -24,6 +25,18 @@ namespace RPG.PL.Forms
 
         private InvoiceManager _invoiceManager;
         private InvoiceManager InvoiceManager => _invoiceManager ?? (_invoiceManager = new InvoiceManager());
+        private MaterialManager _materialManager;
+        private MaterialManager MaterialManager => _materialManager ?? (_materialManager = new MaterialManager());
+        private InvoiceItemManager _invoiceItemManager;
+
+        private InvoiceItemManager InvoiceItemManager =>
+            _invoiceItemManager ?? (_invoiceItemManager = new InvoiceItemManager());
+
+        private InvoicePaymentManager _invoicePaymentManager;
+
+        private InvoicePaymentManager InvoicePaymentManager =>
+            _invoicePaymentManager ?? (_invoicePaymentManager = new InvoicePaymentManager());
+
         private List<Invoice> Invoices { get; set; }
         private List<InvoiceVm> InvoicesList { get; set; }
 
@@ -79,6 +92,24 @@ namespace RPG.PL.Forms
             Cursor = Cursors.Default;
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog(Resources.DeleteInvoiceConfirmationMsg) == DialogResult.Yes)
+            {
+                if (dgvInvoices.Rows.Count > 0)
+                {
+                    var invoiceId = int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString());
+                    var invoice = InvoiceManager.GetInvoiceById(invoiceId);
+                    var invoiceItems = invoice.InvoiceItems.ToList();
+                    MaterialManager.UpdateQuantitiesAfterDeletingInvoice(invoiceItems);
+                    InvoiceItemManager.DeleteInvoiceItems(invoiceItems);
+                    InvoicePaymentManager.DeleteInvoicePayments(invoice.InvoicePayments.ToList());
+                    InvoiceManager.DeleteInvoice(invoice);
+                    ResetForm();
+                }
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -117,7 +148,7 @@ namespace RPG.PL.Forms
                 InvoicesList = InvoicesList.Where(invoiceVm => invoiceVm.Date.Date == DateTime.Today.Date).ToList();
             else if (radThisMonth.Checked)
                 InvoicesList = InvoicesList.Where(invoiceVm => invoiceVm.Date.Month == DateTime.Today.Month).ToList();
-            else if (radSpesificDate.Checked && dtInvoiceDate.Value != default(DateTime))
+            else if (radSpesificDate.Checked && dtInvoiceDate.Value != default)
                 InvoicesList = InvoicesList.Where(invoiceVm => invoiceVm.Date.Date == dtInvoiceDate.Value.Date).ToList();
 
             #endregion
@@ -137,6 +168,7 @@ namespace RPG.PL.Forms
         private void FillGrid()
         {
             dgvInvoices.DataSource = InvoicesList;
+            btnDelete.Enabled = InvoicesList?.Any() == true;
         }
 
         #endregion

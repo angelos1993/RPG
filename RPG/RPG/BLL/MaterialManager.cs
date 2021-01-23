@@ -59,6 +59,19 @@ namespace RPG.BLL
             }
         }
 
+        public void UpdateQuantitiesAfterDeletingInvoice(List<InvoiceItem> invoiceItems)
+        {
+            foreach (var invoiceItem in invoiceItems)
+            {
+                var material = GetMaterialById(invoiceItem.MaterialId);
+                if (material != null)
+                {
+                    material.Quantity += invoiceItem.Quantity;
+                    UpdateMaterial(material);
+                }
+            }
+        }
+
         #endregion
     }
 }
