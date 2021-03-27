@@ -3,3 +3,8 @@
 /RPG/.vs/*
 /RPG/RPG/RPG.csproj
 /RPG/RPG/RPG.csproj.user
+/RPG/RPG/obj/Debug/*
+/RPG/RPG/obj/Debug/edmxResourcesToEmbed/DAL/Model/Model.msl
+/RPG/RPG/obj/Debug/edmxResourcesToEmbed/DAL/Model/Model.ssdl
+/RPG/RPG/obj/Debug/TempPE/DAL.Model.Model.cs.dll
+/RPG/RPG/obj/Debug/TempPE/DAL.Model.Model.Designer.cs.dll
