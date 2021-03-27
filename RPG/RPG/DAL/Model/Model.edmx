@@ -70,16 +70,99 @@
           <Property Name="IsArchived" Type="bit" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="PurchaseInvoiceItems">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceId" Type="int" Nullable="false" />
+          <Property Name="MaterialId" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="PurchaseInvoicePayments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseInvoices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="SupplierId" Type="int" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suppliers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Facebook" Type="nvarchar(max)" />
+          <Property Name="Viber" Type="nvarchar(max)" />
+          <Property Name="WhatsApp" Type="nvarchar(max)" />
+          <Property Name="Other" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK__PurchaseI__Invoi__6EF57B66">
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoices" Multiplicity="1" />
+          <End Role="PurchaseInvoicePayments" Type="Self.PurchaseInvoicePayments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseInvoices">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoicePayments">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Invoi__71D1E811">
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoices" Multiplicity="1" />
+          <End Role="PurchaseInvoiceItems" Type="Self.PurchaseInvoiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseInvoices">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoiceItems">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Mater__72C60C4A">
+          <End Role="Materials" Type="Self.Materials" Multiplicity="1" />
+          <End Role="PurchaseInvoiceItems" Type="Self.PurchaseInvoiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materials">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoiceItems">
+              <PropertyRef Name="MaterialId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Suppl__6C190EBB">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoices">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_InvoiceItems_Invoices">
           <End Role="Invoices" Type="Self.Invoices" Multiplicity="1" />
           <End Role="InvoiceItems" Type="Self.InvoiceItems" Multiplicity="*" />
@@ -135,7 +218,26 @@
           <EntitySet Name="InvoicePayments" EntityType="Self.InvoicePayments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Materials" EntityType="Self.Materials" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseInvoiceItems" EntityType="Self.PurchaseInvoiceItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseInvoicePayments" EntityType="Self.PurchaseInvoicePayments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseInvoices" EntityType="Self.PurchaseInvoices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__PurchaseI__Invoi__6EF57B66" Association="Self.FK__PurchaseI__Invoi__6EF57B66">
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
+            <End Role="PurchaseInvoicePayments" EntitySet="PurchaseInvoicePayments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Invoi__71D1E811" Association="Self.FK__PurchaseI__Invoi__71D1E811">
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
+            <End Role="PurchaseInvoiceItems" EntitySet="PurchaseInvoiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Mater__72C60C4A" Association="Self.FK__PurchaseI__Mater__72C60C4A">
+            <End Role="Materials" EntitySet="Materials" />
+            <End Role="PurchaseInvoiceItems" EntitySet="PurchaseInvoiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Suppl__6C190EBB" Association="Self.FK__PurchaseI__Suppl__6C190EBB">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
+          </AssociationSet>
           <AssociationSet Name="FK_InvoiceItems_Invoices" Association="Self.FK_InvoiceItems_Invoices">
             <End Role="Invoices" EntitySet="Invoices" />
             <End Role="InvoiceItems" EntitySet="InvoiceItems" />
@@ -230,16 +332,59 @@
           <Property Name="IsArchived" Type="Boolean" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="InvoiceItems" Relationship="Self.FK_InvoiceItems_Materials" FromRole="Materials" ToRole="InvoiceItems" />
+          <NavigationProperty Name="PurchaseInvoiceItems" Relationship="Self.FK__PurchaseI__Mater__72C60C4A" FromRole="Materials" ToRole="PurchaseInvoiceItems" />
         </EntityType>
-        <EntityType Name="sysdiagram">
+        <EntityType Name="PurchaseInvoiceItem">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+          <Property Name="MaterialId" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Material" Relationship="Self.FK__PurchaseI__Mater__72C60C4A" FromRole="PurchaseInvoiceItems" ToRole="Materials" />
+          <NavigationProperty Name="PurchaseInvoice" Relationship="Self.FK__PurchaseI__Invoi__71D1E811" FromRole="PurchaseInvoiceItems" ToRole="PurchaseInvoices" />
+        </EntityType>
+        <EntityType Name="PurchaseInvoicePayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="PurchaseInvoice" Relationship="Self.FK__PurchaseI__Invoi__6EF57B66" FromRole="PurchaseInvoicePayments" ToRole="PurchaseInvoices" />
+        </EntityType>
+        <EntityType Name="PurchaseInvoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SupplierId" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="PurchaseInvoiceItems" Relationship="Self.FK__PurchaseI__Invoi__71D1E811" FromRole="PurchaseInvoices" ToRole="PurchaseInvoiceItems" />
+          <NavigationProperty Name="PurchaseInvoicePayments" Relationship="Self.FK__PurchaseI__Invoi__6EF57B66" FromRole="PurchaseInvoices" ToRole="PurchaseInvoicePayments" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK__PurchaseI__Suppl__6C190EBB" FromRole="PurchaseInvoices" ToRole="Suppliers" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Facebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Viber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WhatsApp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PurchaseInvoices" Relationship="Self.FK__PurchaseI__Suppl__6C190EBB" FromRole="Suppliers" ToRole="PurchaseInvoices" />
         </EntityType>
         <Association Name="FK_Invoices_Clients">
           <End Role="Clients" Type="Self.Client" Multiplicity="1" />
@@ -289,6 +434,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__PurchaseI__Mater__72C60C4A">
+          <End Role="Materials" Type="Self.Material" Multiplicity="1" />
+          <End Role="PurchaseInvoiceItems" Type="Self.PurchaseInvoiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materials">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoiceItems">
+              <PropertyRef Name="MaterialId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Invoi__71D1E811">
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoice" Multiplicity="1" />
+          <End Role="PurchaseInvoiceItems" Type="Self.PurchaseInvoiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseInvoices">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoiceItems">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Invoi__6EF57B66">
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoice" Multiplicity="1" />
+          <End Role="PurchaseInvoicePayments" Type="Self.PurchaseInvoicePayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseInvoices">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoicePayments">
+              <PropertyRef Name="InvoiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Suppl__6C190EBB">
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+          <End Role="PurchaseInvoices" Type="Self.PurchaseInvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInvoices">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RPGEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Clients" EntityType="Self.Client" />
@@ -296,7 +489,10 @@
           <EntitySet Name="InvoicePayments" EntityType="Self.InvoicePayment" />
           <EntitySet Name="Invoices" EntityType="Self.Invoice" />
           <EntitySet Name="Materials" EntityType="Self.Material" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="PurchaseInvoiceItems" EntityType="Self.PurchaseInvoiceItem" />
+          <EntitySet Name="PurchaseInvoicePayments" EntityType="Self.PurchaseInvoicePayment" />
+          <EntitySet Name="PurchaseInvoices" EntityType="Self.PurchaseInvoice" />
+          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
           <AssociationSet Name="FK_Invoices_Clients" Association="Self.FK_Invoices_Clients">
             <End Role="Clients" EntitySet="Clients" />
             <End Role="Invoices" EntitySet="Invoices" />
@@ -312,6 +508,22 @@
           <AssociationSet Name="FK_InvoicePayments_Invoices" Association="Self.FK_InvoicePayments_Invoices">
             <End Role="Invoices" EntitySet="Invoices" />
             <End Role="InvoicePayments" EntitySet="InvoicePayments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Mater__72C60C4A" Association="Self.FK__PurchaseI__Mater__72C60C4A">
+            <End Role="Materials" EntitySet="Materials" />
+            <End Role="PurchaseInvoiceItems" EntitySet="PurchaseInvoiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Invoi__71D1E811" Association="Self.FK__PurchaseI__Invoi__71D1E811">
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
+            <End Role="PurchaseInvoiceItems" EntitySet="PurchaseInvoiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Invoi__6EF57B66" Association="Self.FK__PurchaseI__Invoi__6EF57B66">
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
+            <End Role="PurchaseInvoicePayments" EntitySet="PurchaseInvoicePayments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Suppl__6C190EBB" Association="Self.FK__PurchaseI__Suppl__6C190EBB">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="PurchaseInvoices" EntitySet="PurchaseInvoices" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -391,14 +603,52 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="RPGModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+          <EntitySetMapping Name="PurchaseInvoiceItems">
+            <EntityTypeMapping TypeName="RPGModel.PurchaseInvoiceItem">
+              <MappingFragment StoreEntitySet="PurchaseInvoiceItems">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseInvoicePayments">
+            <EntityTypeMapping TypeName="RPGModel.PurchaseInvoicePayment">
+              <MappingFragment StoreEntitySet="PurchaseInvoicePayments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseInvoices">
+            <EntityTypeMapping TypeName="RPGModel.PurchaseInvoice">
+              <MappingFragment StoreEntitySet="PurchaseInvoices">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="RPGModel.Supplier">
+              <MappingFragment StoreEntitySet="Suppliers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="Viber" ColumnName="Viber" />
+                <ScalarProperty Name="WhatsApp" ColumnName="WhatsApp" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

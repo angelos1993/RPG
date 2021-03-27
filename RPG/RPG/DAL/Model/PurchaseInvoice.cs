@@ -12,25 +12,26 @@ namespace RPG.DAL.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class PurchaseInvoice
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public PurchaseInvoice()
         {
-            this.Invoices = new HashSet<Invoice>();
+            this.PurchaseInvoiceItems = new HashSet<PurchaseInvoiceItem>();
+            this.PurchaseInvoicePayments = new HashSet<PurchaseInvoicePayment>();
         }
     
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
-        public string Email { get; set; }
-        public string Facebook { get; set; }
-        public string Viber { get; set; }
-        public string WhatsApp { get; set; }
-        public string Other { get; set; }
+        public System.DateTime Date { get; set; }
+        public int SupplierId { get; set; }
+        public decimal Total { get; set; }
+        public decimal Paid { get; set; }
+        public decimal Discount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual ICollection<PurchaseInvoiceItem> PurchaseInvoiceItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseInvoicePayment> PurchaseInvoicePayments { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

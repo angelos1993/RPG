@@ -4,18 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bc65f5186ed44536ad44672b966687ff" Name="Diagram1">
-        <EntityTypeShape EntityType="RPGModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.Client" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.InvoiceItem" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.InvoicePayment" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.Invoice" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.Material" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGModel.sysdiagram" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="0758ae16f480490a9bf46e4f663ef25a" Name="Diagram1">
+        <EntityTypeShape EntityType="RPGModel.Admin" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Client" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.InvoiceItem" Width="1.5" PointX="12.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.InvoicePayment" Width="1.5" PointX="12.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Invoice" Width="1.5" PointX="10" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Material" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.PurchaseInvoiceItem" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.PurchaseInvoicePayment" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.PurchaseInvoice" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RPGModel.Supplier" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <AssociationConnector Association="RPGModel.FK_Invoices_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="RPGModel.FK_InvoiceItems_Invoices" ManuallyRouted="false" />
         <AssociationConnector Association="RPGModel.FK_InvoiceItems_Materials" ManuallyRouted="false" />
         <AssociationConnector Association="RPGModel.FK_InvoicePayments_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="RPGModel.FK__PurchaseI__Mater__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="RPGModel.FK__PurchaseI__Invoi__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="RPGModel.FK__PurchaseI__Invoi__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="RPGModel.FK__PurchaseI__Suppl__6C190EBB" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

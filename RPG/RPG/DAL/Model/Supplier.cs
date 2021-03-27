@@ -12,12 +12,12 @@ namespace RPG.DAL.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class Supplier
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public Supplier()
         {
-            this.Invoices = new HashSet<Invoice>();
+            this.PurchaseInvoices = new HashSet<PurchaseInvoice>();
         }
     
         public int Id { get; set; }
@@ -31,6 +31,6 @@ namespace RPG.DAL.Model
         public string Other { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual ICollection<PurchaseInvoice> PurchaseInvoices { get; set; }
     }
 }

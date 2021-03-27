@@ -18,6 +18,7 @@ namespace RPG.DAL.Model
         public Material()
         {
             this.InvoiceItems = new HashSet<InvoiceItem>();
+            this.PurchaseInvoiceItems = new HashSet<PurchaseInvoiceItem>();
         }
     
         public int Id { get; set; }
@@ -30,5 +31,7 @@ namespace RPG.DAL.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseInvoiceItem> PurchaseInvoiceItems { get; set; }
     }
 }

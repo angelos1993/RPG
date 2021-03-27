@@ -31,6 +31,9 @@ namespace RPG.DAL.Model
         public virtual DbSet<InvoicePayment> InvoicePayments { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<PurchaseInvoiceItem> PurchaseInvoiceItems { get; set; }
+        public virtual DbSet<PurchaseInvoicePayment> PurchaseInvoicePayments { get; set; }
+        public virtual DbSet<PurchaseInvoice> PurchaseInvoices { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
     }
 }
