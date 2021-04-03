@@ -320,7 +320,7 @@
             this.btnListSuppliers.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListSuppliers.Image = global::RPG.Properties.Resources.ShowAllClients;
             this.btnListSuppliers.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListSuppliers.Location = new System.Drawing.Point(8, 78);
+            this.btnListSuppliers.Location = new System.Drawing.Point(12, 86);
             this.btnListSuppliers.Name = "btnListSuppliers";
             this.btnListSuppliers.Size = new System.Drawing.Size(200, 40);
             this.btnListSuppliers.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -334,7 +334,7 @@
             this.btnAddSupplier.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddSupplier.Image = global::RPG.Properties.Resources.Add;
             this.btnAddSupplier.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddSupplier.Location = new System.Drawing.Point(8, 32);
+            this.btnAddSupplier.Location = new System.Drawing.Point(12, 40);
             this.btnAddSupplier.Name = "btnAddSupplier";
             this.btnAddSupplier.Size = new System.Drawing.Size(200, 40);
             this.btnAddSupplier.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

@@ -2,7 +2,7 @@
 
 namespace RPG.DAL.VMs
 {
-    public class ClientVm
+    public class PersonVm
     {
         public int Id { get; set; }
 

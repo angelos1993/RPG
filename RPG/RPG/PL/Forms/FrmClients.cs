@@ -29,7 +29,7 @@ namespace RPG.PL.Forms
         private InvoiceManager _invoiceManager;
         private InvoiceManager InvoiceManager => _invoiceManager ?? (_invoiceManager = new InvoiceManager());
         private List<Client> Clients { get; set; }
-        private List<ClientVm> ClientsList { get; set; }
+        private List<PersonVm> ClientsList { get; set; }
 
         #endregion
 
@@ -93,7 +93,7 @@ namespace RPG.PL.Forms
         private void GetClients()
         {
             Clients = ClientManager.GetAllClients().OrderBy(client => client.Name).ToList();
-            ClientsList = Clients.Select(client => new ClientVm
+            ClientsList = Clients.Select(client => new PersonVm
             {
                 Id = client.Id,
                 Name = client.Name,
@@ -118,7 +118,7 @@ namespace RPG.PL.Forms
                                                   client.Viber != null && client.Viber.Contains(searchText) ||
                                                   client.WhatsApp != null && client.WhatsApp.Contains(searchText) ||
                                                   client.Other != null && client.Other.Contains(searchText))
-                .Select(client => new ClientVm
+                .Select(client => new PersonVm
                 {
                     Id = client.Id,
                     Name = client.Name,

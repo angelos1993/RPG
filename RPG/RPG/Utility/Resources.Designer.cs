@@ -196,6 +196,15 @@ namespace RPG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to هل أنت متأكد من أنك تريد حذف هذا المُورد؟.
+        /// </summary>
+        internal static string DeleteSupplierConfirmationMsg {
+            get {
+                return ResourceManager.GetString("DeleteSupplierConfirmationMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تم إدخال الفاتورة بنجاح.
         /// </summary>
         internal static string InvoiceCreatedSuccessfully {
@@ -327,6 +336,15 @@ namespace RPG.Utility {
         internal static string SupplierEditedSeccessfully {
             get {
                 return ResourceManager.GetString("SupplierEditedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لا يمكن الحذف لوجود فواتير متعلقة بهذا المُورد.
+        /// </summary>
+        internal static string SupplierNotDeletedDueToHisInvoices {
+            get {
+                return ResourceManager.GetString("SupplierNotDeletedDueToHisInvoices", resourceCulture);
             }
         }
         

@@ -73,7 +73,7 @@ namespace RPG.PL.Forms
 
         private void btnListSuppliers_Click(object sender, EventArgs e)
         {
-
+            new FrmSuppliers().ShowDialog();
         }
 
         #endregion
