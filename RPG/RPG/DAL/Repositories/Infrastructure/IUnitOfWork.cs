@@ -8,5 +8,9 @@
         InvoicePaymentRepository InvoicePaymentRepository { get; }
         InvoiceRepository InvoiceRepository { get; }
         MaterialRepository MaterialRepository { get; }
+        PurchaseInvoiceItemRepository PurchaseInvoiceItemRepository { get; }
+        PurchaseInvoicePaymentRepository PurchaseInvoicePaymentRepository { get; }
+        PurchaseInvoiceRepository PurchaseInvoiceRepository { get; }
+        SupplierRepository SupplierRepository { get; }
     }
 }

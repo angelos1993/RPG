@@ -10,6 +10,10 @@
         private InvoicePaymentRepository _invoicePaymentRepository;
         private InvoiceRepository _invoiceRepository;
         private MaterialRepository _materialRepository;
+        private PurchaseInvoiceItemRepository _purchaseInvoiceItemRepository;
+        private PurchaseInvoicePaymentRepository _purchaseInvoicePaymentRepository;
+        private PurchaseInvoiceRepository _purchaseInvoiceRepository;
+        private SupplierRepository _supplierRepository;
 
         #endregion
 
@@ -29,6 +33,19 @@
 
         public MaterialRepository MaterialRepository =>
             _materialRepository ?? (_materialRepository = new MaterialRepository());
+
+        public PurchaseInvoiceItemRepository PurchaseInvoiceItemRepository =>
+            _purchaseInvoiceItemRepository ?? (_purchaseInvoiceItemRepository = new PurchaseInvoiceItemRepository());
+
+        public PurchaseInvoicePaymentRepository PurchaseInvoicePaymentRepository =>
+            _purchaseInvoicePaymentRepository ??
+            (_purchaseInvoicePaymentRepository = new PurchaseInvoicePaymentRepository());
+
+        public PurchaseInvoiceRepository PurchaseInvoiceRepository =>
+            _purchaseInvoiceRepository ?? (_purchaseInvoiceRepository = new PurchaseInvoiceRepository());
+
+        public SupplierRepository SupplierRepository =>
+            _supplierRepository ?? (_supplierRepository = new SupplierRepository());
 
         #endregion
     }

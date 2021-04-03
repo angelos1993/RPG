@@ -123,6 +123,10 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Repositories\AdminRepository.cs" />
+    <Compile Include="DAL\Repositories\PurchaseInvoiceItemRepository.cs" />
+    <Compile Include="DAL\Repositories\PurchaseInvoicePaymentRepository.cs" />
+    <Compile Include="DAL\Repositories\PurchaseInvoiceRepository.cs" />
+    <Compile Include="DAL\Repositories\SupplierRepository.cs" />
     <Compile Include="DAL\Repositories\ClientRepository.cs" />
     <Compile Include="DAL\Repositories\Infrastructure\IUnitOfWork.cs" />
     <Compile Include="DAL\Repositories\Infrastructure\RepositoryBase.cs" />
