@@ -40,6 +40,8 @@
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.picMaterials = new System.Windows.Forms.PictureBox();
             this.pnlClients = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnListSuppliers = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddSupplier = new DevComponents.DotNetBar.ButtonX();
             this.btnListClients = new DevComponents.DotNetBar.ButtonX();
             this.btnAddClient = new DevComponents.DotNetBar.ButtonX();
             this.picClients = new System.Windows.Forms.PictureBox();
@@ -76,9 +78,9 @@
             this.pnlInvoices.Controls.Add(this.btnListInvoices);
             this.pnlInvoices.Controls.Add(this.btnAddInvoice);
             this.pnlInvoices.Controls.Add(this.picInvoices);
-            this.pnlInvoices.Location = new System.Drawing.Point(948, 61);
+            this.pnlInvoices.Location = new System.Drawing.Point(628, 61);
             this.pnlInvoices.Name = "pnlInvoices";
-            this.pnlInvoices.Size = new System.Drawing.Size(320, 200);
+            this.pnlInvoices.Size = new System.Drawing.Size(640, 200);
             // 
             // 
             // 
@@ -119,12 +121,12 @@
             this.btnPayInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnPayInvoice.Image = global::RPG.Properties.Resources.Pay;
             this.btnPayInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnPayInvoice.Location = new System.Drawing.Point(109, 67);
+            this.btnPayInvoice.Location = new System.Drawing.Point(423, 67);
             this.btnPayInvoice.Name = "btnPayInvoice";
             this.btnPayInvoice.Size = new System.Drawing.Size(200, 40);
             this.btnPayInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnPayInvoice.TabIndex = 1;
-            this.btnPayInvoice.Text = "دفع";
+            this.btnPayInvoice.Text = "دفع لعميل";
             this.btnPayInvoice.Click += new System.EventHandler(this.btnPayInvoice_Click);
             // 
             // btnListInvoices
@@ -133,12 +135,12 @@
             this.btnListInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListInvoices.Image = global::RPG.Properties.Resources.List;
             this.btnListInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListInvoices.Location = new System.Drawing.Point(109, 113);
+            this.btnListInvoices.Location = new System.Drawing.Point(423, 113);
             this.btnListInvoices.Name = "btnListInvoices";
             this.btnListInvoices.Size = new System.Drawing.Size(200, 40);
             this.btnListInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnListInvoices.TabIndex = 2;
-            this.btnListInvoices.Text = "عرض كل الفواتير";
+            this.btnListInvoices.Text = "عرض كل فواتير البيع";
             this.btnListInvoices.Click += new System.EventHandler(this.btnListInvoices_Click);
             // 
             // btnAddInvoice
@@ -147,21 +149,21 @@
             this.btnAddInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddInvoice.Image = global::RPG.Properties.Resources.Add;
             this.btnAddInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddInvoice.Location = new System.Drawing.Point(109, 20);
+            this.btnAddInvoice.Location = new System.Drawing.Point(423, 20);
             this.btnAddInvoice.Name = "btnAddInvoice";
             this.btnAddInvoice.Size = new System.Drawing.Size(200, 40);
             this.btnAddInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddInvoice.TabIndex = 0;
-            this.btnAddInvoice.Text = "إضافة فاتورة جديدة";
+            this.btnAddInvoice.Text = "فاتورة بيع جديدة";
             this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
             // 
             // picInvoices
             // 
             this.picInvoices.BackColor = System.Drawing.Color.Transparent;
             this.picInvoices.Image = global::RPG.Properties.Resources.Invoice;
-            this.picInvoices.Location = new System.Drawing.Point(3, 39);
+            this.picInvoices.Location = new System.Drawing.Point(255, 20);
             this.picInvoices.Name = "picInvoices";
-            this.picInvoices.Size = new System.Drawing.Size(100, 100);
+            this.picInvoices.Size = new System.Drawing.Size(123, 133);
             this.picInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInvoices.TabIndex = 0;
             this.picInvoices.TabStop = false;
@@ -270,12 +272,14 @@
             this.pnlClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlClients.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlClients.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlClients.Controls.Add(this.btnListSuppliers);
+            this.pnlClients.Controls.Add(this.btnAddSupplier);
             this.pnlClients.Controls.Add(this.btnListClients);
             this.pnlClients.Controls.Add(this.btnAddClient);
             this.pnlClients.Controls.Add(this.picClients);
-            this.pnlClients.Location = new System.Drawing.Point(622, 268);
+            this.pnlClients.Location = new System.Drawing.Point(296, 268);
             this.pnlClients.Name = "pnlClients";
-            this.pnlClients.Size = new System.Drawing.Size(320, 200);
+            this.pnlClients.Size = new System.Drawing.Size(646, 200);
             // 
             // 
             // 
@@ -308,7 +312,35 @@
             this.pnlClients.StyleMouseOver.Class = "";
             this.pnlClients.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlClients.TabIndex = 3;
-            this.pnlClients.Text = "العملاء";
+            this.pnlClients.Text = "العملاء والموردون";
+            // 
+            // btnListSuppliers
+            // 
+            this.btnListSuppliers.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListSuppliers.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListSuppliers.Image = global::RPG.Properties.Resources.ShowAllClients;
+            this.btnListSuppliers.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListSuppliers.Location = new System.Drawing.Point(8, 78);
+            this.btnListSuppliers.Name = "btnListSuppliers";
+            this.btnListSuppliers.Size = new System.Drawing.Size(200, 40);
+            this.btnListSuppliers.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListSuppliers.TabIndex = 3;
+            this.btnListSuppliers.Text = "عرض كل المُوردين";
+            this.btnListSuppliers.Click += new System.EventHandler(this.btnListSuppliers_Click);
+            // 
+            // btnAddSupplier
+            // 
+            this.btnAddSupplier.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddSupplier.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddSupplier.Image = global::RPG.Properties.Resources.Add;
+            this.btnAddSupplier.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddSupplier.Location = new System.Drawing.Point(8, 32);
+            this.btnAddSupplier.Name = "btnAddSupplier";
+            this.btnAddSupplier.Size = new System.Drawing.Size(200, 40);
+            this.btnAddSupplier.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddSupplier.TabIndex = 2;
+            this.btnAddSupplier.Text = "إضافة مُورد جديد";
+            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // btnListClients
             // 
@@ -316,7 +348,7 @@
             this.btnListClients.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListClients.Image = global::RPG.Properties.Resources.ShowAllClients;
             this.btnListClients.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListClients.Location = new System.Drawing.Point(109, 87);
+            this.btnListClients.Location = new System.Drawing.Point(429, 86);
             this.btnListClients.Name = "btnListClients";
             this.btnListClients.Size = new System.Drawing.Size(200, 40);
             this.btnListClients.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -330,7 +362,7 @@
             this.btnAddClient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddClient.Image = global::RPG.Properties.Resources.Add;
             this.btnAddClient.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddClient.Location = new System.Drawing.Point(109, 41);
+            this.btnAddClient.Location = new System.Drawing.Point(429, 40);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(200, 40);
             this.btnAddClient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -342,9 +374,9 @@
             // 
             this.picClients.BackColor = System.Drawing.Color.Transparent;
             this.picClients.Image = global::RPG.Properties.Resources.Clients;
-            this.picClients.Location = new System.Drawing.Point(3, 33);
+            this.picClients.Location = new System.Drawing.Point(237, 13);
             this.picClients.Name = "picClients";
-            this.picClients.Size = new System.Drawing.Size(100, 100);
+            this.picClients.Size = new System.Drawing.Size(160, 132);
             this.picClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picClients.TabIndex = 0;
             this.picClients.TabStop = false;
@@ -568,7 +600,7 @@
             this.reflectionImage.Image = global::RPG.Properties.Resources.Logo;
             this.reflectionImage.Location = new System.Drawing.Point(12, 12);
             this.reflectionImage.Name = "reflectionImage";
-            this.reflectionImage.Size = new System.Drawing.Size(300, 300);
+            this.reflectionImage.Size = new System.Drawing.Size(278, 294);
             this.reflectionImage.TabIndex = 8;
             // 
             // FrmIndex
@@ -635,5 +667,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage;
         private DevComponents.DotNetBar.ButtonX btnDatabase;
+        private DevComponents.DotNetBar.ButtonX btnListSuppliers;
+        private DevComponents.DotNetBar.ButtonX btnAddSupplier;
     }
 }

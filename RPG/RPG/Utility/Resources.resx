@@ -201,6 +201,12 @@
   <data name="ShouldSelectMaterial" xml:space="preserve">
     <value>يجب اختيار المادة / الخامة</value>
   </data>
+  <data name="SupplierAddedSeccessfully" xml:space="preserve">
+    <value>تم إضافة المُورد بنجاح</value>
+  </data>
+  <data name="SupplierEditedSeccessfully" xml:space="preserve">
+    <value>تم تعديل المُورد بنجاح</value>
+  </data>
   <data name="ThisFieldIsRequired" xml:space="preserve">
     <value>يجب ملئ هذا الحقل</value>
   </data>

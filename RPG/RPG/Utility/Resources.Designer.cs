@@ -313,6 +313,24 @@ namespace RPG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إضافة المُورد بنجاح.
+        /// </summary>
+        internal static string SupplierAddedSeccessfully {
+            get {
+                return ResourceManager.GetString("SupplierAddedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم تعديل المُورد بنجاح.
+        /// </summary>
+        internal static string SupplierEditedSeccessfully {
+            get {
+                return ResourceManager.GetString("SupplierEditedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to يجب ملئ هذا الحقل.
         /// </summary>
         internal static string ThisFieldIsRequired {

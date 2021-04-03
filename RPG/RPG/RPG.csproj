@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\AdminManager.cs" />
+    <Compile Include="BLL\SupplierManager.cs" />
     <Compile Include="BLL\ClientManager.cs" />
     <Compile Include="BLL\Infrastructure\BaseManager.cs" />
     <Compile Include="BLL\InvoiceItemManager.cs" />
@@ -143,6 +144,12 @@
     <Compile Include="DAL\VMs\LightInvoiceVm.cs" />
     <Compile Include="DAL\VMs\LightMaterialVm.cs" />
     <Compile Include="DAL\VMs\MaterialVm.cs" />
+    <Compile Include="PL\Forms\FrmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmAddSupplier.Designer.cs">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmAddClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +249,9 @@
     <Compile Include="Utility\StringExtensions.cs" />
     <Compile Include="Utility\TextBoxAutoCompleteUtility.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="PL\Forms\FrmAddSupplier.resx">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddClient.resx">
       <DependentUpon>FrmAddClient.cs</DependentUpon>
     </EmbeddedResource>

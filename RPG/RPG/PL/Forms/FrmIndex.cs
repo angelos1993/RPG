@@ -35,7 +35,7 @@ namespace RPG.PL.Forms
 
         #endregion
 
-        #region Invoice
+        #region Invoices
 
         private void btnAddInvoice_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace RPG.PL.Forms
 
         #endregion
 
-        #region Client
+        #region Clients & Suppliers
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
@@ -66,9 +66,19 @@ namespace RPG.PL.Forms
             new FrmClients().ShowDialog();
         }
 
+        private void btnAddSupplier_Click(object sender, EventArgs e)
+        {
+            new FrmAddSupplier().ShowDialog();
+        }
+
+        private void btnListSuppliers_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
-        #region Material
+        #region Materials
 
         private void btnAddMaterial_Click(object sender, EventArgs e)
         {
