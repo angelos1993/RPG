@@ -59,6 +59,16 @@ namespace RPG.BLL
             }
         }
 
+        public void UpdateQuantitiesAfterCreatingPurchaseInvoice(List<PurchaseInvoiceItemVm> purchaseInvoiceItemVms)
+        {
+            foreach (var purchaseInvoiceItemVm in purchaseInvoiceItemVms)
+            {
+                var material = GetMaterialById(purchaseInvoiceItemVm.MaterialId);
+                material.Quantity += purchaseInvoiceItemVm.Quantity;
+                UpdateMaterial(material);
+            }
+        }
+
         public void UpdateQuantitiesAfterDeletingInvoice(List<InvoiceItem> invoiceItems)
         {
             foreach (var invoiceItem in invoiceItems)

@@ -52,6 +52,21 @@ namespace RPG.PL.Forms
             new FrmInvoices().ShowDialog();
         }
 
+        private void btnAddPurchaseInvoice_Click(object sender, EventArgs e)
+        {
+            new FrmAddPurchaseInvoice().ShowDialog();
+        }
+
+        private void btnPayPurchaseInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListPurchaseInvoices_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Clients & Suppliers

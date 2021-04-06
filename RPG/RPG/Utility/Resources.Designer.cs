@@ -349,6 +349,15 @@ namespace RPG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to اسم المُورد غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا المُورد إلي قاعدة البيانات.
+        /// </summary>
+        internal static string SupplierNotExists {
+            get {
+                return ResourceManager.GetString("SupplierNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to يجب ملئ هذا الحقل.
         /// </summary>
         internal static string ThisFieldIsRequired {

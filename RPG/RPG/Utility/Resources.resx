@@ -213,6 +213,9 @@
   <data name="SupplierNotDeletedDueToHisInvoices" xml:space="preserve">
     <value>لا يمكن الحذف لوجود فواتير متعلقة بهذا المُورد</value>
   </data>
+  <data name="SupplierNotExists" xml:space="preserve">
+    <value>اسم المُورد غير موجود. هل تريد الاستمرار ؟ .. علماَ بأنة إذا قررت الاستمرار سيتم إضافة هذا المُورد إلي قاعدة البيانات</value>
+  </data>
   <data name="ThisFieldIsRequired" xml:space="preserve">
     <value>يجب ملئ هذا الحقل</value>
   </data>
