@@ -242,6 +242,7 @@ namespace RPG.PL.Forms
         {
             ErrorProvider.Clear();
             var isFormValid = true;
+            Client newClient = null;
             if (txtClientName.Text.IsNullOrEmptyOrWhiteSpace())
             {
                 isFormValid = false;
@@ -250,7 +251,7 @@ namespace RPG.PL.Forms
             else if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
             {
                 isFormValid = ShowConfirmationDialog(Resources.ClientNotExists) == DialogResult.Yes;
-                ClientManager.AddClient(new Client {Name = txtClientName.Text.FullTrim()});
+                newClient = new Client {Name = txtClientName.Text.FullTrim()};
             }
             if (!InvoiceItemVms.Any())
             {
@@ -264,6 +265,12 @@ namespace RPG.PL.Forms
                 ShowErrorMsg(Resources.NoItemsAdded);
                 return;
             }
+
+            if (newClient != null)
+            {
+                ClientManager.AddClient(newClient);
+            }
+
             var invoice = new Invoice
             {
                 ClientId = ClientManager.GetClientIdByName(txtClientName.Text.FullTrim()),
