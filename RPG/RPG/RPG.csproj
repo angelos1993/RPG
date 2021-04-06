@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\AdminManager.cs" />
+    <Compile Include="BLL\PurchaseInvoicePaymentManager.cs" />
+    <Compile Include="BLL\PurchaseInvoiceItemManager.cs" />
+    <Compile Include="BLL\PurchaseInvoiceManager.cs" />
     <Compile Include="BLL\SupplierManager.cs" />
     <Compile Include="BLL\ClientManager.cs" />
     <Compile Include="BLL\Infrastructure\BaseManager.cs" />
@@ -137,6 +140,8 @@
     <Compile Include="DAL\Repositories\InvoicePaymentRepository.cs" />
     <Compile Include="DAL\Repositories\InvoiceRepository.cs" />
     <Compile Include="DAL\Repositories\MaterialRepository.cs" />
+    <Compile Include="DAL\VMs\PurchaseInvoiceItemVm.cs" />
+    <Compile Include="DAL\VMs\PurchaseInvoiceVm.cs" />
     <Compile Include="DAL\VMs\PersonVm.cs" />
     <Compile Include="DAL\VMs\InvoiceItemVm.cs" />
     <Compile Include="DAL\VMs\InvoicePaymentVm.cs" />
@@ -179,6 +184,12 @@
     </Compile>
     <Compile Include="PL\Forms\FrmAddMaterialQuantity.Designer.cs">
       <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Forms\FrmPurchaseInvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmPurchaseInvoiceDetails.Designer.cs">
+      <DependentUpon>FrmPurchaseInvoiceDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Forms\FrmPayPurchaseInvoice.cs">
       <SubType>Form</SubType>
@@ -284,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterialQuantity.resx">
       <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPurchaseInvoiceDetails.resx">
+      <DependentUpon>FrmPurchaseInvoiceDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmPayPurchaseInvoice.resx">
       <DependentUpon>FrmPayPurchaseInvoice.cs</DependentUpon>

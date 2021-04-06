@@ -58,7 +58,7 @@ namespace RPG.PL.Forms
         private void dgvInvoices_DoubleClick(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            new FrmInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+            new FrmPurchaseInvoiceDetails(int.Parse(dgvInvoices.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
             Cursor = Cursors.Default;
         }
 
