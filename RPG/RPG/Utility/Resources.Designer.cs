@@ -232,6 +232,15 @@ namespace RPG.Utility {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to من فضلك تأكد من اسم المُورد.
+        /// </summary>
+        internal static string MakeSureOfSupplierName {
+            get {
+                return ResourceManager.GetString("MakeSureOfSupplierName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تم إضافة المادة / الخامة بنجاح.
         /// </summary>
         internal static string MaterialAddedSuccessfully {
@@ -336,6 +345,15 @@ namespace RPG.Utility {
         internal static string SupplierEditedSeccessfully {
             get {
                 return ResourceManager.GetString("SupplierEditedSeccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هذا المُورد ليس له فواتير باقية.
+        /// </summary>
+        internal static string SupplierHasNoRemainingInvoices {
+            get {
+                return ResourceManager.GetString("SupplierHasNoRemainingInvoices", resourceCulture);
             }
         }
         

@@ -180,6 +180,12 @@
     <Compile Include="PL\Forms\FrmAddMaterialQuantity.Designer.cs">
       <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Forms\FrmPayPurchaseInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Forms\FrmPayPurchaseInvoice.Designer.cs">
+      <DependentUpon>FrmPayPurchaseInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Forms\FrmSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmAddMaterialQuantity.resx">
       <DependentUpon>FrmAddMaterialQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Forms\FrmPayPurchaseInvoice.resx">
+      <DependentUpon>FrmPayPurchaseInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Forms\FrmSuppliers.resx">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>

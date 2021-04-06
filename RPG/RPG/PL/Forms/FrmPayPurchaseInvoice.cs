@@ -11,11 +11,11 @@ using static RPG.Utility.MessageBoxUtility;
 
 namespace RPG.PL.Forms
 {
-    public partial class FrmPayInvoice : FrmMaster
+    public partial class FrmPayPurchaseInvoice : FrmMaster
     {
         #region Constructor
 
-        public FrmPayInvoice()
+        public FrmPayPurchaseInvoice()
         {
             InitializeComponent();
         }
@@ -24,16 +24,18 @@ namespace RPG.PL.Forms
 
         #region Properties
 
-        private ClientManager _clientManager;
-        private ClientManager ClientManager => _clientManager ?? (_clientManager = new ClientManager());
-        private InvoiceManager _invoiceManager;
-        private InvoiceManager InvoiceManager => _invoiceManager ?? (_invoiceManager = new InvoiceManager());
-        private List<string> ClientsNames { get; set; }
-        private List<LightInvoiceVm> ClientInvoices { get; set; }
-        private InvoicePaymentManager _invoicePaymentManager;
+        private SupplierManager _supplierManager;
+        private SupplierManager SupplierManager => _supplierManager ?? (_supplierManager = new SupplierManager());
+        private PurchaseInvoiceManager _purchaseInvoiceManager;
 
-        private InvoicePaymentManager InvoicePaymentManager => _invoicePaymentManager ??
-                                                               (_invoicePaymentManager = new InvoicePaymentManager());
+        private PurchaseInvoiceManager PurchaseInvoiceManager =>
+            _purchaseInvoiceManager ?? (_purchaseInvoiceManager = new PurchaseInvoiceManager());
+        private List<string> SuppliersNames { get; set; }
+        private List<LightInvoiceVm> SupplierInvoices { get; set; }
+        private PurchaseInvoicePaymentManager _purchaseInvoicePaymentManager;
+
+        private PurchaseInvoicePaymentManager PurchaseInvoicePaymentManager =>
+            _purchaseInvoicePaymentManager ?? (_purchaseInvoicePaymentManager = new PurchaseInvoicePaymentManager());
 
         #endregion
 
@@ -97,64 +99,64 @@ namespace RPG.PL.Forms
         private void ResetForm()
         {
             dtPaymentDate.Value = DateTime.Today;
-            SetAutocompletForClients();
-            txtClientName.Focus();
+            SetAutocompleteForSuppliers();
+            txtSupplierName.Focus();
         }
 
-        private void SetAutocompletForClients()
+        private void SetAutocompleteForSuppliers()
         {
-            ClientsNames = ClientManager.GetAllClientsNames();
-            TextBoxAutoCompleteUtility.SetAutoCompleteSourceForTextBox(txtClientName, ClientsNames);
+            SuppliersNames= SupplierManager.GetAllSuppliersNames();
+            TextBoxAutoCompleteUtility.SetAutoCompleteSourceForTextBox(txtSupplierName, SuppliersNames);
         }
 
         private void ShowInvoices()
         {
             var isFormValid = true;
-            if (!ClientsNames.Contains(txtClientName.Text.FullTrim()))
+            if (!SuppliersNames.Contains(txtSupplierName.Text.FullTrim()))
             {
                 isFormValid = false;
-                ShowErrorMsg(Resources.MakeSureOfClientName);
+                ShowErrorMsg(Resources.MakeSureOfSupplierName);
             }
             if (!isFormValid)
                 return;
-            ClientInvoices = InvoiceManager
-                .GetClientRemainingInvoices(ClientManager.GetClientIdByName(txtClientName.Text.FullTrim()))
+            SupplierInvoices= PurchaseInvoiceManager
+                .GetSupplierRemainingInvoices(SupplierManager.GetSupplierIdByName(txtSupplierName.Text.FullTrim()))
                 .OrderBy(invoice => invoice.Date).ToList();
-            if (ClientInvoices.Any())
+            if (SupplierInvoices.Any())
             {
                 FillGrid();
             }
             else
             {
-                ShowInfoMsg(Resources.ClientHasNoRemainingInvoices);
+                ShowInfoMsg(Resources.SupplierHasNoRemainingInvoices);
                 dblInTotal.Value = 0;
             }
         }
 
         private void FillGrid()
         {
-            dgvInvoices.DataSource = ClientInvoices;
+            dgvInvoices.DataSource = SupplierInvoices;
             dgvInvoices.Columns[0].Visible = false;
-            dblInTotal.Value = ClientInvoices.Sum(invoice => (double) invoice.Remaining);
+            dblInTotal.Value = SupplierInvoices.Sum(invoice => (double) invoice.Remaining);
         }
 
         private void Pay()
         {
             var enteredAmount = (decimal) dblInPaid.Value;
             var paidInvoices = new List<KeyValuePair<DateTime, decimal>>();
-            foreach (var invoice in ClientInvoices)
+            foreach (var invoice in SupplierInvoices)
             {
                 if (enteredAmount <= 0)
                     break;
                 var paid = invoice.Remaining <= enteredAmount ? invoice.Remaining : enteredAmount;
-                InvoicePaymentManager.AddInvoicePayment(new InvoicePayment
+                PurchaseInvoicePaymentManager.AddPurchaseInvoicePayment(new PurchaseInvoicePayment
                 {
                     Date = dtPaymentDate.Value,
                     InvoiceId = invoice.InvoiceId,
                     Paid = paid
                 });
                 paidInvoices.Add(new KeyValuePair<DateTime, decimal>(invoice.Date, paid));
-                InvoiceManager.UpdateInvoicePaidAmount(invoice.InvoiceId, paid);
+                PurchaseInvoiceManager.UpdatePurchaseInvoicePaidAmount(invoice.InvoiceId, paid);
                 enteredAmount -= paid;
             }
             ShowSuccessMsg(paidInvoices, (decimal) dblInRemaining.Value);

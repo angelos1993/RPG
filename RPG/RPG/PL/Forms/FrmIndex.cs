@@ -59,7 +59,7 @@ namespace RPG.PL.Forms
 
         private void btnPayPurchaseInvoice_Click(object sender, EventArgs e)
         {
-
+            new FrmPayPurchaseInvoice().ShowDialog();
         }
 
         private void btnListPurchaseInvoices_Click(object sender, EventArgs e)
