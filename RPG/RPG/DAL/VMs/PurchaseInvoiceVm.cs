@@ -15,7 +15,7 @@ namespace RPG.DAL.VMs
         public string DateString => Date.ToCustomShortDateString();
 
         [DisplayName("اسم المُورد")]
-        public string ClientName { get; set; }
+        public string SupplierName { get; set; }
 
         [DisplayName("الإجمالي")]
         public decimal Total { get; set; }

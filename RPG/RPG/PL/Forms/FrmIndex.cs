@@ -64,7 +64,7 @@ namespace RPG.PL.Forms
 
         private void btnListPurchaseInvoices_Click(object sender, EventArgs e)
         {
-
+            new FrmPurchaseInvoices().ShowDialog();
         }
 
         #endregion

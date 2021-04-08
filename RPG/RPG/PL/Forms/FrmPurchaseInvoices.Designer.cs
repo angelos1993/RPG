@@ -1,6 +1,6 @@
 ﻿namespace RPG.PL.Forms
 {
-    partial class FrmInvoices
+    partial class FrmPurchaseInvoices
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoices = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
-            this.txtClientName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtSupplierName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.pnlDate = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.radAllDates = new System.Windows.Forms.RadioButton();
@@ -43,28 +43,28 @@
             this.radRemainingInvoices = new System.Windows.Forms.RadioButton();
             this.radPaidInvoices = new System.Windows.Forms.RadioButton();
             this.radAllStates = new System.Windows.Forms.RadioButton();
-            this.pnlClient = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.pnlSupplier = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.pnlDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate)).BeginInit();
             this.pnlInvoiceState.SuspendLayout();
-            this.pnlClient.SuspendLayout();
+            this.pnlSupplier.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvInvoices
             // 
             this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoices.Location = new System.Drawing.Point(12, 93);
             this.dgvInvoices.Name = "dgvInvoices";
@@ -89,19 +89,19 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "خروج";
             // 
-            // txtClientName
+            // txtSupplierName
             // 
             // 
             // 
             // 
-            this.txtClientName.Border.Class = "TextBoxBorder";
-            this.txtClientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtClientName.Location = new System.Drawing.Point(3, 10);
-            this.txtClientName.Name = "txtClientName";
-            this.txtClientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtClientName.Size = new System.Drawing.Size(305, 26);
-            this.txtClientName.TabIndex = 0;
-            this.txtClientName.TextChanged += new System.EventHandler(this.txtClientName_TextChanged);
+            this.txtSupplierName.Border.Class = "TextBoxBorder";
+            this.txtSupplierName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSupplierName.Location = new System.Drawing.Point(3, 10);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSupplierName.Size = new System.Drawing.Size(305, 26);
+            this.txtSupplierName.TabIndex = 0;
+            this.txtSupplierName.TextChanged += new System.EventHandler(this.txtSupplierName_TextChanged);
             // 
             // labelX1
             // 
@@ -116,7 +116,7 @@
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(73, 23);
             this.labelX1.TabIndex = 10;
-            this.labelX1.Text = "اسم العميل";
+            this.labelX1.Text = "اسم المُورد";
             // 
             // pnlDate
             // 
@@ -354,48 +354,48 @@
             this.radAllStates.UseVisualStyleBackColor = false;
             this.radAllStates.CheckedChanged += new System.EventHandler(this.radInvoiceState_CheckedChanged);
             // 
-            // pnlClient
+            // pnlSupplier
             // 
-            this.pnlClient.CanvasColor = System.Drawing.SystemColors.Control;
-            this.pnlClient.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlClient.Controls.Add(this.txtClientName);
-            this.pnlClient.Controls.Add(this.labelX1);
-            this.pnlClient.Location = new System.Drawing.Point(712, 12);
-            this.pnlClient.Name = "pnlClient";
-            this.pnlClient.Size = new System.Drawing.Size(396, 75);
-            // 
-            // 
-            // 
-            this.pnlClient.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.pnlClient.Style.BackColorGradientAngle = 90;
-            this.pnlClient.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.pnlClient.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlClient.Style.BorderBottomWidth = 1;
-            this.pnlClient.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.pnlClient.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlClient.Style.BorderLeftWidth = 1;
-            this.pnlClient.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlClient.Style.BorderRightWidth = 1;
-            this.pnlClient.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlClient.Style.BorderTopWidth = 1;
-            this.pnlClient.Style.Class = "";
-            this.pnlClient.Style.CornerDiameter = 4;
-            this.pnlClient.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.pnlClient.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.pnlClient.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.pnlClient.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.pnlSupplier.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlSupplier.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlSupplier.Controls.Add(this.txtSupplierName);
+            this.pnlSupplier.Controls.Add(this.labelX1);
+            this.pnlSupplier.Location = new System.Drawing.Point(712, 12);
+            this.pnlSupplier.Name = "pnlSupplier";
+            this.pnlSupplier.Size = new System.Drawing.Size(396, 75);
             // 
             // 
             // 
-            this.pnlClient.StyleMouseDown.Class = "";
-            this.pnlClient.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlSupplier.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlSupplier.Style.BackColorGradientAngle = 90;
+            this.pnlSupplier.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlSupplier.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlSupplier.Style.BorderBottomWidth = 1;
+            this.pnlSupplier.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlSupplier.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlSupplier.Style.BorderLeftWidth = 1;
+            this.pnlSupplier.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlSupplier.Style.BorderRightWidth = 1;
+            this.pnlSupplier.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlSupplier.Style.BorderTopWidth = 1;
+            this.pnlSupplier.Style.Class = "";
+            this.pnlSupplier.Style.CornerDiameter = 4;
+            this.pnlSupplier.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlSupplier.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlSupplier.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlSupplier.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.pnlClient.StyleMouseOver.Class = "";
-            this.pnlClient.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pnlClient.TabIndex = 23;
-            this.pnlClient.Text = "بحث بالعميل";
+            this.pnlSupplier.StyleMouseDown.Class = "";
+            this.pnlSupplier.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlSupplier.StyleMouseOver.Class = "";
+            this.pnlSupplier.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlSupplier.TabIndex = 23;
+            this.pnlSupplier.Text = "بحث بالمُورد";
             // 
             // btnDelete
             // 
@@ -411,21 +411,21 @@
             this.btnDelete.Text = "حذف";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // FrmInvoices
+            // FrmPurchaseInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1120, 650);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.pnlClient);
+            this.Controls.Add(this.pnlSupplier);
             this.Controls.Add(this.pnlInvoiceState);
             this.Controls.Add(this.pnlDate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvInvoices);
             this.DoubleBuffered = true;
-            this.Name = "FrmInvoices";
-            this.Text = "فواتير البيع";
+            this.Name = "FrmPurchaseInvoices";
+            this.Text = "فواتير الشراء";
             this.Load += new System.EventHandler(this.FrmInvoices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).EndInit();
@@ -434,7 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate)).EndInit();
             this.pnlInvoiceState.ResumeLayout(false);
             this.pnlInvoiceState.PerformLayout();
-            this.pnlClient.ResumeLayout(false);
+            this.pnlSupplier.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -443,11 +443,11 @@
 
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvInvoices;
         private DevComponents.DotNetBar.ButtonX btnClose;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtClientName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSupplierName;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlDate;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlInvoiceState;
-        private DevComponents.DotNetBar.Controls.GroupPanel pnlClient;
+        private DevComponents.DotNetBar.Controls.GroupPanel pnlSupplier;
         private System.Windows.Forms.RadioButton radRemainingInvoices;
         private System.Windows.Forms.RadioButton radPaidInvoices;
         private System.Windows.Forms.RadioButton radAllStates;

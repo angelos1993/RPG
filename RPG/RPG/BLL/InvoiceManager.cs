@@ -29,7 +29,7 @@ namespace RPG.BLL
             return GetAllInvoices()
                 .Where(invoice => invoice.ClientId == clientId
                                   && invoice.Total - invoice.Paid - invoice.Discount > 0)
-                .Select(invoice => new LightInvoiceVm
+                .OrderBy(invoice => invoice.Id).Select(invoice => new LightInvoiceVm
                 {
                     InvoiceId = invoice.Id,
                     Date = invoice.Date,
