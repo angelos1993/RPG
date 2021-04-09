@@ -89,7 +89,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 1;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -104,7 +104,7 @@
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(130, 40);
             this.btnPay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPay.TabIndex = 0;
+            this.btnPay.TabIndex = 3;
             this.btnPay.Text = "دفع";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
@@ -387,7 +387,7 @@
             this.dtPaymentDate.Name = "dtPaymentDate";
             this.dtPaymentDate.Size = new System.Drawing.Size(183, 26);
             this.dtPaymentDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtPaymentDate.TabIndex = 0;
+            this.dtPaymentDate.TabIndex = 2;
             // 
             // labelX2
             // 

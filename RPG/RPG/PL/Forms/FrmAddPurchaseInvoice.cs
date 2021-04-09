@@ -146,7 +146,7 @@ namespace RPG.PL.Forms
 
         private void FillMaterials()
         {
-            Materials = MaterialManager.GetAllUnArchivedMaterials().Where(material => material.Quantity > 0).ToList();
+            Materials = MaterialManager.GetAllUnArchivedMaterials().ToList();
             MaterialsList = Materials.Select(material => new LightMaterialVm
             {
                 Id = material.Id,
