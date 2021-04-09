@@ -88,6 +88,7 @@ namespace RPG.PL.Forms
             GetClients();
             SearchClients();
             dgvClients.Columns[0].Visible = false;
+            txtSearch.Focus();
         }
 
         private void GetClients()

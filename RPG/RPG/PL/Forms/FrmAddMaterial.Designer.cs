@@ -208,6 +208,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmAddMaterial";
             this.Text = "إضافة مادة / خامة";
+            this.Load += new System.EventHandler(this.FrmAddMaterial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblInQuantity)).EndInit();

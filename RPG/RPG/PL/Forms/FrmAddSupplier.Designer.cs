@@ -417,6 +417,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmAddSupplier";
             this.Text = "إضافة مُورد";
+            this.Load += new System.EventHandler(this.FrmAddSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

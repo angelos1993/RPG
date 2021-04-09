@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMaterials = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.radName = new System.Windows.Forms.RadioButton();
@@ -41,7 +41,6 @@
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.btnArchive = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             this.btnUnArchive = new DevComponents.DotNetBar.ButtonX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
@@ -54,14 +53,14 @@
             // 
             this.dgvMaterials.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaterials.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterials.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMaterials.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMaterials.Location = new System.Drawing.Point(12, 81);
             this.dgvMaterials.MultiSelect = false;
@@ -249,7 +248,7 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RPG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterial.Location = new System.Drawing.Point(12, 17);
+            this.btnAddMaterial.Location = new System.Drawing.Point(12, 39);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(203, 26);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -285,20 +284,6 @@
             this.btnArchive.TabIndex = 3;
             this.btnArchive.Text = "أرشفة";
             this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
-            // 
-            // btnAddMaterialQuantity
-            // 
-            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddMaterialQuantity.Image = global::RPG.Properties.Resources.IncreaseQuantity;
-            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(12, 49);
-            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
-            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(203, 26);
-            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterialQuantity.TabIndex = 1;
-            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
-            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
             // 
             // btnUnArchive
             // 
@@ -336,7 +321,6 @@
             this.ClientSize = new System.Drawing.Size(934, 458);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUnArchive);
-            this.Controls.Add(this.btnAddMaterialQuantity);
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.btnEdit);
@@ -370,7 +354,6 @@
         private DevComponents.DotNetBar.ButtonX btnEdit;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel grpSearch;
-        private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
         private DevComponents.DotNetBar.ButtonX btnUnArchive;
         private System.Windows.Forms.RadioButton radAvailableQuantity;
         private DevComponents.DotNetBar.ButtonX btnDelete;

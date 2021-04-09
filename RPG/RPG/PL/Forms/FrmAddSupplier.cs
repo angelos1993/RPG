@@ -31,6 +31,11 @@ namespace RPG.PL.Forms
 
         #region Events
 
+        private void FrmAddSupplier_Load(object sender, EventArgs e)
+        {
+            txtName.Focus();
+        }
+
         private void chkBoxViber_CheckedChanged(object sender, EventArgs e)
         {
             txtViber.Text = chkBoxViber.Checked ? txtPhone.Text : string.Empty;
@@ -118,7 +123,7 @@ namespace RPG.PL.Forms
         {
             IsEditMode = true;
             Supplier = SupplierManager.GetSupplierById(supplierId);
-            Text = @"تعديل عميل";
+            Text = @"تعديل مُورد";
             txtName.Text = Supplier.Name;
             txtAddress.Text = Supplier.Address;
             txtPhone.Text = Supplier.Phone;

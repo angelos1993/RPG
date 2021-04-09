@@ -99,12 +99,7 @@ namespace RPG.PL.Forms
         {
             new FrmAddMaterial().ShowDialog();
         }
-
-        private void btnAddMaterialQuantity_Click(object sender, EventArgs e)
-        {
-            new FrmAddMaterialQuantity().ShowDialog();
-        }
-
+        
         private void btnListMaterials_Click(object sender, EventArgs e)
         {
             new FrmMaterials().ShowDialog();

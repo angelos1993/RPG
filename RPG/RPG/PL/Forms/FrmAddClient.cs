@@ -31,6 +31,11 @@ namespace RPG.PL.Forms
 
         #region Events
 
+        private void FrmAddClient_Load(object sender, EventArgs e)
+        {
+            txtName.Focus();
+        }
+
         private void chkBoxViber_CheckedChanged(object sender, EventArgs e)
         {
             txtViber.Text = chkBoxViber.Checked ? txtPhone.Text : string.Empty;

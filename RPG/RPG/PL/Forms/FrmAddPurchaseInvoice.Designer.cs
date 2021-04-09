@@ -294,7 +294,7 @@
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Size = new System.Drawing.Size(183, 26);
             this.dtInvoiceDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtInvoiceDate.TabIndex = 1;
+            this.dtInvoiceDate.TabIndex = 2;
             // 
             // labelX2
             // 
@@ -403,7 +403,7 @@
             this.dblInUnitPrice.Name = "dblInUnitPrice";
             this.dblInUnitPrice.ShowUpDown = true;
             this.dblInUnitPrice.Size = new System.Drawing.Size(94, 26);
-            this.dblInUnitPrice.TabIndex = 3;
+            this.dblInUnitPrice.TabIndex = 5;
             // 
             // labelX10
             // 
@@ -446,7 +446,7 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtNotes.Size = new System.Drawing.Size(461, 26);
-            this.txtNotes.TabIndex = 5;
+            this.txtNotes.TabIndex = 7;
             // 
             // cmbMaterials
             // 
@@ -459,7 +459,7 @@
             this.cmbMaterials.Name = "cmbMaterials";
             this.cmbMaterials.Size = new System.Drawing.Size(178, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaterials.TabIndex = 2;
+            this.cmbMaterials.TabIndex = 3;
             // 
             // btnAddMaterial
             // 
@@ -471,7 +471,7 @@
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(25, 25);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterial.TabIndex = 23;
+            this.btnAddMaterial.TabIndex = 4;
             this.btnAddMaterial.Tooltip = "إضافة مادة جديدة";
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
@@ -486,7 +486,7 @@
             this.btnInsertItem.Name = "btnInsertItem";
             this.btnInsertItem.Size = new System.Drawing.Size(85, 26);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnInsertItem.TabIndex = 6;
+            this.btnInsertItem.TabIndex = 8;
             this.btnInsertItem.Text = "إضافة";
             this.btnInsertItem.Click += new System.EventHandler(this.btnInsertItem_Click);
             // 
@@ -504,7 +504,7 @@
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
             this.dblInQuantity.Size = new System.Drawing.Size(100, 26);
-            this.dblInQuantity.TabIndex = 4;
+            this.dblInQuantity.TabIndex = 6;
             // 
             // labelX6
             // 
@@ -547,7 +547,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 10;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -561,7 +561,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

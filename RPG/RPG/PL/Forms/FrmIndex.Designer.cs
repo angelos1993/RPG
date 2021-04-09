@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIndex));
             this.pnlInvoices = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnPayPurchaseInvoice = new DevComponents.DotNetBar.ButtonX();
+            this.btnListPurchaseInvoices = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddPurchaseInvoice = new DevComponents.DotNetBar.ButtonX();
             this.btnPayInvoice = new DevComponents.DotNetBar.ButtonX();
             this.btnListInvoices = new DevComponents.DotNetBar.ButtonX();
             this.btnAddInvoice = new DevComponents.DotNetBar.ButtonX();
             this.picInvoices = new System.Windows.Forms.PictureBox();
             this.pnlMaterials = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnAddMaterialQuantity = new DevComponents.DotNetBar.ButtonX();
             this.btnListMaterials = new DevComponents.DotNetBar.ButtonX();
             this.btnAddMaterial = new DevComponents.DotNetBar.ButtonX();
             this.picMaterials = new System.Windows.Forms.PictureBox();
@@ -55,9 +57,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.reflectionImage = new DevComponents.DotNetBar.Controls.ReflectionImage();
-            this.btnPayPurchaseInvoice = new DevComponents.DotNetBar.ButtonX();
-            this.btnListPurchaseInvoices = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddPurchaseInvoice = new DevComponents.DotNetBar.ButtonX();
             this.pnlInvoices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInvoices)).BeginInit();
             this.pnlMaterials.SuspendLayout();
@@ -121,6 +120,48 @@
             this.pnlInvoices.TabIndex = 1;
             this.pnlInvoices.Text = "الفواتير";
             // 
+            // btnPayPurchaseInvoice
+            // 
+            this.btnPayPurchaseInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPayPurchaseInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPayPurchaseInvoice.Image = global::RPG.Properties.Resources.Pay;
+            this.btnPayPurchaseInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnPayPurchaseInvoice.Location = new System.Drawing.Point(15, 67);
+            this.btnPayPurchaseInvoice.Name = "btnPayPurchaseInvoice";
+            this.btnPayPurchaseInvoice.Size = new System.Drawing.Size(200, 40);
+            this.btnPayPurchaseInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPayPurchaseInvoice.TabIndex = 4;
+            this.btnPayPurchaseInvoice.Text = "دفع لمُورد";
+            this.btnPayPurchaseInvoice.Click += new System.EventHandler(this.btnPayPurchaseInvoice_Click);
+            // 
+            // btnListPurchaseInvoices
+            // 
+            this.btnListPurchaseInvoices.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnListPurchaseInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnListPurchaseInvoices.Image = global::RPG.Properties.Resources.List;
+            this.btnListPurchaseInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnListPurchaseInvoices.Location = new System.Drawing.Point(15, 113);
+            this.btnListPurchaseInvoices.Name = "btnListPurchaseInvoices";
+            this.btnListPurchaseInvoices.Size = new System.Drawing.Size(200, 40);
+            this.btnListPurchaseInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnListPurchaseInvoices.TabIndex = 5;
+            this.btnListPurchaseInvoices.Text = "عرض كل فواتير الشراء";
+            this.btnListPurchaseInvoices.Click += new System.EventHandler(this.btnListPurchaseInvoices_Click);
+            // 
+            // btnAddPurchaseInvoice
+            // 
+            this.btnAddPurchaseInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddPurchaseInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddPurchaseInvoice.Image = global::RPG.Properties.Resources.Add;
+            this.btnAddPurchaseInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnAddPurchaseInvoice.Location = new System.Drawing.Point(15, 20);
+            this.btnAddPurchaseInvoice.Name = "btnAddPurchaseInvoice";
+            this.btnAddPurchaseInvoice.Size = new System.Drawing.Size(200, 40);
+            this.btnAddPurchaseInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddPurchaseInvoice.TabIndex = 3;
+            this.btnAddPurchaseInvoice.Text = "فاتورة شراء جديدة";
+            this.btnAddPurchaseInvoice.Click += new System.EventHandler(this.btnAddPurchaseInvoice_Click);
+            // 
             // btnPayInvoice
             // 
             this.btnPayInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -179,7 +220,6 @@
             this.pnlMaterials.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMaterials.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlMaterials.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlMaterials.Controls.Add(this.btnAddMaterialQuantity);
             this.pnlMaterials.Controls.Add(this.btnListMaterials);
             this.pnlMaterials.Controls.Add(this.btnAddMaterial);
             this.pnlMaterials.Controls.Add(this.picMaterials);
@@ -220,27 +260,13 @@
             this.pnlMaterials.TabIndex = 2;
             this.pnlMaterials.Text = "المواد / الخامات";
             // 
-            // btnAddMaterialQuantity
-            // 
-            this.btnAddMaterialQuantity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddMaterialQuantity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddMaterialQuantity.Image = global::RPG.Properties.Resources.IncreaseQuantity;
-            this.btnAddMaterialQuantity.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterialQuantity.Location = new System.Drawing.Point(109, 60);
-            this.btnAddMaterialQuantity.Name = "btnAddMaterialQuantity";
-            this.btnAddMaterialQuantity.Size = new System.Drawing.Size(200, 40);
-            this.btnAddMaterialQuantity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterialQuantity.TabIndex = 1;
-            this.btnAddMaterialQuantity.Text = "إضافة كمية لـ مادة / خامة";
-            this.btnAddMaterialQuantity.Click += new System.EventHandler(this.btnAddMaterialQuantity_Click);
-            // 
             // btnListMaterials
             // 
             this.btnListMaterials.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnListMaterials.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnListMaterials.Image = global::RPG.Properties.Resources.ShowAllMaterials;
             this.btnListMaterials.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListMaterials.Location = new System.Drawing.Point(109, 106);
+            this.btnListMaterials.Location = new System.Drawing.Point(109, 87);
             this.btnListMaterials.Name = "btnListMaterials";
             this.btnListMaterials.Size = new System.Drawing.Size(200, 40);
             this.btnListMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -254,7 +280,7 @@
             this.btnAddMaterial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddMaterial.Image = global::RPG.Properties.Resources.Add;
             this.btnAddMaterial.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddMaterial.Location = new System.Drawing.Point(109, 14);
+            this.btnAddMaterial.Location = new System.Drawing.Point(109, 41);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(200, 40);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -609,48 +635,6 @@
             this.reflectionImage.Size = new System.Drawing.Size(278, 294);
             this.reflectionImage.TabIndex = 8;
             // 
-            // btnPayPurchaseInvoice
-            // 
-            this.btnPayPurchaseInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPayPurchaseInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPayPurchaseInvoice.Image = global::RPG.Properties.Resources.Pay;
-            this.btnPayPurchaseInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnPayPurchaseInvoice.Location = new System.Drawing.Point(15, 67);
-            this.btnPayPurchaseInvoice.Name = "btnPayPurchaseInvoice";
-            this.btnPayPurchaseInvoice.Size = new System.Drawing.Size(200, 40);
-            this.btnPayPurchaseInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPayPurchaseInvoice.TabIndex = 4;
-            this.btnPayPurchaseInvoice.Text = "دفع لمُورد";
-            this.btnPayPurchaseInvoice.Click += new System.EventHandler(this.btnPayPurchaseInvoice_Click);
-            // 
-            // btnListPurchaseInvoices
-            // 
-            this.btnListPurchaseInvoices.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnListPurchaseInvoices.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnListPurchaseInvoices.Image = global::RPG.Properties.Resources.List;
-            this.btnListPurchaseInvoices.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnListPurchaseInvoices.Location = new System.Drawing.Point(15, 113);
-            this.btnListPurchaseInvoices.Name = "btnListPurchaseInvoices";
-            this.btnListPurchaseInvoices.Size = new System.Drawing.Size(200, 40);
-            this.btnListPurchaseInvoices.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnListPurchaseInvoices.TabIndex = 5;
-            this.btnListPurchaseInvoices.Text = "عرض كل فواتير الشراء";
-            this.btnListPurchaseInvoices.Click += new System.EventHandler(this.btnListPurchaseInvoices_Click);
-            // 
-            // btnAddPurchaseInvoice
-            // 
-            this.btnAddPurchaseInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddPurchaseInvoice.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddPurchaseInvoice.Image = global::RPG.Properties.Resources.Add;
-            this.btnAddPurchaseInvoice.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnAddPurchaseInvoice.Location = new System.Drawing.Point(15, 20);
-            this.btnAddPurchaseInvoice.Name = "btnAddPurchaseInvoice";
-            this.btnAddPurchaseInvoice.Size = new System.Drawing.Size(200, 40);
-            this.btnAddPurchaseInvoice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddPurchaseInvoice.TabIndex = 3;
-            this.btnAddPurchaseInvoice.Text = "فاتورة شراء جديدة";
-            this.btnAddPurchaseInvoice.Click += new System.EventHandler(this.btnAddPurchaseInvoice_Click);
-            // 
             // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -708,7 +692,6 @@
         private System.Windows.Forms.PictureBox picAdmins;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlDB;
         private System.Windows.Forms.PictureBox picDB;
-        private DevComponents.DotNetBar.ButtonX btnAddMaterialQuantity;
         private DevComponents.DotNetBar.ButtonX btnPayInvoice;
         private DevComponents.DotNetBar.ButtonX btnClose;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlCloseApplication;

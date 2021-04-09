@@ -55,14 +55,6 @@ namespace RPG.PL.Forms
             Cursor = Cursors.Default;
         }
 
-        private void btnAddMaterialQuantity_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            new FrmAddMaterialQuantity().ShowDialog();
-            ResetForm();
-            Cursor = Cursors.Default;
-        }
-
         private void radSort_CheckedChanged(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -87,14 +79,14 @@ namespace RPG.PL.Forms
         private void btnArchive_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            ArchiveOrunArchiveMaterial(true);
+            ArchiveOrUnArchiveMaterial(true);
             Cursor = Cursors.Default;
         }
 
         private void btnUnArchive_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            ArchiveOrunArchiveMaterial(false);
+            ArchiveOrUnArchiveMaterial(false);
             Cursor = Cursors.Default;
         }
 
@@ -181,7 +173,7 @@ namespace RPG.PL.Forms
             ResetForm();
         }
 
-        private void ArchiveOrunArchiveMaterial(bool isArchived)
+        private void ArchiveOrUnArchiveMaterial(bool isArchived)
         {
             var rowIndex = dgvMaterials.SelectedRows[0].Index;
             var material =

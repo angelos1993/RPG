@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInvoiceItems = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.dblInTotal = new DevComponents.Editors.DoubleInput();
@@ -73,14 +73,14 @@
             // 
             this.dgvInvoiceItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInvoiceItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInvoiceItems.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInvoiceItems.Location = new System.Drawing.Point(12, 165);
             this.dgvInvoiceItems.Name = "dgvInvoiceItems";
@@ -292,7 +292,7 @@
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Size = new System.Drawing.Size(183, 26);
             this.dtInvoiceDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtInvoiceDate.TabIndex = 0;
+            this.dtInvoiceDate.TabIndex = 2;
             // 
             // labelX2
             // 
@@ -412,7 +412,7 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtNotes.Size = new System.Drawing.Size(488, 26);
-            this.txtNotes.TabIndex = 12;
+            this.txtNotes.TabIndex = 6;
             // 
             // lblMaterialAvailableQuantity
             // 
@@ -441,7 +441,7 @@
             this.cmbMaterials.Name = "cmbMaterials";
             this.cmbMaterials.Size = new System.Drawing.Size(178, 26);
             this.cmbMaterials.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaterials.TabIndex = 0;
+            this.cmbMaterials.TabIndex = 3;
             this.cmbMaterials.SelectedIndexChanged += new System.EventHandler(this.cmbMaterials_SelectedIndexChanged);
             // 
             // btnAddMaterial
@@ -454,7 +454,7 @@
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(25, 25);
             this.btnAddMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMaterial.TabIndex = 23;
+            this.btnAddMaterial.TabIndex = 4;
             this.btnAddMaterial.Tooltip = "إضافة مادة جديدة";
             this.btnAddMaterial.Click += new System.EventHandler(this.btnAddMaterial_Click);
             // 
@@ -469,7 +469,7 @@
             this.btnInsertItem.Name = "btnInsertItem";
             this.btnInsertItem.Size = new System.Drawing.Size(72, 57);
             this.btnInsertItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnInsertItem.TabIndex = 2;
+            this.btnInsertItem.TabIndex = 7;
             this.btnInsertItem.Text = "إضافة";
             this.btnInsertItem.Click += new System.EventHandler(this.btnInsertItem_Click);
             // 
@@ -487,7 +487,7 @@
             this.dblInQuantity.Name = "dblInQuantity";
             this.dblInQuantity.ShowUpDown = true;
             this.dblInQuantity.Size = new System.Drawing.Size(79, 26);
-            this.dblInQuantity.TabIndex = 1;
+            this.dblInQuantity.TabIndex = 5;
             // 
             // labelX6
             // 
@@ -530,7 +530,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 40);
             this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "خروج";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -544,7 +544,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

@@ -417,6 +417,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmAddClient";
             this.Text = "إضافة عميل";
+            this.Load += new System.EventHandler(this.FrmAddClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

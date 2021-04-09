@@ -31,6 +31,11 @@ namespace RPG.PL.Forms
 
         #region Events
 
+        private void FrmAddMaterial_Load(object sender, EventArgs e)
+        {
+            txtCode.Focus();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;

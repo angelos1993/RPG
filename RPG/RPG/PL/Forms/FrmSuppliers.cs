@@ -88,6 +88,7 @@ namespace RPG.PL.Forms
             GetSuppliers();
             SearchSuppliers();
             dgvSuppliers.Columns[0].Visible = false;
+            txtSearch.Focus();
         }
 
         private void GetSuppliers()

@@ -139,6 +139,7 @@ namespace RPG.PL.Forms
             dtInvoiceDate.Value = DateTime.Today;
             SetAutocompletForClients();
             FillMaterials();
+            txtClientName.Focus();
         }
 
         private void SetAutocompletForClients()
