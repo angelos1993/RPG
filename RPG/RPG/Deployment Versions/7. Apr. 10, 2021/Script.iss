@@ -2,14 +2,14 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "RPG"
-#define MyAppVersion "2.0"
+#define MyAppVersion "3.0"
 #define MyAppPublisher "Angelos"
 #define MyAppExeName "RPG.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{4B6B3B9A-81D8-421E-8E59-948A8253517E}
+AppId={{D429CC5B-8153-4E77-8A5D-1402ED71A817}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -19,6 +19,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=RPG
+SetupIconFile=D:\Angelos\RPG\Repo\RPG\RPG\RPG\Logo.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
