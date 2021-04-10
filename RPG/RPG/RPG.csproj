@@ -396,7 +396,12 @@
     <Content Include="Deployment Versions\4. Apr. 1, 2018\DB_Script.sql" />
     <Content Include="Deployment Versions\4. Apr. 1, 2018\Output\RPG.exe" />
     <Content Include="Deployment Versions\4. Apr. 1, 2018\Script.iss" />
-    <Content Include="Deployment Versions\Current Work\DB_Script.sql" />
+    <Content Include="Deployment Versions\7. Apr. 10, 2021\DB_Script.sql" />
+    <Content Include="Deployment Versions\7. Apr. 10, 2021\RPG.exe" />
+    <Content Include="Deployment Versions\7. Apr. 10, 2021\Script.iss" />
+    <Content Include="Deployment Versions\5. Sep. 18, 2020\DB_Script.sql" />
+    <Content Include="Deployment Versions\6. Jan. 23, 2021\RPG.exe" />
+    <Content Include="Deployment Versions\6. Jan. 23, 2021\Script.iss" />
     <Content Include="Logo.ico" />
     <Content Include="Resources\Add.png" />
     <None Include="Resources\Viber.png" />
