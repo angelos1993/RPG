@@ -129,6 +129,7 @@ namespace RPG.PL.Forms
             else
             {
                 ShowInfoMsg(Resources.SupplierHasNoRemainingInvoices);
+                dgvInvoices.DataSource = null;
                 dblInTotal.Value = 0;
             }
         }
