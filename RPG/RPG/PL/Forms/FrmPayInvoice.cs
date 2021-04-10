@@ -158,6 +158,7 @@ namespace RPG.PL.Forms
                 enteredAmount -= paid;
             }
             ShowSuccessMsg(paidInvoices, (decimal) dblInRemaining.Value);
+            ShowInvoices();
         }
 
         private void ShowSuccessMsg(List<KeyValuePair<DateTime, decimal>> paidInvoices, decimal remaining)
@@ -167,7 +168,6 @@ namespace RPG.PL.Forms
                 msg.AppendLine($"{item.Value} : {item.Key.ToCustomShortDateString()}\n");
             msg.AppendLine($"{remaining} : المتبقي");
             ShowInfoMsg(msg.ToString());
-            Close();
         }
 
         #endregion
